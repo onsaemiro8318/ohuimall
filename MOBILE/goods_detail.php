@@ -16,8 +16,12 @@
       <script type='text/javascript' src='../js/om.js'></script>
   </head>
   <body>
-    <h2>마음을 파는 쇼핑몰</h2>
-    <h1>오늘을 가장 어리게</h1>
+    <div>
+      <h3>마음을 파는 쇼핑몰</h3>
+      <h1>오늘을 가장 어리게</h1>
+      <h4>Introduce / Mall / FAQ</h4>
+    </div>
+    <h1>--------------------------------</h1>
 	<img src="<?=$goods_info[goods_imgurl]?>">
 	<div>
 	<?=$goods_info[goods_detail]?>
