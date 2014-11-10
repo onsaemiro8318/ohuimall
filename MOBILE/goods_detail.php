@@ -3,7 +3,8 @@
 	include_once "../config.php";
 	$goods_idx	= $_REQUEST['goods_idx'];
 
-	$goods_info = TK_GetGoodsInfo($goods_idx);
+	$goods_info = OM_GetGoodsInfo($goods_idx);
+	print_r($goods_info);
 ?>
 <!doctype html>
   <html lang="en">
@@ -15,8 +16,8 @@
       <script type='text/javascript' src='../js/jquery-1.11.0.min.js'></script>
   </head>
   <body>
-    <h1>마음을 파는 쇼핑몰</h1>
-    <h2>오늘을 가장 어리게</h2>
+    <h2>마음을 파는 쇼핑몰</h2>
+    <h1>오늘을 가장 어리게</h1>
 	<img src="<?=$goods_info[goods_imgurl]?>">
   </body>
 </html>

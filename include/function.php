@@ -1,6 +1,6 @@
 <?
 	// 상품정보 (idx)
-	function TK_GetGoodsInfo($idx)
+	function OM_GetGoodsInfo($idx)
 	{
 		global $_gl;
 		global $my_db;
