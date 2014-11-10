@@ -21,7 +21,7 @@
 	<div>
 	<?=$goods_info[goods_detail]?>
 	</div>
-	<a href="#">Get It!!</a>
+	<a href="#" onclick="buy_goods('<?=$goods_idx?>')">Get It!!</a>
 	<a href="#">facebook</a>
 	<a href="#">KAKAOTALK</a>
 
