@@ -29,7 +29,6 @@
 <?php
 $query 		= "SELECT * FROM ".$_gl['goods_info_table']." ";
 $result 	= mysqli_query($my_db, $query);
-print_r($my_db);
 while($data = mysqli_fetch_array($result))
 {
 ?>
