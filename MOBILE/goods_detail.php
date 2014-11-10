@@ -1,4 +1,6 @@
 <?
+	// 설정파일
+	include_once "../config.php";
 	$goods_idx	= $_REQUEST['goods_idx'];
 
 	$goods_info = TK_GetGoodsInfo($goods_idx);
