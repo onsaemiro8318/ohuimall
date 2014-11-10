@@ -1,4 +1,4 @@
-<?
+<?php
 	session_start();
     
 	//환경설정 파일
