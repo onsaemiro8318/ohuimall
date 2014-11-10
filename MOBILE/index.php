@@ -32,7 +32,7 @@ $result 	= mysqli_query($my_db, $query);
 while($data = mysqli_fetch_array($result))
 {
 ?>
-        <div class="item"><img src="<?php echo $data[goods_imgurl]?>" alt="Owl Image"><p><?php echo $data[goods_name]?></p><p><?php echo $data[goods_detail]?></p></div>
+        <div class="item"><img src="<?php echo $data['goods_imgurl']?>" alt="Owl Image"><p><?php echo $data['goods_name']?></p><p><?php echo $data['goods_detail']?></p></div>
 <?php
 }
 ?>
