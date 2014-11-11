@@ -28,10 +28,12 @@ function buy_goods(idx)
 			},
 			url: "../main_exec.php",
 			success: function(response){
-				alert(response);
+				if (response == "Y")
+					location.href = "winner_input.php?goods_idx=" + idx;
+				else
+					location.href = "sorry.php?goods_idx=" + idx;
 			}
 		});
-
 	}
 }
 
@@ -72,4 +74,86 @@ function kt_share(name,detail,imgurl)
 		}
 	});
   OM_InsertShareInfo(media, gubun);
+}
+
+function popupzipcode()
+{
+	$('#input_zipcode').show();
+}
+
+
+function chkwinnerfrm()
+{
+	var frm = document.addrfrm;
+
+	if (frm.mb_name.value == "")
+	{
+		alert("이름을 입력해 주세요.");
+		frm.mb_name.focus();
+		return false;
+	}
+
+	if (frm.mb_phone.value == "")
+	{
+		alert("전화번호를 입력해 주세요.");
+		frm.mb_phone.focus();
+		return false;
+	}
+
+	if (frm.zipcode1.value == "" || frm.zipcode2.value == "")
+	{
+		alert("우편번호 찾기를 해주세요.");
+		return false;
+	}
+
+	if (frm.addr2.value == "")
+	{
+		alert("상세주소를 입력해 주세요.");
+		frm.addr2.focus();
+		return false;
+	}
+
+	if ($('#privacychk1').is(":checked") == false)
+	{
+		alert("개인정보활용 동의에 체크해 주세요.");
+		return false;
+	}
+
+	if ($('#privacychk2').is(":checked") == false)
+	{
+		alert("개인정보취급위탁 동의에 체크해 주세요.");
+		return false;
+	}
+
+	frm.submit();
+}
+
+function only_num(obj)
+{
+	var inText = obj.value;
+	var outText = "";
+	var flag = true;
+	var ret;
+	for(var i = 0; i < inText.length; i++)
+	{
+		ret = inText.charCodeAt(i);
+		if((ret < 48) || (ret > 57))
+		{
+			flag = false;
+		}
+		else
+		{
+			outText += inText.charAt(i);
+		}
+	}
+
+	if(flag == false)
+	{
+		alert("숫자만 입력하세요");
+		obj.value = outText;
+		obj.focus();
+		return false;
+	}
+
+	return true;
 }
