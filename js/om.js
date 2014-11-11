@@ -80,20 +80,6 @@ function popupzipcode()
 	$('#input_zipcode').show();
 }
 
-$(function() { 
-	$("#input_zipcode").postcodify({
-		insertPostcode6 : "#postcode6",
-		insertAddress : "#addr1",
-		insertDetails : "#addr2",
-		afterSelect: function(){
-			var zipcode_str	= $("#postcode6").val();
-			var zipcode_arr	= zipcode_str.split("-");
-			$("#zipcode1").val(zipcode_arr[0]);
-			$("#zipcode2").val(zipcode_arr[1]);
-			$("#input_zipcode").hide();
-		}
-	}); 
-});
 
 function chkwinnerfrm()
 {
