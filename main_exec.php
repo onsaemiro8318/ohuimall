@@ -16,7 +16,6 @@ switch ($_REQUEST['exec'])
 	break;
 
 	case "insert_winner" :
-		print_r($_POST);
 		$mb_name		= $_REQUEST['mb_name'];
 		$mb_phone		= $_REQUEST['mb_phone'];
 		$mb_zipcode1	= $_REQUEST['zipcode1'];
