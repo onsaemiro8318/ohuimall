@@ -49,17 +49,20 @@ function fb_share(name,detail,imgurl,gubun)
 		caption: 'ohuimall.co.kr',
 		//description: job + " - " + job_explain
 		description: detail
-	},function(response) {
+	},
+		function(response) {
+			alert(response);
 			if (response && response.post_id) {
-    		$.ajax({
-    			type:"POST",
-    			data:{
-    				"exec" : "insert_share_info",
-					"media" : media,
-    				"gubun" : gubun
-    			},
-    			url: "../main_exec.php"
-    		});
+				$.ajax({
+					type   : "POST",
+					async  : false,
+					url    : "../main_exec.php",
+					data:{
+						"exec" : "insert_share_info",
+						"media" : media,
+						"gubun" : gubun
+					}
+				});
 			}
 		}
 	);
