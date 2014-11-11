@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0"/>
     <link href="../lib/owl/owl.carousel.css" rel="stylesheet">
     <link href="../lib/owl/owl.theme.css" rel="stylesheet">
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
     <script type='text/javascript' src='../js/jquery-1.11.0.min.js'></script>
     <script type='text/javascript' src='../js/om.js'></script>
     <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
