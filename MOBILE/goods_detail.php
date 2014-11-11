@@ -29,8 +29,8 @@
 	<?=$goods_info['goods_detail']?>
 	</div>
 	<a href="#" onclick="buy_goods('<?=$goods_idx?>')">Get It!!</a>
-	<a href="#" onclick="fb_share('<?=$goods_info['goods_name']?>','<?=$goods_info['goods_detail']?>','<?=$goods_info['goods_imgurl']?>','fb','<?=$gubun?>');">facebook</a>
-	<a href="#" onclick="kt_share('<?=$goods_info['goods_name']?>','<?=$goods_info['goods_detail']?>','<?=$goods_info['goods_imgurl']?>','kt','<?=$gubun?>');">KAKAOTALK</a>
+	<a href="#" onclick="fb_share('<?=$goods_info['goods_name']?>','<?=$goods_info['goods_detail']?>','<?=$goods_info['goods_imgurl']?>','<?=$gubun?>');">facebook</a>
+	<a href="#" onclick="kt_share('<?=$goods_info['goods_name']?>','<?=$goods_info['goods_detail']?>','<?=$goods_info['goods_imgurl']?>','<?=$gubun?>');">KAKAOTALK</a>
   </body>
 </html>
 

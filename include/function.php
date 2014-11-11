@@ -109,12 +109,4 @@
 
 	}
 
-	function OM_InsertShareInfo($media, $gubun)
-	{
-		global $_gl;
-		global $my_db;
-
-		$query		= "INSERT INTO ".$_gl['share_info_table']."(sns_media, sns_ipaddr, sns_gubun, sns_date) values('".$media."','".$_SERVER['REMOTE_ADDR']."','".$gubun."',now())";
-		$result		= mysqli_query($my_db, $query);
-	}
 ?>
