@@ -52,18 +52,6 @@ function fb_share(name,detail,imgurl,gubun)
 	},
 		function(response) {
 			alert(response);
-			if (response && response.post_id) {
-				$.ajax({
-					type   : "POST",
-					async  : false,
-					url    : "../main_exec.php",
-					data:{
-						"exec" : "insert_share_info",
-						"media" : media,
-						"gubun" : gubun
-					}
-				});
-			}
 		}
 	);
 }
