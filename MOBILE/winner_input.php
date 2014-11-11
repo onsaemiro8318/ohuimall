@@ -28,7 +28,7 @@
 	<input type="button" value="자세히보기"><br />
 	<input type="button" value="입력완료" onclick="chkwinnerfrm()">
 	</form>
-	<div id="input_zipcode" style="width:100%;height:100%;position:absolute;top:0px;left:0px;display:none;background:gray">
+	<div id="input_zipcode" style="width:80%;height:100%;position:absolute;top:0px;left:0px;display:none;background:white">
 	</div>
   </body>
 </html>
