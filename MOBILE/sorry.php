@@ -8,7 +8,7 @@
 <!doctype html>
   <html lang="en">
     <head>
-      <title>Document</title>
+      <title>오늘을 가장 어리게 - Ohui mind mall</title>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
       <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0"/>
@@ -28,8 +28,8 @@
 	<img src="<?=$goods_info['goods_imgurl']?>">
 	</div>
   <p>공유하기</p>
-	<a href="#" onclick="fb_share('<?=$goods_info['goods_name']?>','<?=$goods_info['goods_detail']?>','<?=$goods_info['goods_imgurl']?>');">facebook</a>
-	<a href="#" onclick="kt_share('<?=$goods_info['goods_name']?>','<?=$goods_info['goods_detail']?>','<?=$goods_info['goods_imgurl']?>');">KAKAOTALK</a>
+	<a href="#" onclick="fb_share('<?=$goods_info['goods_name']?>','<?=$goods_info['goods_detail']?>','<?=$goods_info['goods_imgurl']?>','<?=$gubun?>');">facebook</a>
+	<a href="#" onclick="kt_share('<?=$goods_info['goods_name']?>','<?=$goods_info['goods_detail']?>','<?=$goods_info['goods_imgurl']?>','<?=$gubun?>');">KAKAOTALK</a>
   </body>
 </html>
 

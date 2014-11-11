@@ -37,8 +37,9 @@ function buy_goods(idx)
 	}
 }
 
-function fb_share(name,detail,imgurl)
+function fb_share(name,detail,imgurl,gubun)
 {
+  var media = "fb";
 	FB.ui(
 	{
 		method: 'feed',
@@ -50,7 +51,15 @@ function fb_share(name,detail,imgurl)
 		description: detail
 	},function(response) {
 			if (response && response.post_id) {
-
+    		$.ajax({
+    			type:"POST",
+    			data:{
+    				"exec" : "insert_share_info",
+            "media" : media,
+    				"gubun" : gubun
+    			},
+    			url: "../main_exec.php"
+    		});
 			}else{
         
       }
@@ -58,8 +67,9 @@ function fb_share(name,detail,imgurl)
 	);
 }
 
-function kt_share(name,detail,imgurl)
+function kt_share(name,detail,imgurl,gubun)
 {
+  var media = "kt";
 	Kakao.Link.sendTalkLink({
 		//container: '#kakao-link-btn',
 		label: detail,
@@ -72,6 +82,15 @@ function kt_share(name,detail,imgurl)
 			text: '오늘을 가장 어리게',
 			url: 'http://ohuimall.co.kr'
 		}
+	});
+	$.ajax({
+		type:"POST",
+		data:{
+			"exec" : "insert_share_info",
+      "media" : media,
+			"gubun" : gubun
+		},
+		url: "../main_exec.php"
 	});
 }
 
