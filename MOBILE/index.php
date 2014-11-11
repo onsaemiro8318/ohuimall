@@ -52,7 +52,7 @@ while($data = mysqli_fetch_array($result))
       var owl = $(".owl-carousel");
       
       $(".owl-carousel").owlCarousel({
-        loop: true,
+        loop : true,
         autoplay: true,
         autoplayTimeout:2000,
         autoplayHoverPause:false,

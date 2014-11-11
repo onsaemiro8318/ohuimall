@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0"/>
     <link href="../lib/owl/owl.carousel.css" rel="stylesheet">
-    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../lib/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="../lib/owl/owl.theme.default.min.css">
     <link href="http://cdn.poesis.kr/post/search.css" rel="stylesheet" media="all" />
     <script type='text/javascript' src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
     <script type='text/javascript' src='../js/jquery-1.11.0.min.js'></script>
