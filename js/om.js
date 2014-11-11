@@ -55,14 +55,12 @@ function fb_share(name,detail,imgurl,gubun)
     			type:"POST",
     			data:{
     				"exec" : "insert_share_info",
-            "media" : media,
+					"media" : media,
     				"gubun" : gubun
     			},
     			url: "../main_exec.php"
     		});
-			}else{
-        
-      }
+			}
 		}
 	);
 }
