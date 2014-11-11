@@ -37,7 +37,7 @@ function buy_goods(idx)
 	}
 }
 
-function fb_share(name,detail,imgurl)
+function fb_share(name,detail,imgurl,media,gubun)
 {
 	FB.ui(
 	{
@@ -58,7 +58,7 @@ function fb_share(name,detail,imgurl)
 	);
 }
 
-function kt_share(name,detail,imgurl)
+function kt_share(name,detail,imgurl,media,gubun)
 {
 	Kakao.Link.sendTalkLink({
 		//container: '#kakao-link-btn',
