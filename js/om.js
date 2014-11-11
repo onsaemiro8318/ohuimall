@@ -28,10 +28,12 @@ function buy_goods(idx)
 			},
 			url: "../main_exec.php",
 			success: function(response){
-				alert(response);
+				if (response == "Y")
+					location.href = "winner_input.php?goods_idx=" + idx;
+				else
+					location.href = "sorry.php?goods_idx=" + idx;
 			}
 		});
-
 	}
 }
 
