@@ -10,6 +10,7 @@
     <script type='text/javascript' src='../js/om.js'></script>
     <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
     <script src="../lib/owl/owl.carousel.js"></script>
+    <script type='text/javascript' src='../js/kakao.link.js'></script>
     <script src="http://cdn.poesis.kr/post/search.min.js"></script>
     <link href="http://cdn.poesis.kr/post/search.css" rel="stylesheet" media="all" />
   </head>
