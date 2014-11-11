@@ -7,6 +7,7 @@
     <link href="../lib/owl/owl.carousel.css" rel="stylesheet">
     <link href="../lib/owl/owl.theme.css" rel="stylesheet">
     <link href="http://cdn.poesis.kr/post/search.css" rel="stylesheet" media="all" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
     <script type='text/javascript' src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
     <script type='text/javascript' src='../js/jquery-1.11.0.min.js'></script>
     <script type='text/javascript' src='../js/om.js'></script>
@@ -14,11 +15,12 @@
     <script type='text/javascript' src="../lib/owl/owl.carousel.js"></script>
     <script type='text/javascript' src='../js/kakao.link.js'></script>
     <script type='text/javascript' src="http://cdn.poesis.kr/post/search.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
   </head>
   <body>
     <div>
       <h3>마음을 파는 쇼핑몰</h3>
       <h1>오늘을 가장 어리게</h1>
-      <h4><a href="index.php">Introduce</a> / <a href="index.php">Mall</a> / <a href="faq.php">FAQ</a></h4>
+      <h4><a href="index.php" data-role="button" data-transition="slide" data-inline="true">Introduce</a> / <a href="index.php" data-role="button" data-transition="slide" data-inline="true">Mall</a> / <a href="faq.php" data-role="button" data-transition="slide" data-inline="true">FAQ</a></h4>
     </div>
     <h1>--------------------------------</h1>
