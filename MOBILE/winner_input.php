@@ -1,24 +1,12 @@
 <?
 	// 설정파일
 	include_once "../config.php";
+	include_once "header.php";
+
 	$goods_idx	= $_REQUEST['goods_idx'];
 
 	$goods_info = OM_GetGoodsInfo($goods_idx);
 ?>
-<html>
-  <head>
-    <title>Document</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0"/>
-    <script type='text/javascript' src='../js/jquery-1.11.0.min.js'></script>
-    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
-    <script type='text/javascript' src='../js/om.js'></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script src="http://cdn.poesis.kr/post/search.min.js"></script>
-    <link href="http://cdn.poesis.kr/post/search.css" rel="stylesheet" media="all" />
-  </head>
-  <body>
     <form name="addrfrm" method="post" action="../main_exec.php">
     <input type="hidden" name="exec" value="insert_winner" />
     <input type="hidden" id="postcode6" value="" />
