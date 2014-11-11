@@ -24,13 +24,13 @@
       <h4>Introduce / Mall / FAQ</h4>
     </div>
     <h1>--------------------------------</h1>
-	<img src="<?=$goods_info[goods_imgurl]?>">
+	<img src="<?=$goods_info['goods_imgurl']?>">
 	<div>
-	<?=$goods_info[goods_detail]?>
+	<?=$goods_info['goods_detail']?>
 	</div>
 	<a href="#" onclick="buy_goods('<?=$goods_idx?>')">Get It!!</a>
-	<a href="#" onclick="fb_share('<?=$goods_info[goods_name]?>','<?=$goods_info[goods_detail]?>','<?=$goods_info[goods_imgurl]?>');">facebook</a>
-	<a href="#" onclick="kt_share('<?=$goods_info[goods_name]?>','<?=$goods_info[goods_detail]?>','<?=$goods_info[goods_imgurl]?>');">KAKAOTALK</a>
+	<a href="#" onclick="fb_share('<?=$goods_info['goods_name']?>','<?=$goods_info['goods_detail']?>','<?=$goods_info['goods_imgurl']?>');">facebook</a>
+	<a href="#" onclick="kt_share('<?=$goods_info['goods_name']?>','<?=$goods_info['goods_detail']?>','<?=$goods_info['goods_imgurl']?>');">KAKAOTALK</a>
   </body>
 </html>
 
