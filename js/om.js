@@ -48,7 +48,7 @@ function fb_share(name,detail,imgurl)
 		description: detail
 	},function(response) {
 			if (response && response.post_id) {
-
+        OM_InsertShareInfo(media, gubun);
 			}else{
         
       }
@@ -71,4 +71,5 @@ function kt_share(name,detail,imgurl)
 			url: 'http://ohuimall.co.kr'
 		}
 	});
+  OM_InsertShareInfo(media, gubun);
 }
