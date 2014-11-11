@@ -58,6 +58,14 @@
 
 	}
 
+	function OM_GoodsWinUpdate($idx)
+	{
+		global $_gl;
+		global $my_db;
+
+		$query 		= "UPDATE ".$_gl['goods_info_table']." SET goods_selcount = goods_selcount + 1 WHERE idx = '".$idx."'";
+		$result 	= mysqli_query($my_db, $query);
+	}
 	// 당첨자 체크 로직
 	function OM_WinCheck($idx)
 	{
@@ -67,7 +75,7 @@
 		$chkwin = "N";
 		// 하루에 10명 당첨
 
-		// 당일 당첨자 수 조회
+		// 당일 구매자 수 조회
 		$today_cnt = OM_TodayBuyCnt();
 		$winner_array = array(1,10,35,80,112,145,175,200,230,280);
 
@@ -76,6 +84,7 @@
 			if ($today_cnt == $val)
 			{
 				$chkwin = "Y";
+				OM_GoodsWinUpdate($idx);
 			}
 		}
 
@@ -90,6 +99,7 @@
 					if ($today_cnt == $val2)
 					{
 						$chkwin = "Y";
+						OM_GoodsWinUpdate($idx);
 					}
 				}
 			}
