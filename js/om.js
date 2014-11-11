@@ -123,6 +123,8 @@ function chkwinnerfrm()
 		alert("개인정보취급위탁 동의에 체크해 주세요.");
 		return false;
 	}
+
+	frm.submit();
 }
 
 function only_num(obj)

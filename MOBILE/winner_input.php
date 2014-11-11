@@ -19,7 +19,7 @@
     <link href="http://cdn.poesis.kr/post/search.css" rel="stylesheet" media="all" />
   </head>
   <body>
-    <form name="addrfrm" method="post" action="../main_exec.php" onsubmit="return chkwinnerfrm()">
+    <form name="addrfrm" method="post" action="../main_exec.php">
     <input type="hidden" name="exec" value="insert_winner" />
     <input type="hidden" id="postcode6" value="" />
     <input type="hidden" id="address" value="" />
@@ -38,7 +38,7 @@
 	개인정보활용 동의 <input type="checkbox" name="privacychk1" id="privacychk1"><br />
 	개인정보취급위탁 동의 <input type="checkbox" name="privacychk2" id="privacychk2">
 	<input type="button" value="자세히보기"><br />
-	<input type="submit" value="입력완료">
+	<input type="button" value="입력완료" onclick="chkwinnerfrm()">
 	</form>
 	<div id="input_zipcode" style="width:100%;height:100%;position:absolute;top:0px;left:0px;display:none;background:gray">
 	</div>
