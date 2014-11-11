@@ -11,7 +11,7 @@
         <div class="customNavigation">
           <a class="btn prev" style="float:left; width:5%;"><img src="./images/btn_prev.png" style="width:100%; margin-top:100%;"></a>
         </div>
-        <div id="owl-demo" class="owl-carousel" style="float:left">
+        <div class="owl-carousel" style="float:left">
 <?php
 $query 		= "SELECT * FROM ".$_gl['goods_info_table']." ";
 $result 	= mysqli_query($my_db, $query);
@@ -32,14 +32,14 @@ while($data = mysqli_fetch_array($result))
   </html>
 
     <style>
-    #owl-demo .item{
+    .owl-carousel .item{
         margin: 3px;
     }
     
-    #owl-demo {
+    .owl-carousel {
         width:90%;
     }
-    #owl-demo .item img{
+    .owl-carousel .item img{
         display: block;
         width: 100%;
         height: auto;
@@ -49,22 +49,34 @@ while($data = mysqli_fetch_array($result))
     <script type='text/javascript'>
     // 이미지 슬라이드
     $(document).ready(function() {
-      var owl = $("#owl-demo");
+      var owl = $(".owl-carousel");
       
-      $("#owl-demo").owlCarousel({
-        autoPlay: 3000,
-        items : 4,
-        itemsDesktop : [1000,5], //5 items between 1000px and 901px
-        itemsDesktopSmall : [900,3], // betweem 900px and 601px
-        itemsTablet: [600,2], //2 items between 600 and 0
-        itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
-      });	
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        autoplay: true,
+        autoplayTimeout:2000,
+        autoplayHoverPause:false,
+        responsive:{
+                0:{
+                    items:2
+                },
+                600:{
+                    items:3
+                },            
+                960:{
+                    items:4
+                },
+                1200:{
+                    items:5
+                }
+            }
+     });	
       
       $(".next").click(function(){
-        owl.trigger('owl.next');
+        owl.trigger('next.owl');
       })
       $(".prev").click(function(){
-        owl.trigger('owl.prev');
+        owl.trigger('prev.owl');
       })
     });
   
