@@ -29,7 +29,10 @@ switch ($_REQUEST['exec'])
 
 		if ($result)
 		{
-			echo "<script>location.href='/MOBILE/complete.php?goods_idx=".$goods_idx."';</script>";
+			if ($gubun == "PC")
+				echo "<script>location.href='/PC/complete.php?goods_idx=".$goods_idx."';</script>";
+			else
+				echo "<script>location.href='/MOBILE/complete.php?goods_idx=".$goods_idx."';</script>";
 		}else{
 			echo "<script>alert('정보 입력에 실패하였습니다.');</script>";
 		}
