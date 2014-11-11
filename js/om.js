@@ -35,17 +35,17 @@ function buy_goods(idx)
 	}
 }
 
-function fb_share()
+function fb_share(name,detail,imgurl)
 {
 	FB.ui(
 	{
 		method: 'feed',
-		name: '마음을 파는 쇼핑몰',
+		name: '오늘을 가장 어리게',
 		link: 'http://ohuimall.co.kr',
-		picture: 'http://www.tomorrowkids.or.kr/images/fb/jobimg_1.jpg',
+		picture: imgurl,
 		caption: 'ohuimall.co.kr',
 		//description: job + " - " + job_explain
-		description: "오늘을 가장 어리게"
+		description: detail
 	},function(response) {
 			if (response && response.post_id) {
 
@@ -56,18 +56,18 @@ function fb_share()
 	);
 }
 
-function kt_share()
+function kt_share(name,detail,imgurl)
 {
 	Kakao.Link.sendTalkLink({
 		//container: '#kakao-link-btn',
-		label: "오늘을 가장 어리게",
+		label: detail,
 		image: {
-			src: 'http://www.tomorrowkids.or.kr/images/fb/jobimg_1.jpg',
+			src: imgurl,
 			width: '300',
 			height: '200'
 		},
 		webButton: {
-			text: '마음을 파는 쇼핑몰',
+			text: '오늘을 가장 어리게',
 			url: 'http://ohuimall.co.kr'
 		}
 	});

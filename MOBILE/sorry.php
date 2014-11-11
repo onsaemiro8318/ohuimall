@@ -19,16 +19,15 @@
   </head>
   <body>
     <div>
-      <h3>마음을 파는 쇼핑몰</h3>
-      <h1>오늘을 가장 어리게</h1>
-      <h4>Introduce / Mall / FAQ</h4>
+      <h3>당신은 오늘 충분히 어리세요</h3>
+      <h1>어린 마음이 필요하시다면 내일 도전하세요</h1>
+      <h4>'최근 본 마음'을 SNS를 통해 공유해주시면 내일 당첨될 확률이 올라갑니다.</h4>
     </div>
     <h1>--------------------------------</h1>
-	<img src="<?=$goods_info[goods_imgurl]?>">
 	<div>
-	<?=$goods_info[goods_detail]?>
+	<img src="<?=$goods_info[goods_imgurl]?>">
 	</div>
-	<a href="#" onclick="buy_goods('<?=$goods_idx?>')">Get It!!</a>
+  <p>공유하기</p>
 	<a href="#" onclick="fb_share('<?=$goods_info[goods_name]?>,<?=$goods_info[goods_detail]?>,<?=$goods_info[goods_imgurl]?>');">facebook</a>
 	<a href="#" onclick="kt_share('<?=$goods_info[goods_name]?>,<?=$goods_info[goods_detail]?>,<?=$goods_info[goods_imgurl]?>');">KAKAOTALK</a>
   </body>
