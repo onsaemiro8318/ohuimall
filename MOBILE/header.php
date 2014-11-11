@@ -7,6 +7,7 @@
     <link href="../lib/owl/owl.carousel.css" rel="stylesheet">
     <link href="../lib/owl/owl.theme.css" rel="stylesheet">
     <script type='text/javascript' src='../js/jquery-1.11.0.min.js'></script>
+    <script type='text/javascript' src='../js/om.js'></script>
     <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
     <script src="../lib/owl/owl.carousel.js"></script>
     <script src="http://cdn.poesis.kr/post/search.min.js"></script>

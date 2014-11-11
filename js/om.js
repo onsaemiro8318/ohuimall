@@ -37,6 +37,62 @@ function buy_goods(idx)
 	}
 }
 
+function fb_share(name,detail,imgurl,gubun)
+{
+  var media = "fb";
+	FB.ui(
+	{
+		method: 'feed',
+		name: '오늘을 가장 어리게',
+		link: 'http://ohuimall.co.kr',
+		picture: imgurl,
+		caption: 'ohuimall.co.kr',
+		//description: job + " - " + job_explain
+		description: detail
+	},
+		function(response) {
+			if (response && response.post_id) {
+				$.ajax({
+					type   : "POST",
+					async  : false,
+					url    : "../main_exec.php",
+					data:{
+						"exec" : "insert_share_info",
+						"media" : media,
+						"gubun" : gubun
+					}
+				});
+			}
+		}
+	);
+}
+
+function kt_share(name,detail,imgurl,gubun)
+{
+  var media = "kt";
+	Kakao.Link.sendTalkLink({
+		//container: '#kakao-link-btn',
+		label: detail,
+		image: {
+			src: imgurl,
+			width: '300',
+			height: '200'
+		},
+		webButton: {
+			text: '오늘을 가장 어리게',
+			url: 'http://ohuimall.co.kr'
+		}
+	});
+	$.ajax({
+		type:"POST",
+		data:{
+			"exec" : "insert_share_info",
+			"media" : media,
+			"gubun" : gubun
+		},
+		url: "../main_exec.php"
+	});
+}
 
 function popupzipcode()
 {
