@@ -56,7 +56,6 @@ while($data = mysqli_fetch_array($result))
         autoplay: true,
         autoplayTimeout:2000,
         autoplayHoverPause:false,
-		nav : true,
         responsive:{
                 0:{
                     items:2
