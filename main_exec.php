@@ -38,13 +38,12 @@ switch ($_REQUEST['exec'])
 		}
 	break;
   
-  case "insert_share_info" :
-    $media = $_REQUEST['media'];
-    $gubun = $_REQUEST['gubun'];
-  	$query		= "INSERT INTO ".$_gl['share_info_table']."(sns_media, sns_ipaddr, sns_gubun, sns_date) values('".$media."','".$_SERVER['REMOTE_ADDR']."','".$gubun."',now())";
-  	$result		= mysqli_query($my_db, $query);
-    
-  break;
+	case "insert_share_info" :
+		$media = $_REQUEST['media'];
+		$gubun = $_REQUEST['gubun'];
+		$query		= "INSERT INTO ".$_gl['share_info_table']."(sns_media, sns_ipaddr, sns_gubun, sns_date) values('".$media."','".$_SERVER['REMOTE_ADDR']."','".$gubun."',now())";
+		$result		= mysqli_query($my_db, $query);
+	break;
 }
 
 ?>

@@ -2,7 +2,7 @@
   	include_once "../config.php";
   	include_once "header.php";
 ?>
-    <div>
+    <div class="animsition">
       <h4>어리게 산다는 것</h4>
       <div class="youtubebox">
         <iframe id="ytplayer" width="100%" src="<?=$_gl['youtube_url']?>" frameborder="0" allowfullscreen></iframe>
