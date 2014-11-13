@@ -33,7 +33,7 @@ while($faq_info = mysqli_fetch_array($result))
     
     function faq_toggle(idx){      
       var faq_con = "#faq_con" + idx
-      $(faq_con).toggle();
+      $(faq_con).slideToggle( "slow" );
     }
     
     </script>
