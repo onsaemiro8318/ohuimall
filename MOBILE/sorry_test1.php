@@ -18,7 +18,7 @@
       <meta property="og:url" content="http://ohuimall.co.kr/MOBILE/sorry_test1.php"/>
       <meta property="og:description" content="test description"/>
       <meta property="fb:app_id" content="744500028976771" />
-      <meta property="og:image" content="http://ohuimall.co.kr/images/imgtest.jpg" />
+      <meta property="og:image" content="http://www.tomorrowkids.or.kr/images/fb/jobimg_1.jpg" />
       <meta property="og:type" content="article"/>
       <script type='text/javascript' src='../js/jquery-1.11.0.min.js'></script>
       <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
