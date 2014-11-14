@@ -2,7 +2,7 @@
   	include_once "../config.php";
   	include_once "header.php";
 ?>
-    <div>
+    <div class="animsition">
       <h4>어리게 산다는 것</h4>
       <div class="youtubebox">
         <iframe id="ytplayer" width="100%" src="<?=$_gl['youtube_url']?>" frameborder="0" allowfullscreen></iframe>
@@ -18,7 +18,7 @@ $result 	= mysqli_query($my_db, $query);
 while($data = mysqli_fetch_array($result))
 {
 ?>
-        <div class="item"><img src="<?php echo $data['goods_imgurl']?>" alt="Owl Image"><p><?php echo $data['goods_name']?></p><p><?php echo $data['goods_detail']?></p></div>
+        <div class="item" onclick="javascript:location.href='goods_detail.php?goods_idx=<?=$data['idx']?>'"><img src="<?php echo $data['goods_imgurl']?>" alt="Owl Image"><p><?php echo $data['goods_name']?></p><p><?php echo $data['goods_detail']?></p></div>
 <?php
 }
 ?>

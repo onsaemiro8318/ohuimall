@@ -25,15 +25,17 @@
 <img src="//i1.daumcdn.net/localimg/localimages/07/postcode/320/close.png" id="btnCloseLayer" style="cursor:pointer;position:absolute;right:-3px;top:-3px" onclick="closeDaumPostcode()" alt="닫기 버튼">
 </div>
   <br />
+<div class="chk_div">
 	개인정보활용 동의 <input type="checkbox" name="privacychk1" id="privacychk1"><br />
 	개인정보취급위탁 동의 <input type="checkbox" name="privacychk2" id="privacychk2">
+</div>
 	<input type="button" value="자세히보기"><br />
 	<input type="button" value="입력완료" onclick="chkwinnerfrm()">
 	</form>
   </body>
 </html>
 <script type="text/javascript">
-$(function() {	
+$(function() {
 	$("#input_zipcode").postcodify({
 		insertPostcode6 : "#postcode6",
 		insertAddress : "#addr1",
@@ -78,4 +80,15 @@ $(function() {
         // iframe을 넣은 element를 보이게 한다.
         element.style.display = 'block';
     }
+
+  $(document).ready(function(){
+	$('.chk_div input').on('ifChecked ifUnchecked', function(event){
+		alert(this.id);
+	}).iCheck({
+		checkboxClass: 'icheckbox_square-red',
+		increaseArea: '20%'
+	});
+
+  });
+
 </script>
