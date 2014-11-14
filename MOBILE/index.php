@@ -47,6 +47,7 @@ while($data = mysqli_fetch_array($result))
     </style>
 
     <script type='text/javascript'>
+	alert(document.cookie);
     // 이미지 슬라이드
     $(document).ready(function() {
       var owl = $(".owl-carousel");
