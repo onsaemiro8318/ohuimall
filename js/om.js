@@ -45,7 +45,7 @@ function fb_share(name,detail,imgurl,gubun)
 		method: 'feed',
 		name: '오늘을 가장 어리게',
 		link: 'http://ohuimall.co.kr',
-		picture: imgurl,
+//		picture: imgurl,
 		caption: 'ohuimall.co.kr',
 		//description: job + " - " + job_explain
 		description: detail
