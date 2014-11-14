@@ -5,6 +5,7 @@
 
 	$goods_idx	= $_REQUEST['goods_idx'];
 
+	// 최근 본 상품 쿠키 저장  
 	$view_arr = explode(",",$_COOKIE['goods_view']); 
 	while(list($key,$val) = each($view_arr)){ 
 		if($val==$goods_idx){ 
@@ -13,7 +14,7 @@
 	}
 
 	if($view_flag != "y"){ 
-		setcookie("goods_view", $_COOKIE['goods_view'].",".$_GET['goods_idx']); 
+		setcookie("goods_view", $_COOKIE['goods_view'].",".$_GET['goods_idx'], time()+(60*60*120)); 
 	}
 
 
