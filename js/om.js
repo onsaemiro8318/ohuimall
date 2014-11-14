@@ -73,7 +73,7 @@ function fb_share_test1(name,detail,imgurl,gubun)
   FB.ui(
   {
     method: 'share',
-    href: 'http://ohuimall.co.kr/MOBILE/sorry_test2.php'
+    href: 'http://ohuimall.co.kr/MOBILE/sorry_test1.php'
 
   },
     function(response) {
