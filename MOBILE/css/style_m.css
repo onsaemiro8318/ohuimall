@@ -1,173 +1,299 @@
 @charset "UTF-8";
 /* CSS Document */
-html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;font-family: '돋움',Dotum,'Apple SD Gothic Neo',Helvetica,sans-serif;font-family: "Malgun Gothic";}
-body{line-height:1}
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
-nav ul{list-style:none}
-blockquote,q{quotes:none}
-blockquote:before,blockquote:after,q:before,q:after{content:none}
-a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
-ins{background-color:#ff9;color:#000;text-decoration:none}
-mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
-del{text-decoration:line-through}
-abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
-table{border-collapse:collapse;border-spacing:0}
-hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
-input,select{vertical-align:middle}
-li{
-	list-style:none;
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	font-family: '돋움', Dotum, 'Apple SD Gothic Neo', Helvetica, sans-serif;
+	font-family: "Malgun Gothic";
 }
-
-
+body {
+	line-height: 1
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block
+}
+nav ul {
+	list-style: none
+}
+blockquote, q {
+	quotes: none
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: none
+}
+a {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent
+}
+ins {
+	background-color: #ff9;
+	color: #000;
+	text-decoration: none
+}
+mark {
+	background-color: #ff9;
+	color: #000;
+	font-style: italic;
+	font-weight: bold
+}
+del {
+	text-decoration: line-through
+}
+abbr[title], dfn[title] {
+	border-bottom: 1px dotted;
+	cursor: help
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0
+}
+input, select {
+	vertical-align: middle
+}
+li {
+	list-style: none;
+}
 /*common*/
-*{
-	padding:0; margin:0;
+* {
+	padding: 0;
+	margin: 0;
 }
-
 /*layout*/
 
-body{
-	width:100%;
-	background:url(../images/bg.jpg)
+body {
+	width: 100%;
+	background: url(../images/bg.jpg)
 }
-.header{
-	width:100%;
-	height:160px;
-	background:url(../images/bg_top.jpg) repeat-x bottom;
-	position:fixed;
-	z-index:9999;
+.header {
+	width: 100%;
+	height: 160px;
+	background: url(../images/bg_top.jpg) repeat-x bottom;
+	position: fixed;
+	z-index: 9999;
 }
-.header .logo_block{
-	padding-top:10px;
-	padding-left:10px;
+.header .logo_block {
+	padding-top: 10px;
+	padding-left: 10px;
 }
-.header .title_block{
-	text-align:center;
-	border-bottom:1px solid #d78b8b;
-	padding-bottom:20px;
+.header .title_block {
+	text-align: center;
+	border-bottom: 1px solid #d78b8b;
+	padding-bottom: 20px;
 }
-.header .menu_block ul{
-	width:100%;
-	padding:0;
+.header .menu_block {
+	width: 100%;
 }
-.header .menu_block ul li{
-	float:left;
-	display:block;
-	width:33.3%;
-	text-align:center;
+.header .menu_block ul {
+	width: 220px;
+	padding: 0;
+	padding-top: 10px;
+	margin: 0 auto;
+	display: block;
+}
+.header .menu_block ul li {
+	float: left;
+	display: block;
+	padding: 0 8px;
+	text-align: center;
 }
 
 
 
 
-.content{
-	width:100%;
-	padding-top:160px;
-	height:2000px;
-}
-.content .list_block ul{
-	padding:0;
-	margin:0;
-}
-.content .list_block ul li{
-	display:block;
-	background:url(../images/bg_gift.jpg) repeat-x;
-	height:160px;
+/*content*/
+.content {
+	width: 100%;
+	padding-top: 160px;
 	position:relative;
 }
-.content .list_block ul li a img{
+.content .list_block ul {
+	padding: 0;
+	margin: 0;
 }
-.content .list_block ul li div.t_soldout{
-	position:absolute;
-	height:20px;
-	width:100%;
-	text-align:center;
-	background:#000;
-	bottom:0;
-	z-index:998;
+.content .list_block ul li {
+	display: block;
+	background: url(../images/bg_gift.jpg) repeat-x;
+	height: 160px;
+	position: relative;
 }
-.content .list_block ul li div.list{
-	width:100%;
-	height:160px;
-	z-index:997;
+.content .list_block ul li a img {
 }
-.content .list_block ul li div.list div{
+.content .list_block ul li div.t_soldout {
+	position: absolute;
+	height: 20px;
+	width: 100%;
+	text-align: center;
+	background: #000;
+	bottom: 0;
+	z-index: 998;
+}
+.content .list_block ul li div.list {
+	width: 100%;
+	height: 160px;
+	z-index: 997;
+}
+.content .list_block ul li div.list div {
+	float: left;
+	width: 50%;
+}
+.content .list_block ul li div.img {
+	text-align: center;
+	padding-top: 20px;
+}
+.content .product_img {
+	width: 100%;
+}
+.content .product_img img {
+	width: 100%;
+}
+.content .btn_getit {
+	width: 100%;
+	text-align: center;
+	padding: 30px 0 10px;
+}
+.content .btn_getit img {
+	width: 84%;
+}
+.content .btn_share_inview {
+	width: 100%;
+}
+.content .btn_share_inview div {
+	float: left;
+}
+.content .btn_share_inview div.txt {
+	padding-left: 8%;
+	padding-top: 10px
+}
+.content .btn_share_inview div.btn_fb, .content .btn_share_inview div.btn_kt {
+	float: right;
+}
+.content .btn_share_inview div.btn_fb {
+	padding-right: 8%;
+	padding-left: 10px;
+}
+
+
+/*footer*/
+.footer {
+	font-size: 11px;
+	color: #5c5c5c;
+	position:relative;
+	padding-top:50px;
+}
+.footer .txt {
+	border-top: 1px solid #c7c7c7;
+	padding: 10px;
+}
+.footer h2 {
+	font-size: 11px;
+	color: #d78b8b;
+	letter-spacing: -1px;
+}
+.footer ul {
+	padding: 0;
+	padding-left: 10px;
+}
+.footer ul li {
+	padding: 0;
+	line-height: 15px;
+	list-style-image: url(../images/list_style.jpg);
+}
+
+
+/*faq*/
+.faq .one_q{
+	border-bottom:1px solid #bfbebd;
+}
+.faq .one_q h2{
+	padding:15px 30px;
+	font-size:15px;
+	line-height:20px;
+	font-weight:normal;
+	margin:0;
+}
+.faq .one_q h2 a{
+	display:block;
+	color:#5e5e5e;
+	text-decoration:none;
+}
+.faq .one_q h2 a span{
 	float:left;
-	width:50%;
+	display:block;
 }
-.content .list_block ul li div.img{
+.faq .one_q h2 a span.arrow{
+	float:right;
+}
+.faq .one_q p{
+	padding:20px 30px;
+	font-size:13px;
+	background:#eee;
+	line-height:18px;
+	margin:0;
+}
+
+/*pop*/
+body.pop_bg{
+	background:#000;
+}
+.popup{
+	width:95%;
+	background: url(../images/bg.jpg);
+	margin:10px auto ;
+}
+.popup .btn_close{
+	text-align:right;
+}
+.popup .btn_close a{
+	padding-left:10px;
+	display:inline-block;
+}
+.popup .content{
+	padding:20px 0 40px;
+}
+.popup .content .title{
+	text-align:center;
+	padding-bottom:20px;
+}
+.popup .content .info_block .input_one div{
+	float:left;
+}
+
+.popup .content .btn_block{
 	text-align:center;
 	padding-top:20px;
 }
 
-
-
-.content .product_img{
-	width:100%;
-}
-.content .product_img img,
-.content .product_title img{
-	width:100%;
-}
-.content .btn_getit{
-	width:100%;
-	text-align:center;
-	padding:30px 0 10px;
-}
-.content .btn_getit img{
-	width:84%;
-}
-.content .btn_share_inview{
-	width:100%;
-}
-.content .btn_share_inview div{
-	float:left;
-}
-.content .btn_share_inview div.txt{
-	padding-left:8%;
-}
-
-.footer{
-	font-size:11px;
-	color:#5c5c5c;
-}
-.footer .txt{
-	border-top:1px solid #c7c7c7;
-	padding:10px;
-}
-.footer h2{
-	font-size:11px;
-	color:#d78b8b;
-	letter-spacing:-1px;
-}
-.footer ul{
-	padding:0;
-	padding-left:10px;
-}
-.footer ul li{
-	padding:0;
-	line-height:15px;
-	list-style-image:url(../images/list_style.jpg);
-}
-
 /*clearfix*/
 .clearfix:after {
-    content: ".";
-    display: block;
-    clear: both;
-    visibility: hidden;
-    line-height: 0;
-    height: 0;
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
 }
- 
 .clearfix {
-    display: inline-block;
+	display: inline-block;
 }
- 
 html[xmlns] .clearfix {
-    display: block;
+	display: block;
 }
- 
 * html .clearfix {
-    height: 1%;
+	height: 1%;
 }
