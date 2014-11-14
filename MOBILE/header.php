@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0"/>
     <link rel="stylesheet" href="../lib/owl/owl.carousel.min.css">
     <link rel="stylesheet" href="../lib/owl/owl.theme.default.min.css">
-    <link rel="stylesheet" href="../js/animsition.min.css">
     <link rel="stylesheet" href="../lib/iCheck/skins/all.css">
     <link href="http://cdn.poesis.kr/post/search.css" rel="stylesheet" media="all" />
     <!-- <link rel="stylesheet" href="../js/jquery.mobile/jquery.mobile-1.4.5.min.css" /> -->
@@ -20,34 +19,6 @@
     <script type='text/javascript' src="../lib/owl/owl.carousel.min.js"></script>
     <script type='text/javascript' src='../js/kakao.link.js'></script>
     <script type='text/javascript' src="http://cdn.poesis.kr/post/search.min.js"></script>
-	<script type="text/javascript">
-$(document).ready(function() {
-  
-  $(".animsition").animsition({
-  
-    inClass               :   'fade-in',
-    outClass              :   'fade-out',
-    inDuration            :    1500,
-    outDuration           :    800,
-    linkElement           :   '.animsition-link', 
-    // e.g. linkElement   :   'a:not([target="_blank"]):not([href^=#])'
-    loading               :    true,
-    loadingParentElement  :   'body', //animsition wrapper element
-    loadingClass          :   'animsition-loading',
-    unSupportCss          : [ 'animation-duration',
-                              '-webkit-animation-duration',
-                              '-o-animation-duration'
-                            ],
-    //"unSupportCss" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser. 
-    //The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
-    
-    overlay               :   false,
-    
-    overlayClass          :   'animsition-overlay-slide',
-    overlayParentElement  :   'body'
-  });
-}); 
-	</script>
   </head>
   <body>
     <div>
