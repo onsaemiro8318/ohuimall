@@ -13,7 +13,7 @@
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
       <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0"/>
-      <meta property="og:image" content="http://www.tomorrowkids.or.kr/images/fb/jobimg_60.jpg" />
+      <meta property="og:image" content="http://ohuimall.co.kr/images/imgtest.jpg" />
       <meta property="og:title" content="오늘을 가장 어리게 - Ohui mind mall">
       <meta property="og:url" content="http://ohuimall.co.kr/">
       <script type='text/javascript' src='../js/jquery-1.11.0.min.js'></script>
