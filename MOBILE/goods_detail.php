@@ -3,7 +3,7 @@
 	include_once "../config.php";
   	include_once "header.php";
 
-	setcookie("goods_view", $_COOKIE['goods_idx'].",".$_REQUEST['goods_idx']); 
+setcookie("goods_view", $_COOKIE['goods_view'].",".$_GET['goods_idx']); 
 	$goods_idx	= $_REQUEST['goods_idx'];
 
 	$goods_info = OM_GetGoodsInfo($goods_idx);
