@@ -45,7 +45,7 @@ function fb_share(name,detail,imgurl,gubun)
     method: 'feed',
     name: '오늘을 가장 어리게',
     link: 'http://ohuimall.co.kr/',
-    picture: imgurl,
+    // picture: imgurl,
     caption: 'ohuimall.co.kr',
     //description: job + " - " + job_explain
     description: detail
@@ -72,8 +72,13 @@ function fb_share_test1(name,detail,imgurl,gubun)
   var media = "fb";
   FB.ui(
   {
-    method: 'share',
-    href: 'http://ohuimall.co.kr/MOBILE/sorry_test1.php'
+    method: 'feed',
+    name: '오늘을 가장 어리게',
+    link: 'http://ohuimall.co.kr/MOBILE/sorry_test1.php',
+    // picture: imgurl,
+    caption: 'ohuimall.co.kr',
+    //description: job + " - " + job_explain
+    description: detail
   },
     function(response) {
       if (response && response.post_id) {
