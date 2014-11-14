@@ -13,9 +13,12 @@
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
       <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0"/>
-      <meta property="og:image" content="http://ohuimall.co.kr/images/imgtest.jpg" />
-      <meta property="og:title" content="오늘을 가장 어리게 - Ohui mind mall"/>
+      <meta property="og:title" content="test title"/>
+      <meta property="og:site_name" content="test site"/>
       <meta property="og:url" content="http://ohuimall.co.kr/MOBILE/sorry_test1.php"/>
+      <meta property="og:description" content="test description"/>
+      <meta property="fb:app_id" content="744500028976771" />
+      <meta property="og:image" content="http://ohuimall.co.kr/images/imgtest.jpg" />
       <meta property="og:type" content="article"/>
       <script type='text/javascript' src='../js/jquery-1.11.0.min.js'></script>
       <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
