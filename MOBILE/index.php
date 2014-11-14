@@ -1,6 +1,10 @@
 <?php
   	include_once "../config.php";
   	include_once "header.php";
+
+	$view_arr = explode(",",$_COOKIE['goods_view']); 
+
+	print_r($view_arr);
 ?>
     <div>
       <h4>어리게 산다는 것</h4>
