@@ -3,8 +3,19 @@
 	include_once "../config.php";
   	include_once "header.php";
 
-setcookie("goods_view", $_COOKIE['goods_view'].",".$_GET['goods_idx']); 
 	$goods_idx	= $_REQUEST['goods_idx'];
+
+	$view_arr = explode(",",$_COOKIE['goods_view']); 
+	while(list($key,$val) = each($view_arr)){ 
+		if($val==$goods_idx){ 
+			$view_flag = "y"; 
+		}
+	}
+
+	if($view_flag != "y"){ 
+		setcookie("goods_view", $_COOKIE['goods_view'].",".$_GET['goods_idx']); 
+	}
+
 
 	$goods_info = OM_GetGoodsInfo($goods_idx);
 ?>
