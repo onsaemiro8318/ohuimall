@@ -270,7 +270,58 @@
     </div>
 <!--  개인정보 취급위탁동의 DIV 끝  -->
 
+
+<!--  당첨자 추가 정보입력 DIV 시작  -->
+    <div class="popup big zoom-anim-dialog mfp-hide" id="input_2">
+      <div class="btn_close">
+        <a href="javascript:magnificPopup.close();"><img src="images/btn_close.jpg" width="26" alt=""/></a>
+      </div>
+      <div class="content address">
+        <div class="title">
+          <img src="images/pop_title_address.jpg" width="240"/>
+        </div>
+        <div class="sub_title">
+          <img src="images/pop_title_address2.jpg" width="215" alt=""/>
+        </div>
+        <div class="info_block">
+          <div class="input_one add_num clearfix">
+            <div class="label">우편번호</div>
+            <div class="input">
+              <div class="inner clearfix">
+                <div class="in"><input type="text" id="postcode1" readonly="readonly" size="5"></div>
+                <div class="dash">-</div>
+                <div class="in"><input type="text" id="postcode2" readonly="readonly" size="5"></div>
+                <div class="btn"><a href="#post_div" class="popup-with-zoom-anim2" onclick="showDaumPostcode()"><img src="images/btn_search.jpg" width="50"/></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="input_one detail_num clearfix">
+            <div class="label">상세주소</div>
+            <div class="input">
+              <p class="first"><input type="text" id="addr1" readonly="readonly"></p>
+              <p><input type="text" id="addr2"></p>
+            </div>
+          </div>
+        </div>
+        <div class="btn_block">
+          <a href="#">
+            <img src="images/btn_input_comp_1.jpg" width="170" alt=""/> 
+          </a>
+        </div>
+      </div>
+    </div>
+<!--  당첨자 추가 정보입력 DIV 끝  -->
+
+<!--  주소검색 DIV 시작  -->
+    <div id="post_div" class="zoom-anim-dialog mfp-hide" style="border:5px solid;position:fixed;width:300px;height:460px;left:50%;margin-left:-155px;top:50%;margin-top:-235px;overflow:hidden;-webkit-overflow-scrolling:touch;">
+      <img src="//i1.daumcdn.net/localimg/localimages/07/postcode/320/close.png" id="btnCloseLayer" style="cursor:pointer;position:absolute;right:-3px;top:-3px" onclick="closeDaumPostcode()" alt="닫기 버튼">
+    </div>
+<!--  주소검색 DIV 끝  -->
+
+
+
     <div id="fb-root"></div>
+	<script src="http://dmaps.daum.net/map_js_init/postcode.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('.popup-with-zoom-anim').magnificPopup({
@@ -286,70 +337,61 @@
 				showCloseBtn : false
 			});
 
+			$('.popup-with-zoom-anim2').magnificPopup({
+				type: 'inline',
+				fixedContentPos: false,
+				fixedBgPos: true,
+				overflowY: 'auto',
+				closeBtnInside: true,
+				preloader: false,
+				midClick: true,
+				removalDelay: 300,
+				mainClass: 'my-mfp-zoom-in',
+				showCloseBtn : false,
+				callbacks: {
+					open: function() {
+						console.log('Popup is opened');
+						showDaumPostcode();
+					},
+					change: function() {
+						console.log('Content changed');
+						console.log(this.content); // Direct reference to your popup element
+					}
+				}
+			});
+
 			$('.first-popup-link').magnificPopup({
 				closeBtnInside:true
 			});
 		});
 		var magnificPopup = $.magnificPopup.instance;
 
-		function input_name()
-		{
-			var name_val	= $("#mb_name").val();
-			var phone_val	= $("#mb_phone").val();
+		// 우편번호 찾기 iframe을 넣을 element
+		var element = document.getElementById('post_div');
 
-			if (name_val == "" )
-			{
-				alert("이름을 입력해 주세요.");
-				$("#mb_name").focus();
-				return false;
-			}
+		function closeDaumPostcode() {
+			// iframe을 넣은 element를 안보이게 한다.
+			element.style.display = 'none';
+		}
 
-			if (phone_val == "" )
-			{
-				alert("전화번호를 입력해 주세요.");
-				$("#mb_phone").focus();
-				return false;
-			}
-
-			if ($("input:checkbox[id='agree1']").is(":checked") == false)
-			{
-				alert("개인정보활용 동의에 체크해 주세요.");
-				return false;
-			}
-
-			if ($("input:checkbox[id='agree2']").is(":checked") == false)
-			{
-				alert("개인정보취급위탁 동의에 체크해 주세요.");
-				return false;
-			}
-
-
-			$.ajax({
-				type:"POST",
-				data:{
-					"exec" : "insert_name_phone",
-					"goods_idx" : '<?=$goods_idx?>',
-					"mb_name"   : name_val,
-					"mb_phone"  : phone_val
+		function showDaumPostcode() {
+			new daum.Postcode({
+				oncomplete: function(data) {
+					// 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+					// 우편번호와 주소 및 영문주소 정보를 해당 필드에 넣는다.
+					document.getElementById('postcode1').value = data.postcode1;
+					document.getElementById('postcode2').value = data.postcode2;
+					document.getElementById('addr1').value = data.address;
+					document.getElementById('addr2').focus();
+					// iframe을 넣은 element를 안보이게 한다.
+					element.style.display = 'none';
 				},
-				url: "../main_exec.php",
-				success: function(response){
-					alert(response);
-					if (response == "Y")
-					{
-						location.href = "sorry.php?goods_idx=<?=$goods_idx?>";
-					}else{
-						$.magnificPopup.open({
-							items: {
-								src: '#sorry_div'
-							},
-							type: 'inline'
+				width : '100%',
+				height : '100%'
+			}).embed(element);
 
-						}, 0);
-					}
-				}
-			});
-
+			// iframe을 넣은 element를 보이게 한다.
+			element.style.display = 'block';
 		}
 
 	</script>

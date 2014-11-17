@@ -227,18 +227,65 @@ function only_num(obj)
 	return true;
 }
 
-function open_div(div)
+function input_name()
 {
-	if (div == "input1")
-	{
-		$("#input_1").show();
-	}
-}
+	var name_val	= $("#mb_name").val();
+	var phone_val	= $("#mb_phone").val();
 
-function close_div(div)
-{
-	if (div == "input1")
+	if (name_val == "" )
 	{
-		$("#input_1").hide();
+		alert("이름을 입력해 주세요.");
+		$("#mb_name").focus();
+		return false;
 	}
+
+	if (phone_val == "" )
+	{
+		alert("전화번호를 입력해 주세요.");
+		$("#mb_phone").focus();
+		return false;
+	}
+
+	if ($("input:checkbox[id='agree1']").is(":checked") == false)
+	{
+		alert("개인정보활용 동의에 체크해 주세요.");
+		return false;
+	}
+
+	if ($("input:checkbox[id='agree2']").is(":checked") == false)
+	{
+		alert("개인정보취급위탁 동의에 체크해 주세요.");
+		return false;
+	}
+
+
+	$.ajax({
+		type:"POST",
+		data:{
+			"exec" : "insert_name_phone",
+			"goods_idx" : '<?=$goods_idx?>',
+			"mb_name"   : name_val,
+			"mb_phone"  : phone_val
+		},
+		url: "../main_exec.php",
+		success: function(response){
+			if (response == "Y")
+			{
+				$.magnificPopup.open({
+					items: {
+						src: '#input_2'
+					},
+					type: 'inline'
+				}, 0);
+			}else{
+				$.magnificPopup.open({
+					items: {
+						src: '#sorry_div'
+					},
+					type: 'inline'
+				}, 0);
+			}
+		}
+	});
+
 }
