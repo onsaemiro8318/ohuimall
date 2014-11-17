@@ -168,14 +168,15 @@
           <img src="images/txt_desc_share_btn.jpg" width="145" alt=""/>
         </div>
         <div class="btn_fb">
-          <a href="#" onclick="javascript:kt_share('<?=$goods_info['goods_name']?>','<?=$goods_info['goods_detail']?>','<?=$goods_info['goods_imgurl']?>','<?=$gubun?>');"><img src="images/btn_fb.jpg" width="40" alt=""/></a>
+          <a href="#" onclick="javascript:fb_share('<?=$goods_info['goods_name']?>','<?=$goods_info['goods_detail']?>','<?=$goods_info['goods_imgurl']?>','<?=$gubun?>');"><img src="images/btn_fb.jpg" width="40" alt=""/></a>
         </div>
         <div class="btn_kt">
-          <a href="#" onclick="javascript:fb_share('<?=$goods_info['goods_name']?>','<?=$goods_info['goods_detail']?>','<?=$goods_info['goods_imgurl']?>','<?=$gubun?>');"><img src="images/btn_kt.jpg" width="40" alt=""/></a>
+          <a href="#" onclick="javascript:kt_share('<?=$goods_info['goods_name']?>','<?=$goods_info['goods_detail']?>','<?=$goods_info['goods_imgurl']?>','<?=$gubun?>');"><img src="images/btn_kt.jpg" width="40" alt=""/></a>
         </div>
       </div>      
     </div>
 
+<!--  이름, 전화번호 입력 받는 DIV 시작  -->
     <div class="popup big zoom-anim-dialog mfp-hide" id="input_1">
       <div class="btn_close">
         <a href="#" onclick="javascript:magnificPopup.close();"><img src="images/btn_close.jpg" width="26" alt=""/></a>
@@ -187,52 +188,170 @@
         <div class="info_block">
           <div class="input_one name clearfix">
             <div class="label">이름</div>
-            <div class="input"><input type="text" name="mb_name"></div>
+            <div class="input"><input type="text" name="mb_name" id="mb_name"></div>
           </div>
           <div class="input_one name clearfix">
             <div class="label">휴대폰번호</div>
-            <div class="input"><input type="text" name="mb_phone" onkeyup="only_num(this)"></div>
+            <div class="input"><input type="text" name="mb_phone" id="mb_phone" onkeyup="only_num(this)"></div>
           </div>
         </div>
         <div class="check_block">
           <div class="check_one clearfix">
-            <div class="check"><input type="checkbox"></div>
-            <div class="label"><a href="#">개인정보활용 동의</a></div>
+            <div class="check"><input type="checkbox" name="agree1" id="agree1"></div>
+            <div class="label"><a href="#agree1_div" class="popup-with-zoom-anim">개인정보활용 동의</a></div>
           </div>
           <div class="check_one clearfix">
-            <div class="check"><input type="checkbox"></div>
-            <div class="label"><a href="#">개인정보취급위탁 동의</a></div>
+            <div class="check"><input type="checkbox" name="agree2" id="agree2"></div>
+            <div class="label"><a href="#agree2_div" class="popup-with-zoom-anim">개인정보취급위탁 동의</a></div>
           </div>
         </div>
         <div class="btn_block">
-          <a href="#">
+          <a href="#" onclick="input_name();return false;">
             <img src="images/btn_input_comp_1.jpg" width="170" alt=""/> 
           </a>
         </div>
       </div>
     </div>
+<!--  이름, 전화번호 입력 받는 DIV 끝  -->
+
+<!--  미당첨 페이지 DIV 시작  -->
+    <div class="popup big zoom-anim-dialog mfp-hide" id="sorry_div">
+      <div class="btn_close">
+        <a href="javascript:magnificPopup.close();"><img src="images/btn_close.jpg" width="26" alt=""/></a>
+      </div>
+      <div class="content fail">
+        <div class="title">
+          <img src="images/pop_title_fail.jpg"/>
+        </div>
+        <div class="f_img">
+          <img src="images/pop_title_fail_img_p_01.jpg" alt=""/>
+        </div>
+        <div class="btn_share clearfix">
+          <div class="btn_fb">
+            <a href="#" onclick="javascript:fb_share('<?=$goods_info['goods_name']?>','<?=$goods_info['goods_detail']?>','<?=$goods_info['goods_imgurl']?>','<?=$gubun?>');"><img src="images/btn_fb.jpg" width="40" alt=""/></a>
+          </div>
+          <div class="btn_kt">
+            <a href="#" onclick="javascript:kt_share('<?=$goods_info['goods_name']?>','<?=$goods_info['goods_detail']?>','<?=$goods_info['goods_imgurl']?>','<?=$gubun?>');"><img src="images/btn_kt.jpg" width="40" alt=""/></a>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--  미당첨 페이지 DIV 끝  -->
+
+<!--  개인정보 활용동의 DIV 시작  -->
+    <div class="popup big zoom-anim-dialog mfp-hide" id="agree1_div">
+      <div class="btn_close">
+        <a href="#input_1" class="first-popup-link"><img src="images/btn_close.jpg" width="26" alt=""/></a>
+      </div>
+      <div class="content notice">
+        <div class="title">
+          <img src="images/pop_title_notice_1.jpg" width="145" alt=""/>
+        </div>
+        <div class="txt_block">
+        txt
+        </div>
+      </div>
+    </div>
+<!--  개인정보 활용동의 DIV 끝  -->
+
+<!--  개인정보 취급위탁동의 DIV 시작  -->
+    <div class="popup big zoom-anim-dialog mfp-hide" id="agree2_div">
+      <div class="btn_close">
+        <a href="#input_1" class="first-popup-link"><img src="images/btn_close.jpg" width="26" alt=""/></a>
+      </div>
+      <div class="content notice">
+        <div class="title">
+          <img src="images/pop_title_notice_2.jpg" width="175" alt=""/>
+        </div>
+        <div class="txt_block">
+        txt
+        </div>
+      </div>
+    </div>
+<!--  개인정보 취급위탁동의 DIV 끝  -->
 
     <div id="fb-root"></div>
 	<script type="text/javascript">
-	$(document).ready(function() {
-	$('.popup-with-zoom-anim').magnificPopup({
-		type: 'inline',
+		$(document).ready(function() {
+			$('.popup-with-zoom-anim').magnificPopup({
+				type: 'inline',
+				fixedContentPos: false,
+				fixedBgPos: true,
+				overflowY: 'auto',
+				closeBtnInside: true,
+				preloader: false,
+				midClick: true,
+				removalDelay: 300,
+				mainClass: 'my-mfp-zoom-in',
+				showCloseBtn : false
+			});
 
-		fixedContentPos: false,
-		fixedBgPos: true,
+			$('.first-popup-link').magnificPopup({
+				closeBtnInside:true
+			});
+		});
+		var magnificPopup = $.magnificPopup.instance;
 
-		overflowY: 'auto',
+		function input_name()
+		{
+			var name_val	= $("#mb_name").val();
+			var phone_val	= $("#mb_phone").val();
 
-		closeBtnInside: true,
-		preloader: false,
-		
-		midClick: true,
-		removalDelay: 300,
-		mainClass: 'my-mfp-zoom-in',
-		showCloseBtn : false
-	});
-	});
-	var magnificPopup = $.magnificPopup.instance;
+			if (name_val == "" )
+			{
+				alert("이름을 입력해 주세요.");
+				$("#mb_name").focus();
+				return false;
+			}
+
+			if (phone_val == "" )
+			{
+				alert("전화번호를 입력해 주세요.");
+				$("#mb_phone").focus();
+				return false;
+			}
+
+			if ($("input:checkbox[id='agree1']").is(":checked") == false)
+			{
+				alert("개인정보활용 동의에 체크해 주세요.");
+				return false;
+			}
+
+			if ($("input:checkbox[id='agree2']").is(":checked") == false)
+			{
+				alert("개인정보취급위탁 동의에 체크해 주세요.");
+				return false;
+			}
+
+
+			$.ajax({
+				type:"POST",
+				data:{
+					"exec" : "insert_name_phone",
+					"goods_idx" : '<?=$goods_idx?>',
+					"mb_name"   : name_val,
+					"mb_phone"  : phone_val
+				},
+				url: "../main_exec.php",
+				success: function(response){
+					alert(response);
+					if (response == "Y")
+					{
+						location.href = "sorry.php?goods_idx=<?=$goods_idx?>";
+					}else{
+						$.magnificPopup.open({
+							items: {
+								src: '#sorry_div'
+							},
+							type: 'inline'
+
+						}, 0);
+					}
+				}
+			});
+
+		}
+
 	</script>
 <?
 	include_once "footer.php";

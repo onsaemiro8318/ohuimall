@@ -44,6 +44,22 @@ switch ($_REQUEST['exec'])
 		$query		= "INSERT INTO ".$_gl['share_info_table']."(sns_media, sns_ipaddr, sns_gubun, sns_date) values('".$media."','".$_SERVER['REMOTE_ADDR']."','".$gubun."',now())";
 		$result		= mysqli_query($my_db, $query);
 	break;
+
+	case "insert_name_phone" :
+		$mb_name	= $_REQUEST['mb_name'];
+		$mb_phone	= $_REQUEST['mb_phone'];
+		$goods_idx	= $_REQUEST['goods_idx'];
+
+		$insert_rs = InsertBuyerInfo($mb_name, $mb_phone, $goods_idx);
+		$winner_chk = "N";
+		if ($insert_rs)
+		{
+			$winner_chk = OM_WinCheck($goods_idx);
+		}
+
+		echo $winner_chk;
+
+	break;
 }
 
 ?>
