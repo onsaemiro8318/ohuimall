@@ -45,7 +45,7 @@
       </div>      
     </div>
 
-    <div class="popup big white-popup mfp-hide" id="input_1">
+    <div class="popup big white-popup" id="input_1" style="display:none !important">
       <div class="btn_close">
         <a href="javascript:history.back();" ><img src="images/btn_close.jpg" width="26" alt=""/></a>
       </div>
