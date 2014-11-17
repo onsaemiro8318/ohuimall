@@ -6,26 +6,49 @@
 
 ?>
     <div class="content">
-      <!-- <div class="youtubebox">
-        <iframe id="ytplayer" width="100%" src="<?=$_gl['youtube_url']?>" frameborder="0" allowfullscreen></iframe>
-      </div> -->
-      <!-- <div style="width:100%;position:relative;height:400px;background:red;overflow-x:hidden;overflow-y:hidden">
-        <div class="owl-carousel" style="float:left"> -->
-      <ul class="bxslider">
+      <div class="slide_block">
+        <div class="youtubebox">
+          <ul class="bxslider">
 <?php
-$query 		= "SELECT * FROM ".$_gl['banner_info_table']." ";
-$result 	= mysqli_query($my_db, $query);
-while($data = mysqli_fetch_array($result))
-{
+	$query 		= "SELECT * FROM ".$_gl['banner_info_table']." ";
+	$result 	= mysqli_query($my_db, $query);
+	while($data = mysqli_fetch_array($result))
+	{
 ?>
-        <li>
-          <?= $data[banner_url]?>
-        </li>
+            <li>
+              <?=$data['banner_url']?>
+            </li>
 <?php
-}
+	}
 ?>
-      </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="list_block">
+        <ul>
+<?php
+	$query 		= "SELECT * FROM ".$_gl['goods_info_table']." ";
+	$result 	= mysqli_query($my_db, $query);
+	while($goods_data = mysqli_fetch_array($result))
+	{
+?>
+
+          <li>
+            <div class="t_soldout"><img src="images/txt_soldout.png" width="60" alt=""/></div>
+            <div class="list">
+              <a href="goods_detail.php?goods_idx=<?=$goods_data['idx']?>"><img src="images/thumb_product_1.jpg" alt=""/></a>
+            </div>
+          </li>
+<?
+	}
+?>
+        </ul>
+      </div>
     </div>
+
+
+
+
 <?
 	include_once "footer.php";
 
@@ -64,4 +87,5 @@ while($data = mysqli_fetch_array($result))
     	var youtube_height = (width / 16) * 9;
     	$("#ytplayer").height(youtube_height);
     });
+
     </script>
