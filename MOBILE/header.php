@@ -1,9 +1,18 @@
+
+<!doctype html>
 <html>
   <head>
-    <title>내일을부탁해 - 드림풀 매칭그랜트 캠페인</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="shortcut icon" type="image/x-icon" href="./img/icon/favicon.ico" />
+    <title>OHUI MALL</title>
+    <!--[if lt IE 9]><script src="./js/html5shiv.js"></script><![endif]-->
+    <link href="css/style_m.css" rel="stylesheet" type="text/css">
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="../lib/owl/owl.carousel.min.css">
     <link rel="stylesheet" href="../lib/owl/owl.theme.default.min.css">
     <link rel="stylesheet" href="../lib/iCheck/skins/all.css">
@@ -21,10 +30,16 @@
     <script type='text/javascript' src="http://cdn.poesis.kr/post/search.min.js"></script>
   </head>
   <body>
-    <div>
-      <h3>마음을 파는 쇼핑몰</h3>
-      <h1>오늘을 가장 어리게</h1>
-      <!-- <h4><a href="index.php" data-transition="slide">Introduce</a> / <a href="index.php" data-transition="slide">Mall</a> / <a href="faq.php" data-transition="slide">FAQ</a></h4> -->
-      <h4><a href="index.php" class="animsition-link">Introduce</a> / <a href="index.php" class="animsition-link">Mall</a> / <a href="faq.php" class="animsition-link">FAQ</a></h4>
+    <div class="header">
+      <div class="logo_block"><a href=""><img src="images/logo.png" width="60" alt="" boder="0"/></a></div>
+      <div class="title_block"><a href=""><img src="images/title.jpg" width="200" boder="0" /></a></div>
+      <div class="menu_block">
+        <ul class="clearfix">
+          <li><a href="index.php" class="animsition-link"><img src="images/btn_navi_mall.jpg" width="40" alt=""/></a></li>
+          <li><img src="images/navi_bar.jpg" width="1" alt=""/></li>
+          <li><a href="index.php" class="animsition-link"><img src="images/btn_navi_movie.jpg" width="40" alt=""/></a></li>
+          <li><img src="images/navi_bar.jpg" width="1" alt=""/></li>
+          <li><a href="faq.php" class="animsition-link"><img src="images/btn_navi_faq.jpg" width="40" alt=""/></a></li>
+        </ul>
+      </div>
     </div>
-    <h1>--------------------------------</h1>

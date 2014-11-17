@@ -4,7 +4,6 @@
 
 	$view_arr = explode(",",$_COOKIE['goods_view']); 
 
-	print_r($view_arr);
 ?>
     <div>
       <h4>어리게 산다는 것</h4>
@@ -32,8 +31,11 @@ while($data = mysqli_fetch_array($result))
         <div>
       </div>
     </div>
-  </body>
-  </html>
+<?
+	include_once "footer.php";
+
+?>
+
 
     <style>
     .owl-carousel .item{
@@ -51,7 +53,6 @@ while($data = mysqli_fetch_array($result))
     </style>
 
     <script type='text/javascript'>
-	alert(document.cookie);
     // 이미지 슬라이드
     $(document).ready(function() {
       var owl = $(".owl-carousel");
