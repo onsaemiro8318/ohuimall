@@ -226,3 +226,19 @@ function only_num(obj)
 
 	return true;
 }
+
+function open_div(div)
+{
+	if (div == "input1")
+	{
+		$("#input_1").show();
+	}
+}
+
+function close_div(div)
+{
+	if (div == "input1")
+	{
+		$("#input_1").hide();
+	}
+}
