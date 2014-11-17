@@ -23,7 +23,7 @@
 ?>
 	<style>
 /* Styles for dialog window */
-#small-dialog {
+#input_1 {
 	background: white;
 	position: relative;
 }
@@ -161,7 +161,7 @@
       </div>
       <div class="btn_getit">
         <!-- <a href="#" onclick="javascript:buy_goods('<?=$goods_idx?>')"><img src="images/btn_getit.jpg"/></a> -->
-        <a href="#small-dialog" class="popup-with-zoom-anim"><img src="images/btn_getit.jpg"/></a>
+        <a href="#input_1" class="popup-with-zoom-anim"><img src="images/btn_getit.jpg"/></a>
       </div> 
       <div class="btn_share_inview clearfix">
         <div class="txt">
@@ -176,9 +176,9 @@
       </div>      
     </div>
 
-    <div class="popup big zoom-anim-dialog mfp-hide" id="small-dialog">
+    <div class="popup big zoom-anim-dialog mfp-hide" id="input_1">
       <div class="btn_close">
-        <a href="javascript:history.back();" ><img src="images/btn_close.jpg" width="26" alt=""/></a>
+        <a href="#" onclick="javascript:magnificPopup.close();"><img src="images/btn_close.jpg" width="26" alt=""/></a>
       </div>
       <div class="content">
         <div class="title">
@@ -228,9 +228,11 @@
 		
 		midClick: true,
 		removalDelay: 300,
-		mainClass: 'my-mfp-zoom-in'
+		mainClass: 'my-mfp-zoom-in',
+		showCloseBtn : false
 	});
 	});
+	var magnificPopup = $.magnificPopup.instance;
 	</script>
 <?
 	include_once "footer.php";
