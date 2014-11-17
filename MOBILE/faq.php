@@ -2,29 +2,32 @@
 	include_once "../config.php";
 	include_once "header.php";
 ?>
-    <div>
-      <div id="faq_box">
+    <div class="content">
+      <div class="faq">
 <?php
-$query 		= "SELECT * FROM ".$_gl['faq_info_table']." ";
-$result 	= mysqli_query($my_db, $query);
-while($faq_info = mysqli_fetch_array($result))
-{
-?>        
-        <dl id="<?php echo $faq_info['idx']?>">
-          <dt class="faq_sub" id="faq_sub<?php echo $faq_info['idx']?>" onclick="faq_toggle('<?php echo $faq_info['idx']?>');"><p><?php echo $faq_info['faq_subject']?></p></dt>
-          <dd class="faq_con" id="faq_con<?php echo $faq_info['idx']?>"><?php echo $faq_info['faq_content']?></dd>
-        </dl>
-<?php
-}
-?>        
+	$query 		= "SELECT * FROM ".$_gl['faq_info_table']." ";
+	$result 	= mysqli_query($my_db, $query);
+	while($faq_info = mysqli_fetch_array($result))
+	{
+?>
+        <div class="one_q" id="<?php echo $faq_info['idx']?>">
+          <h2>
+            <a href="#" class="clearfix">
+              <span id="faq_sub<?php echo $faq_info['idx']?>" onclick="faq_toggle('<?php echo $faq_info['idx']?>');"><?php echo $faq_info['faq_subject']?></span>
+              <span id="faq_sub<?php echo $faq_info['idx']?>" onclick="faq_toggle('<?php echo $faq_info['idx']?>');" class="arrow"><img src="images/arrow_faq.jpg" width="20" alt=""/></span>
+            </a>
+          </h2>
+          <p id="faq_con<?php echo $faq_info['idx']?>" style="display:none;"><?php echo $faq_info['faq_content']?></p>
+        </div>
+<?
+	}
+?>
       </div>
     </div>
-  </body>
-  </html>
+<?
+	include_once "footer.php";
 
-    <style>
-
-    </style>
+?>
 
     <script type='text/javascript'>
     $(document).ready(function() {
@@ -33,7 +36,7 @@ while($faq_info = mysqli_fetch_array($result))
     
     function faq_toggle(idx){      
       var faq_con = "#faq_con" + idx
-      $(faq_con).slideToggle( "slow" );
+      $(faq_con).slideToggle( "normal" );
     }
     
     </script>
