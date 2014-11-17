@@ -40,7 +40,7 @@
         <ul class="clearfix">
           <li><a href="index.php" class="animsition-link"><img src="images/btn_navi_mall.jpg" width="40" alt=""/></a></li>
           <li><img src="images/navi_bar.jpg" width="1" alt=""/></li>
-          <li><a href="index.php" class="animsition-link"><img src="images/btn_navi_movie.jpg" width="40" alt=""/></a></li>
+          <li><a href="movie.php" class="animsition-link"><img src="images/btn_navi_movie.jpg" width="40" alt=""/></a></li>
           <li><img src="images/navi_bar.jpg" width="1" alt=""/></li>
           <li><a href="faq.php" class="animsition-link"><img src="images/btn_navi_faq.jpg" width="40" alt=""/></a></li>
         </ul>
