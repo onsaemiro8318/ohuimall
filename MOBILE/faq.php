@@ -14,7 +14,7 @@
           <h2>
             <a href="#" class="clearfix">
               <span id="faq_sub<?php echo $faq_info['idx']?>" onclick="faq_toggle('<?php echo $faq_info['idx']?>');"><?php echo $faq_info['faq_subject']?></span>
-              <span id="faq_sub<?php echo $faq_info['idx']?>" onclick="faq_toggle('<?php echo $faq_info['idx']?>');" class="arrow"><img src="images/arrow_faq.jpg" width="20" alt=""/></span>
+              <span id="faq_sub<?php echo $faq_info['idx']?>" onclick="faq_toggle('<?php echo $faq_info['idx']?>');" class="arrow"><img src="images/arrow_faq.jpg" width="20" alt="" id="arrow_faq"/></span>
             </a>
           </h2>
           <p id="faq_con<?php echo $faq_info['idx']?>" style="display:none;"><?php echo $faq_info['faq_content']?></p>
@@ -29,14 +29,24 @@
 
 ?>
 
-    <script type='text/javascript'>
-    $(document).ready(function() {
-      $("#faq_box dd").hide();      
-    });    
-    
-    function faq_toggle(idx){      
-      var faq_con = "#faq_con" + idx
-      $(faq_con).slideToggle( "normal" );
-    }
-    
-    </script>
+<script type='text/javascript'>
+	var toggle_flag = 0;
+
+	$(document).ready(function() {
+		$("#faq_box dd").hide();
+	});
+
+	function faq_toggle(idx){
+		var faq_con = "#faq_con" + idx;
+		$(faq_con).slideToggle( "normal", function(){
+			if (toggle_flag == 0)
+			{
+				$("#arrow_faq").attr("src","images/arrow_faq2.jpg");
+				toggle_flag = 1;
+			}else{
+				$("#arrow_faq").attr("src","images/arrow_faq.jpg");
+				toggle_flag = 0;
+			}
+		});
+	}
+</script>
