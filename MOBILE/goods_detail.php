@@ -25,10 +25,6 @@
 /* Styles for dialog window */
 #small-dialog {
 	background: white;
-	padding: 20px 30px;
-	text-align: left;
-	max-width: 400px;
-	margin: 40px auto;
 	position: relative;
 }
 
