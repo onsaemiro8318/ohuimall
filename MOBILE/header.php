@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../lib/owl/owl.carousel.min.css">
     <link rel="stylesheet" href="../lib/owl/owl.theme.default.min.css">
     <link rel="stylesheet" href="../lib/iCheck/skins/all.css">
+    <link rel="stylesheet" href="../lib/bxslider/jquery.bxslider.css">
     <link href="http://cdn.poesis.kr/post/search.css" rel="stylesheet" media="all" />
     <!-- <link rel="stylesheet" href="../js/jquery.mobile/jquery.mobile-1.4.5.min.css" /> -->
     <script type='text/javascript' src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
@@ -28,6 +29,8 @@
     <script type='text/javascript' src="../lib/owl/owl.carousel.min.js"></script>
     <script type='text/javascript' src='../js/kakao.link.js'></script>
     <script type='text/javascript' src="http://cdn.poesis.kr/post/search.min.js"></script>
+    <script type="text/javascript" src="../lib/bxslider/plugins/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="../lib/bxslider/jquery.bxslider.js"></script>
   </head>
   <body>
     <div class="header">
