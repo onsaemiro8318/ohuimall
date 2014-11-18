@@ -155,7 +155,17 @@
     <div class="content">
       <div class="product_img">
         <!--품절시-->
+<?php
+		$soldout_query 		= "SELECT goods_selcount FROM ".$_gl['goods_info_table']." WHERE idx = ".$goods_idx." ";
+		$soldout_result 	= mysqli_query($my_db, $soldout_query);
+		$soldout_cnt = mysqli_fetch_array($soldout_result);
+		if($soldout_cnt[goods_selcount] >= 10)	
+		{
+?>			  		
         <div class="t_soldout"><img src="images/txt_soldout.png" width="60" alt=""/></div>
+<?php
+		}
+?>		
         <div class="img"><img src="images/big_product_1.jpg" alt="" border="0"/></div>
         <div class="img add"><img src="images/big_product_1_gift.jpg" alt=""/></div>
       </div>
@@ -188,7 +198,7 @@
         <div class="info_block">
           <div class="input_one name clearfix">
             <div class="label">이름</div>
-            <div class="input"><input type="text" name="mb_name" id="mb_name"></div>
+            <div class="input"><input type="text" name="mb_name" id="mb_name" onblur="only_kor(this)"></div>
           </div>
           <div class="input_one name clearfix">
             <div class="label">휴대폰번호</div>
