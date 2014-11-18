@@ -227,10 +227,50 @@ function only_num(obj)
 	return true;
 }
 
+function input_address()
+{
+	var zipcode1_val	= $("#postcode1").val();
+	var zipcode2_val	= $("#postcode2").val();
+	var addr1_val		= $("#addr1").val();
+	var addr2_val		= $("#addr2").val();
+	var goods_idx_val	= $("#goods_idx").val();
+
+	if (zipcode1_val == "" || zipcode2_val == "")
+	{
+		alert("우편번호 찾기를 해주세요.");
+		return false;
+	}
+
+	if (addr2_val == "")
+	{
+		alert("상세주소를 입력해 주세요.");
+		frm.addr2.focus();
+		return false;
+	}
+
+	$.ajax({
+		type:"POST",
+		data:{
+			"exec" : "insert_winner",
+			"goods_idx" : goods_idx_val,
+			"zipcode1"  : zipcode1_val,
+			"zipcode2"  : zipcode2_val,
+			"addr1"     : addr1_val,
+			"addr2"     : addr2_val
+		},
+		url: "../main_exec.php",
+		success: function(response){
+			location.href = "buy_comp.php?goods_idx=" + goods_idx_val;
+		}
+	});
+
+}
+
 function input_name()
 {
-	var name_val	= $("#mb_name").val();
-	var phone_val	= $("#mb_phone").val();
+	var name_val		= $("#mb_name").val();
+	var phone_val		= $("#mb_phone").val();
+	var goods_idx_val	= $("#goods_idx").val();
 
 	if (name_val == "" )
 	{
@@ -263,7 +303,7 @@ function input_name()
 		type:"POST",
 		data:{
 			"exec" : "insert_name_phone",
-			"goods_idx" : '<?=$goods_idx?>',
+			"goods_idx" : goods_idx_val,
 			"mb_name"   : name_val,
 			"mb_phone"  : phone_val
 		},
