@@ -227,6 +227,23 @@ function only_num(obj)
 	return true;
 }
 
+function only_kor(obj)
+{
+	var inText = obj.value;
+	if (inText != ""){
+		var pattern = /^[가-힣]+$/; 
+		if (pattern.test(inText)){
+			return true;
+		}else{
+			alert("한글만 입력하세요");
+			obj.value="";
+			obj.focus();
+			return false;
+		}	
+	}
+}
+
+
 function input_name()
 {
 	var name_val	= $("#mb_name").val();
