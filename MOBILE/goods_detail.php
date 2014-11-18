@@ -375,7 +375,9 @@
 				showDaumPostcode();
 			}
 			*/
-
+			$(".mfp-bg").click(function() {
+				$('body').unbind('touchmove');
+			});
 		});
 		var magnificPopup = $.magnificPopup.instance;
 
