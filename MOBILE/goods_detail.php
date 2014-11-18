@@ -291,7 +291,7 @@
                 <div class="in"><input type="text" id="postcode1" readonly="readonly" size="5"></div>
                 <div class="dash">-</div>
                 <div class="in"><input type="text" id="postcode2" readonly="readonly" size="5"></div>
-                <div class="btn"><a href="#post_div" class="popup-with-zoom-anim2" onclick="showDaumPostcode()"><img src="images/btn_search.jpg" width="50"/></a></div>
+                <div class="btn"><a href="#" onclick="show_post();return false;"><img src="images/btn_search.jpg" width="50"/></a></div>
               </div>
             </div>
           </div>
@@ -313,9 +313,9 @@
 <!--  당첨자 추가 정보입력 DIV 끝  -->
 
 <!--  주소검색 DIV 시작  -->
-    <div id="post_div" class="zoom-anim-dialog mfp-hide" style="border:5px solid;position:fixed;width:300px;height:460px;left:50%;margin-left:-155px;top:50%;margin-top:-235px;overflow:hidden;-webkit-overflow-scrolling:touch;">
-      <img src="//i1.daumcdn.net/localimg/localimages/07/postcode/320/close.png" id="btnCloseLayer" style="cursor:pointer;position:absolute;right:-3px;top:-3px" onclick="closeDaumPostcode()" alt="닫기 버튼">
-    </div>
+<div id="post_div" style="display:none;border:5px solid;position:fixed;width:95%;height:500px;margin-left:1%;top:50%;margin-top:-235px;overflow:hidden;-webkit-overflow-scrolling:touch;z-index:999999999999">
+<img src="//i1.daumcdn.net/localimg/localimages/07/postcode/320/close.png" id="btnCloseLayer" style="cursor:pointer;position:absolute;right:-3px;top:-3px" onclick="closeDaumPostcode()" alt="닫기 버튼">
+</div>
 <!--  주소검색 DIV 끝  -->
 
 
@@ -335,6 +335,7 @@
 				removalDelay: 300,
 				mainClass: 'my-mfp-zoom-in',
 				showCloseBtn : false
+
 			});
 
 			$('.popup-with-zoom-anim2').magnificPopup({
@@ -350,56 +351,63 @@
 				showCloseBtn : false,
 				callbacks: {
 					open: function() {
-						console.log('Popup is opened');
+						alert('135');
 						showDaumPostcode();
-					},
-					change: function() {
-						console.log('Content changed');
-						console.log(this.content); // Direct reference to your popup element
 					}
 				}
 			});
 
+
 			$('.first-popup-link').magnificPopup({
 				closeBtnInside:true
 			});
+			/*
+			if ($('#post_div').css('display') == 'block') {
+				alert('1111111111');
+				showDaumPostcode();
+			}
+			*/
+
 		});
 		var magnificPopup = $.magnificPopup.instance;
 
-		// 우편번호 찾기 iframe을 넣을 element
-		var element = document.getElementById('post_div');
 
 		function closeDaumPostcode() {
 			// iframe을 넣은 element를 안보이게 한다.
 			element.style.display = 'none';
 		}
 
-		function showDaumPostcode() {
-			new daum.Postcode({
-				oncomplete: function(data) {
-					// 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
-					// 우편번호와 주소 및 영문주소 정보를 해당 필드에 넣는다.
-					document.getElementById('postcode1').value = data.postcode1;
-					document.getElementById('postcode2').value = data.postcode2;
-					document.getElementById('addr1').value = data.address;
-					document.getElementById('addr2').focus();
-					// iframe을 넣은 element를 안보이게 한다.
-					element.style.display = 'none';
-				},
-				width : '100%',
-				height : '100%'
-			}).embed(element);
+			// 우편번호 찾기 iframe을 넣을 element
+			var element = document.getElementById('post_div');
 
-			// iframe을 넣은 element를 보이게 한다.
-			element.style.display = 'block';
+			function showDaumPostcode() {
+				new daum.Postcode({
+					oncomplete: function(data) {
+						// 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+						// 우편번호와 주소 및 영문주소 정보를 해당 필드에 넣는다.
+						document.getElementById('postcode1').value = data.postcode1;
+						document.getElementById('postcode2').value = data.postcode2;
+						document.getElementById('addr1').value = data.address;
+						document.getElementById('addr2').focus();
+						// iframe을 넣은 element를 안보이게 한다.
+						element.style.display = 'none';
+					},
+					width : '100%',
+					height : '100%'
+				}).embed(element);
+
+				// iframe을 넣은 element를 보이게 한다.
+				//element.style.display = 'block';
+			}
+
+
+		function show_post()
+		{
+			$("#post_div").show();
+			showDaumPostcode();
 		}
 
 	</script>
 <?
 	include_once "footer.php";
-
 ?>
-
-
-
-

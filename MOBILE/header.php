@@ -32,7 +32,7 @@
     <script type='text/javascript' src="http://cdn.poesis.kr/post/search.min.js"></script>
     <script type="text/javascript" src="../lib/bxslider/plugins/jquery.fitvids.js"></script>
     <script type="text/javascript" src="../lib/bxslider/jquery.bxslider.js"></script>
-	<script type="text/javascript" src="../lib/Magnific-Popup/jquery.magnific-popup.js"></script>
+    <script type="text/javascript" src="../lib/Magnific-Popup/jquery.magnific-popup.js"></script>
 
   </head>
   <body>
