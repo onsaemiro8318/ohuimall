@@ -171,7 +171,7 @@
       </div>
       <div class="btn_getit">
         <!-- <a href="#" onclick="javascript:buy_goods('<?=$goods_idx?>')"><img src="images/btn_getit.jpg"/></a> -->
-        <a href="#input_1" class="popup-with-zoom-anim"><img src="images/btn_getit.jpg"/></a>
+        <a href="#input_1" class="popup-with-zoom-anim" onclick="scroll_no()"><img src="images/btn_getit.jpg"/></a>
       </div> 
       <div class="btn_share_inview clearfix">
         <div class="txt">
@@ -189,7 +189,7 @@
 <!--  이름, 전화번호 입력 받는 DIV 시작  -->
     <div class="popup big zoom-anim-dialog mfp-hide" id="input_1">
       <div class="btn_close">
-        <a href="#" onclick="javascript:magnificPopup.close();"><img src="images/btn_close.jpg" width="26" alt=""/></a>
+        <a href="#" onclick="javascript:magnificPopup.close();$('body').unbind('touchmove');"><img src="images/btn_close.jpg" width="26" alt=""/></a>
       </div>
       <div class="content">
         <div class="title">
@@ -415,6 +415,10 @@
 			showDaumPostcode();
 		}
 
+		function scroll_no()
+		{
+			$('body').bind('touchmove', function(e){e.preventDefault()});
+		}
 	</script>
 <?
 	include_once "footer.php";
