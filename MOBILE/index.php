@@ -67,8 +67,11 @@
 	<script type='text/javascript'>
 	// 메인 배너 slider
 	$('.bxslider').bxSlider({
-	  video: true,
-	  useCSS: false
+		video: true,
+		useCSS: false,
+		reponsive: false,
+		auto: true,
+		speed: 300
 	});
 
     // 유튜브 반복 재생
@@ -98,4 +101,7 @@
     	$("#ytplayer").height(youtube_height);
     });
 
+	$(document).ready(function() {
+		$(".clone").css("margin-top","-15px");
+	});
     </script>

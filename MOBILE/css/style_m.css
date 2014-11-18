@@ -85,7 +85,7 @@ body {
 	height: 160px;
 	background: url(../images/bg_top.jpg) repeat-x bottom;
 	position: fixed;
-	z-index: 9999;
+	z-index: 99999;
 }
 .header .logo_block {
 	padding-top: 10px;
