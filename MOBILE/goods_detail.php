@@ -376,8 +376,20 @@
 			}
 			*/
 			$(".mfp-bg").click(function() {
+				alert('11');
 				$('body').unbind('touchmove');
 			});
+
+			$(".mfp-wrap").click(function() {
+				alert('22');
+				$('body').unbind('touchmove');
+			});
+
+			$(".mfp-container").click(function() {
+				alert('33');
+				$('body').unbind('touchmove');
+			});
+
 		});
 		var magnificPopup = $.magnificPopup.instance;
 
