@@ -171,7 +171,7 @@
       </div>
       <div class="btn_getit">
         <!-- <a href="#" onclick="javascript:buy_goods('<?=$goods_idx?>')"><img src="images/btn_getit.jpg"/></a> -->
-        <a href="#input_1" class="popup-with-zoom-anim" onclick="scroll_no()"><img src="images/btn_getit.jpg"/></a>
+        <a href="#input_1" class="popup-with-zoom-anim"><img src="images/btn_getit.jpg"/></a>
       </div> 
       <div class="btn_share_inview clearfix">
         <div class="txt">
@@ -189,7 +189,7 @@
 <!--  이름, 전화번호 입력 받는 DIV 시작  -->
     <div class="popup big zoom-anim-dialog mfp-hide" id="input_1">
       <div class="btn_close">
-        <a href="#" onclick="javascript:magnificPopup.close();$('body').unbind('touchmove');"><img src="images/btn_close.jpg" width="26" alt=""/></a>
+        <a href="#" onclick="javascript:magnificPopup.close();"><img src="images/btn_close.jpg" width="26" alt=""/></a>
       </div>
       <div class="content">
         <div class="title">
@@ -334,9 +334,9 @@
 		$(document).ready(function() {
 			$('.popup-with-zoom-anim').magnificPopup({
 				type: 'inline',
-				fixedContentPos: false,
+				fixedContentPos: true,
 				fixedBgPos: true,
-				overflowY: 'auto',
+				overflowY: 'hidden',
 				closeBtnInside: true,
 				preloader: false,
 				midClick: true,
@@ -346,35 +346,10 @@
 
 			});
 
-			$('.popup-with-zoom-anim2').magnificPopup({
-				type: 'inline',
-				fixedContentPos: false,
-				fixedBgPos: true,
-				overflowY: 'auto',
-				closeBtnInside: true,
-				preloader: false,
-				midClick: true,
-				removalDelay: 300,
-				mainClass: 'my-mfp-zoom-in',
-				showCloseBtn : false,
-				callbacks: {
-					open: function() {
-						alert('135');
-						showDaumPostcode();
-					}
-				}
-			});
-
-
 			$('.first-popup-link').magnificPopup({
 				closeBtnInside:true
 			});
-			/*
-			if ($('#post_div').css('display') == 'block') {
-				alert('1111111111');
-				showDaumPostcode();
-			}
-			*/
+/*
 			$(".mfp-bg").click(function() {
 				alert('11');
 				$('body').unbind('touchmove');
@@ -389,7 +364,7 @@
 				alert('33');
 				$('body').unbind('touchmove');
 			});
-
+*/
 		});
 		var magnificPopup = $.magnificPopup.instance;
 
