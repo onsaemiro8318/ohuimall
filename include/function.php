@@ -12,6 +12,19 @@
 		return $info;
 	}
 
+	// 회원정보 (phone)
+	function OM_GetBuyerInfoByPhone($phone)
+	{
+		global $_gl;
+		global $my_db;
+
+		$query 		= "SELECT * FROM ".$_gl['buyer_info_table']." WHERE buyer_phone='".$phone."'";
+		$result 	= mysqli_query($my_db, $query);
+		$info		= mysqli_num_rows($result);
+
+		return $info;
+	}
+
 	// 구매자 정보 입력
 	function InsertBuyerInfo($mb_name, $mb_phone, $goods_idx)
 	{

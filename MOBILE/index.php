@@ -15,8 +15,8 @@
 	while($data = mysqli_fetch_array($result))
 	{
 ?>
-            <li>
-              <?=$data['banner_url']?>
+            <li style="top:-20px">
+              <img src="http://www.tomorrowkids.or.kr/images/fb/jobimg_1.jpg">
             </li>
 <?php
 	}

@@ -189,7 +189,7 @@
 <!--  이름, 전화번호 입력 받는 DIV 시작  -->
     <div class="popup big zoom-anim-dialog mfp-hide" id="input_1">
       <div class="btn_close">
-        <a href="#" onclick="javascript:magnificPopup.close();"><img src="images/btn_close.jpg" width="26" alt=""/></a>
+        <a href="#" onclick="javascript:close_div('input_1');"><img src="images/btn_close.jpg" width="26" alt=""/></a>
       </div>
       <div class="content">
         <div class="title">
@@ -284,7 +284,7 @@
 <!--  당첨자 추가 정보입력 DIV 시작  -->
     <div class="popup big zoom-anim-dialog mfp-hide" id="input_2">
       <div class="btn_close">
-        <a href="javascript:magnificPopup.close();"><img src="images/btn_close.jpg" width="26" alt=""/></a>
+        <a href="javascript:javascript:close_div('input_2');"><img src="images/btn_close.jpg" width="26" alt=""/></a>
       </div>
       <div class="content address">
         <div class="title">
@@ -338,7 +338,7 @@
 				fixedBgPos: true,
 				overflowY: 'hidden',
 				closeBtnInside: true,
-				preloader: false,
+				//preloader: false,
 				midClick: true,
 				removalDelay: 300,
 				mainClass: 'my-mfp-zoom-in',

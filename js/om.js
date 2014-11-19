@@ -264,6 +264,11 @@ function input_name()
 		return false;
 	}
 
+	$("#mb_name").val("");
+	$("#mb_phone").val("");
+	$("input:checkbox[id='agree1']").attr("checked", false);
+	$("input:checkbox[id='agree2']").attr("checked", false);
+
 
 	$.ajax({
 		type:"POST",
@@ -283,15 +288,37 @@ function input_name()
 					},
 					type: 'inline'
 				}, 0);
-			}else{
+			}else if (response == "N"){
 				$.magnificPopup.open({
 					items: {
 						src: '#sorry_div'
 					},
 					type: 'inline'
 				}, 0);
+			}else{
+				alert('이미 이벤트에 참여하셨습니다.');
+				$.magnificPopup.close();
 			}
 		}
 	});
 
+}
+
+function close_div(popup)
+{
+	if (popup == "input_1")
+	{
+		$("#mb_name").val("");
+		$("#mb_phone").val("");
+		$("input:checkbox[id='agree1']").attr("checked", false);
+		$("input:checkbox[id='agree2']").attr("checked", false);
+		magnificPopup.close();
+	}else if (popup == "input_2")
+	{
+		$("#postcode1").val("");
+		$("#postcode2").val("");
+		$("#addr1").val("");
+		$("#addr2").val("");
+		magnificPopup.close();
+	}
 }

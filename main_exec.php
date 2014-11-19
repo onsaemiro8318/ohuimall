@@ -40,13 +40,20 @@ switch ($_REQUEST['exec'])
 		$mb_phone	= $_REQUEST['mb_phone'];
 		$goods_idx	= $_REQUEST['goods_idx'];
 
-		$insert_rs = InsertBuyerInfo($mb_name, $mb_phone, $goods_idx);
-		$winner_chk = "N";
-		if ($insert_rs)
-		{
-			$winner_chk = OM_WinCheck($goods_idx);
-		}
+		$buyer_info = OM_GetBuyerInfoByPhone($mb_phone);
 
+		$winner_chk = "N";
+
+		if ($buyer_info > 0)
+		{
+			$winner_chk = "F";
+		}else{
+			$insert_rs = InsertBuyerInfo($mb_name, $mb_phone, $goods_idx);
+			if ($insert_rs)
+			{
+				$winner_chk = OM_WinCheck($goods_idx);
+			}
+		}
 		echo $winner_chk;
 
 	break;
