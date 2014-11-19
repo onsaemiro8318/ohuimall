@@ -342,32 +342,36 @@
 				midClick: true,
 				removalDelay: 300,
 				mainClass: 'my-mfp-zoom-in',
-				showCloseBtn : false
+				showCloseBtn : false,
+				callbacks: {
+					close: function() {
+						$("#mb_name").val("");
+						$("#mb_phone").val("");
+						$('input').iCheck('uncheck');
+						$("#postcode1").val("");
+						$("#postcode2").val("");
+						$("#addr1").val("");
+						$("#addr2").val("");
+					}
+				}
 
 			});
 
 			$('.first-popup-link').magnificPopup({
 				closeBtnInside:true
 			});
-/*
-			$(".mfp-bg").click(function() {
-				alert('11');
-				$('body').unbind('touchmove');
+
+			// 체크박스 스타일 설정
+			$('.popup input').on('ifChecked ifUnchecked', function(event){
+				//alert(this.id);
+			}).iCheck({
+				checkboxClass: 'icheckbox_flat-red',
+				increaseArea: '0%'
 			});
 
-			$(".mfp-wrap").click(function() {
-				alert('22');
-				$('body').unbind('touchmove');
-			});
 
-			$(".mfp-container").click(function() {
-				alert('33');
-				$('body').unbind('touchmove');
-			});
-*/
 		});
 		var magnificPopup = $.magnificPopup.instance;
-
 
 		function closeDaumPostcode() {
 			// iframe을 넣은 element를 안보이게 한다.

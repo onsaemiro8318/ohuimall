@@ -266,8 +266,9 @@ function input_name()
 
 	$("#mb_name").val("");
 	$("#mb_phone").val("");
-	$("input:checkbox[id='agree1']").attr("checked", false);
-	$("input:checkbox[id='agree2']").attr("checked", false);
+	//$("input:checkbox[id='agree1']").attr("checked", false);
+	//$("input:checkbox[id='agree2']").attr("checked", false);
+	$('input').iCheck('uncheck');
 
 
 	$.ajax({
@@ -310,8 +311,9 @@ function close_div(popup)
 	{
 		$("#mb_name").val("");
 		$("#mb_phone").val("");
-		$("input:checkbox[id='agree1']").attr("checked", false);
-		$("input:checkbox[id='agree2']").attr("checked", false);
+		//$("input:checkbox[id='agree1']").attr("checked", false);
+		//$("input:checkbox[id='agree2']").attr("checked", false);
+		$('input').iCheck('uncheck');
 		magnificPopup.close();
 	}else if (popup == "input_2")
 	{
@@ -320,5 +322,24 @@ function close_div(popup)
 		$("#addr1").val("");
 		$("#addr2").val("");
 		magnificPopup.close();
+	}
+}
+
+function move_page(param)
+{
+	if (param == "1")
+	{
+		$('#main_page').show();
+		$('#movie_page').hide();
+		$('#faq_page').hide();
+	}else if (param == "2"){
+ $('#movie_page').slideDown('slow');
+		//$('#main_page').hide();
+		//$('#movie_page').show();
+		//$('#faq_page').hide();
+	}else{
+		$('#main_page').hide();
+		$('#movie_page').hide();
+		$('#faq_page').show();
 	}
 }
