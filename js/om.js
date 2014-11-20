@@ -184,6 +184,7 @@ function input_address()
 	var addr1_val		= $("#addr1").val();
 	var addr2_val		= $("#addr2").val();
 	var goods_idx_val	= $("#goods_idx").val();
+	var winner_phone_val	= $("#winner_phone").val();
 
 	if (zipcode1_val == "" || zipcode2_val == "")
 	{
@@ -202,11 +203,12 @@ function input_address()
 		type:"POST",
 		data:{
 			"exec" : "insert_winner",
-			"goods_idx" : goods_idx_val,
-			"zipcode1"  : zipcode1_val,
-			"zipcode2"  : zipcode2_val,
-			"addr1"     : addr1_val,
-			"addr2"     : addr2_val
+			"goods_idx"    : goods_idx_val,
+			"zipcode1"     : zipcode1_val,
+			"zipcode2"     : zipcode2_val,
+			"addr1"        : addr1_val,
+			"addr2"        : addr2_val,
+			"winner_phone" : winner_phone_val
 		},
 		url: "../main_exec.php",
 		success: function(response){
@@ -232,12 +234,12 @@ function only_kor(obj)
 	}
 }
 
-function input_name()
+function input_name(gubun)
 {
 	var name_val		= $("#mb_name").val();
 	var phone_val		= $("#mb_phone").val();
 	var goods_idx_val	= $("#goods_idx").val();
-
+	var buyer_gubun		= gubun;
 	if (name_val == "" )
 	{
 		alert("이름을 입력해 주세요.");
@@ -275,14 +277,16 @@ function input_name()
 		type:"POST",
 		data:{
 			"exec" : "insert_name_phone",
-			"goods_idx" : goods_idx_val,
-			"mb_name"   : name_val,
-			"mb_phone"  : phone_val
+			"goods_idx"   : goods_idx_val,
+			"mb_name"     : name_val,
+			"mb_phone"    : phone_val,
+			"buyer_gubun" : buyer_gubun
 		},
 		url: "../main_exec.php",
 		success: function(response){
 			if (response == "Y")
 			{
+				$("#winner_phone").val(phone_val);
 				$.magnificPopup.open({
 					items: {
 						src: '#input_2'
@@ -333,10 +337,10 @@ function move_page(param)
 		$('#movie_page').hide();
 		$('#faq_page').hide();
 	}else if (param == "2"){
- $('#movie_page').slideDown('slow');
-		//$('#main_page').hide();
-		//$('#movie_page').show();
-		//$('#faq_page').hide();
+// $('#movie_page').slideDown('slow');
+		$('#main_page').hide();
+		$('#movie_page').show();
+		$('#faq_page').hide();
 	}else{
 		$('#main_page').hide();
 		$('#movie_page').hide();

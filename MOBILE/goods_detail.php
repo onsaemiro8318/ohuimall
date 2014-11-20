@@ -216,7 +216,7 @@
           </div>
         </div>
         <div class="btn_block">
-          <a href="#" onclick="input_name();return false;">
+          <a href="#" onclick="input_name('<?=$gubun?>');return false;">
             <img src="images/btn_input_comp_1.jpg" width="170" alt=""/> 
           </a>
         </div>
@@ -283,6 +283,7 @@
 
 <!--  당첨자 추가 정보입력 DIV 시작  -->
     <div class="popup big zoom-anim-dialog mfp-hide" id="input_2">
+      <input type="hidden" name="winner_phone" id="winner_phone">
       <div class="btn_close">
         <a href="javascript:javascript:close_div('input_2');"><img src="images/btn_close.jpg" width="26" alt=""/></a>
       </div>
@@ -408,10 +409,6 @@
 			showDaumPostcode();
 		}
 
-		function scroll_no()
-		{
-			$('body').bind('touchmove', function(e){e.preventDefault()});
-		}
 	</script>
 <?
 	include_once "footer.php";

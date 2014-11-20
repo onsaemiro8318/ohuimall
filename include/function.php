@@ -26,12 +26,12 @@
 	}
 
 	// 구매자 정보 입력
-	function InsertBuyerInfo($mb_name, $mb_phone, $goods_idx)
+	function InsertBuyerInfo($mb_name, $mb_phone, $goods_idx, $buyer_gubun)
 	{
 		global $_gl;
 		global $my_db;
 
-		$query 		= "INSERT INTO ".$_gl['buyer_info_table']."(buyer_ipaddr,buyer_name,buyer_phone,buyer_goods,buyer_date) values ('".$_SERVER['REMOTE_ADDR']."','".$mb_name."','".$mb_phone."','".$goods_idx."',now())";
+		$query 		= "INSERT INTO ".$_gl['buyer_info_table']."(buyer_ipaddr,buyer_name,buyer_phone,buyer_goods,buyer_date,buyer_gubun) values ('".$_SERVER['REMOTE_ADDR']."','".$mb_name."','".$mb_phone."','".$goods_idx."',now(),'".$buyer_gubun."')";
 		$result 	= mysqli_query($my_db, $query);
 
 		return $result;
@@ -90,7 +90,7 @@
 
 		// 당일 구매자 수 조회
 		$today_cnt = OM_TodayBuyCnt();
-		$winner_array = array(1,10,35,80,112,145,175,200,230,280);
+		$winner_array = array(2,10,35,80,112,145,175,200,230,280);
 
 		foreach ($winner_array as $key => $val)
 		{

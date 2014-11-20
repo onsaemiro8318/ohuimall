@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html>
   <head>
@@ -39,11 +38,44 @@
       <div class="title_block"><a href="index.php"><img src="images/title.jpg" width="200" boder="0" /></a></div>
       <div class="menu_block">
         <ul class="clearfix">
-          <li><a href="#" onclick="move_page('1');"><img src="images/btn_navi_mall.jpg" width="40" alt=""/></a></li>
+<?
+	if (strpos($_SERVER["PHP_SELF"],"index.php") !== false)
+	{
+?>
+          <li><a href="index.php"><img src="images/btn_navi_mall_02.jpg" width="40" alt=""/></a></li>
+<?
+	}else{
+?>
+          <li><a href="index.php"><img src="images/btn_navi_mall.jpg" width="40" alt=""/></a></li>
+<?
+	}
+?>
           <li><img src="images/navi_bar.jpg" width="1" alt=""/></li>
-          <li><a href="#" onclick="move_page('2');"><img src="images/btn_navi_movie.jpg" width="40" alt=""/></a></li>
+<?
+	if (strpos($_SERVER["PHP_SELF"],"movie.php") !== false)
+	{
+?>
+          <li><a href="movie.php"><img src="images/btn_navi_movie_02.jpg" width="40" alt=""/></a></li>
+<?
+	}else{
+?>
+          <li><a href="movie.php"><img src="images/btn_navi_movie.jpg" width="40" alt=""/></a></li>
+<?
+	}
+?>
           <li><img src="images/navi_bar.jpg" width="1" alt=""/></li>
-          <li><a href="#" onclick="move_page('3');"><img src="images/btn_navi_faq.jpg" width="40" alt=""/></a></li>
+<?
+	if (strpos($_SERVER["PHP_SELF"],"faq.php") !== false)
+	{
+?>
+          <li><a href="faq.php"><img src="images/btn_navi_faq_02.jpg" width="40" alt=""/></a></li>
+<?
+	}else{
+?>
+          <li><a href="faq.php"><img src="images/btn_navi_faq.jpg" width="40" alt=""/></a></li>
+<?
+	}
+?>
         </ul>
       </div>
     </div>
