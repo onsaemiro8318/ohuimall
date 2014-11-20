@@ -409,10 +409,6 @@
 			showDaumPostcode();
 		}
 
-		function scroll_no()
-		{
-			$('body').bind('touchmove', function(e){e.preventDefault()});
-		}
 	</script>
 <?
 	include_once "footer.php";
