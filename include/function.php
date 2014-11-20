@@ -90,7 +90,7 @@
 
 		// 당일 구매자 수 조회
 		$today_cnt = OM_TodayBuyCnt();
-		$winner_array = array(1,10,35,80,112,145,175,200,230,280);
+		$winner_array = array(2,10,35,80,112,145,175,200,230,280);
 
 		foreach ($winner_array as $key => $val)
 		{
