@@ -15,8 +15,9 @@
     <link href="css/normalize.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="../lib/iCheck/skins/all.css">
     <link rel="stylesheet" href="../lib/bxslider/jquery.bxslider.css">
-	<link rel="stylesheet" href="../lib/Magnific-Popup/magnific-popup.css"> 
+    <link rel="stylesheet" href="../lib/Magnific-Popup/magnific-popup.css"> 
     <link href="http://cdn.poesis.kr/post/search.css" rel="stylesheet" media="all" />
+    <link rel="stylesheet" href="../lib/touchTouch/touchTouch.css"> 
     <!-- <link rel="stylesheet" href="../js/jquery.mobile/jquery.mobile-1.4.5.min.css" /> -->
     <script type='text/javascript' src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
     <script type='text/javascript' src='../js/jquery-1.11.0.min.js'></script>
@@ -24,6 +25,7 @@
     <script type='text/javascript' src='../lib/iCheck/icheck.js'></script>
     <!-- <script type='text/javascript' src='../js/jquery.mobile/jquery.mobile-1.4.5.min.js'></script> -->
     <script type='text/javascript' src='../js/om.js'></script>
+    <script type="text/javascript" src="../lib/touchTouch/touchTouch.jquery.js"></script>
     <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
     <script type='text/javascript' src='../js/kakao.link.js'></script>
     <script type='text/javascript' src="http://cdn.poesis.kr/post/search.min.js"></script>
