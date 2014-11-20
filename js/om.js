@@ -337,10 +337,10 @@ function move_page(param)
 		$('#movie_page').hide();
 		$('#faq_page').hide();
 	}else if (param == "2"){
- $('#movie_page').slideDown('slow');
-		//$('#main_page').hide();
-		//$('#movie_page').show();
-		//$('#faq_page').hide();
+// $('#movie_page').slideDown('slow');
+		$('#main_page').hide();
+		$('#movie_page').show();
+		$('#faq_page').hide();
 	}else{
 		$('#main_page').hide();
 		$('#movie_page').hide();
