@@ -285,7 +285,7 @@ function input_name()
 		success: function(response){
 			if (response == "Y")
 			{
-				$("#winner_phone").val() = phone_val;
+				$("#winner_phone").val(phone_val);
 				$.magnificPopup.open({
 					items: {
 						src: '#input_2'
