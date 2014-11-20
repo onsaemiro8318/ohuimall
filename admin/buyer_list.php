@@ -24,11 +24,15 @@
 	else
 		$eDate = $_REQUEST['eDate'];
 
+	/*
 	if(isset($_REQUEST['pg']) == false)
 		$pg = "1";
 	else
 		$pg = $_REQUEST['pg'];
+	*/
 
+	if (!$pg)
+		$pg = "1";
 	//if(isset($pg) == false) $pg = 1;	// $pg가 없으면 1로 생성
 	$page_size = 20;	// 한 페이지에 나타날 개수
 	$block_size = 10;	// 한 화면에 나타낼 페이지 번호 개수
@@ -101,11 +105,10 @@
 	$buyer_count_query = "SELECT count(*) FROM ".$_gl['buyer_info_table']." WHERE 1".$where."";
 
 	list($buyer_count) = @mysqli_fetch_array(mysqli_query($my_db, $buyer_count_query));
-
 	$PAGE_CLASS = new Page($pg,$buyer_count,$page_size,$block_size);
-  print_r($PAGE_CLASS);  
-  
+
 	$BLOCK_LIST = $PAGE_CLASS->blockList();
+print_r($buyer_count);
 	$PAGE_UNCOUNT = $PAGE_CLASS->page_uncount;
 
 	$buyer_list_query = "SELECT * FROM ".$_gl['buyer_info_table']." WHERE 1".$where." Order by idx DESC LIMIT $PAGE_CLASS->page_start, $page_size";

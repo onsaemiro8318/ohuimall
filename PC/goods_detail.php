@@ -140,8 +140,19 @@
 
     <div class="content g_960">
       <div class="product_img">
+<?php
+	$soldout_query 		= "SELECT goods_selcount FROM ".$_gl['goods_info_table']." WHERE idx = ".$goods_idx." ";
+	$soldout_result 	= mysqli_query($my_db, $soldout_query);
+	$soldout_cnt = mysqli_fetch_array($soldout_result);
+	if($soldout_cnt[goods_selcount] >= 10)	
+	{
+?>
+
       <!--품절시-->
         <div class="t_soldout"><img src="images/txt_soldout.png" width="60" alt=""/></div>
+<?php
+	}
+?>
         <div class="img"><img src="images/big_product_<?=$goods_idx?>.jpg" alt="" border="0"/></div>
       </div>
       <div class="product_detail">

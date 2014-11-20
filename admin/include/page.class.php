@@ -1,4 +1,4 @@
-<?php
+<?
 class Page
 {
 	var $pg; //-- 현제 페이지
