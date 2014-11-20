@@ -108,24 +108,28 @@
 	$PAGE_CLASS = new Page($pg,$buyer_count,$page_size,$block_size);
 
 	$BLOCK_LIST = $PAGE_CLASS->blockList();
-print_r($buyer_count);
 	$PAGE_UNCOUNT = $PAGE_CLASS->page_uncount;
 
 	$buyer_list_query = "SELECT * FROM ".$_gl['buyer_info_table']." WHERE 1".$where." Order by idx DESC LIMIT $PAGE_CLASS->page_start, $page_size";
 
 	$res = mysqli_query($my_db, $buyer_list_query);
 
-	while($buyer_data = @mysqli_fetch_array($res))
+	while ($buyer_data = @mysqli_fetch_array($res))
+	{
+    $buyer_info[] = $buyer_data; 
+	}
+
+	foreach($buyer_info as $key => $val)
 	{
 ?>
               <tr>
                 <td><?php echo $PAGE_UNCOUNT--?></td>	<!-- No. 하나씩 감소 -->
-                <td><?php echo $buyer_data['buyer_name']?></td>
-                <td><?php echo $buyer_data['buyer_phone']?></td>
-                <td><?php echo $buyer_data['buyer_ipaddr']?></td>
-                <td><?php echo $buyer_data['buyer_goods']?></td>
-                <td><?php echo $buyer_data['buyer_date']?></td>
-                <td><?php echo $buyer_data['buyer_gubun']?></td>
+                <td><?php echo $buyer_info[$key]['buyer_name']?></td>
+                <td><?php echo $buyer_info[$key]['buyer_phone']?></td>
+                <td><?php echo $buyer_info[$key]['buyer_ipaddr']?></td>
+                <td><?php echo $buyer_info[$key]['buyer_goods']?></td>
+                <td><?php echo $buyer_info[$key]['buyer_date']?></td>
+                <td><?php echo $buyer_info[$key]['buyer_gubun']?></td>
               </tr>
 <?php 
 	}
