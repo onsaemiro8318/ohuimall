@@ -184,6 +184,7 @@ function input_address()
 	var addr1_val		= $("#addr1").val();
 	var addr2_val		= $("#addr2").val();
 	var goods_idx_val	= $("#goods_idx").val();
+	var winner_phone_val	= $("#winner_phone").val();
 
 	if (zipcode1_val == "" || zipcode2_val == "")
 	{
@@ -202,11 +203,12 @@ function input_address()
 		type:"POST",
 		data:{
 			"exec" : "insert_winner",
-			"goods_idx" : goods_idx_val,
-			"zipcode1"  : zipcode1_val,
-			"zipcode2"  : zipcode2_val,
-			"addr1"     : addr1_val,
-			"addr2"     : addr2_val
+			"goods_idx"    : goods_idx_val,
+			"zipcode1"     : zipcode1_val,
+			"zipcode2"     : zipcode2_val,
+			"addr1"        : addr1_val,
+			"addr2"        : addr2_val,
+			"winner_phone" : winner_phone_val
 		},
 		url: "../main_exec.php",
 		success: function(response){
@@ -283,6 +285,7 @@ function input_name()
 		success: function(response){
 			if (response == "Y")
 			{
+				$("#winner_phone").val(phone_val);
 				$.magnificPopup.open({
 					items: {
 						src: '#input_2'

@@ -21,8 +21,9 @@ switch ($_REQUEST['exec'])
 		$mb_addr1		= $_REQUEST['addr1'];
 		$mb_addr2		= $_REQUEST['addr2'];
 		$goods_idx		= $_REQUEST['goods_idx'];
+		$winner_phone	= $_REQUEST['winner_phone'];
 
-		$query		= "INSERT INTO ".$_gl['winner_info_table']."(winner_zipcode1, winner_zipcode2, winner_address1, winner_address2, winner_ipaddr, winner_goods, winner_date) values('".$mb_zipcode1."','".$mb_zipcode2."','".$mb_addr1."','".$mb_addr2."','".$_SERVER['REMOTE_ADDR']."','".$goods_idx."',now())";
+		$query		= "INSERT INTO ".$_gl['winner_info_table']."(winner_phone, winner_zipcode1, winner_zipcode2, winner_address1, winner_address2, winner_ipaddr, winner_goods, winner_date) values('".$winner_phone."','".$mb_zipcode1."','".$mb_zipcode2."','".$mb_addr1."','".$mb_addr2."','".$_SERVER['REMOTE_ADDR']."','".$goods_idx."',now())";
 		$result		= mysqli_query($my_db, $query);
 
 		echo $result;

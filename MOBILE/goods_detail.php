@@ -283,6 +283,7 @@
 
 <!--  당첨자 추가 정보입력 DIV 시작  -->
     <div class="popup big zoom-anim-dialog mfp-hide" id="input_2">
+      <input type="hidden" name="winner_phone" id="winner_phone">
       <div class="btn_close">
         <a href="javascript:javascript:close_div('input_2');"><img src="images/btn_close.jpg" width="26" alt=""/></a>
       </div>

@@ -43,11 +43,11 @@
     <div class="navi">
       <div class="inner g_960">
         <ul class="clearfix">
-          <li><a href="#"><img src="images/btn_mall.png" width="47" height="16" alt=""/></a></li>
+          <li><a href="index.php"><img src="images/btn_mall.png" width="47" height="16" alt=""/></a></li>
           <li><img src="images/navi_bar.png" width="1" height="16" alt=""/></li>
-          <li><a href="#"><img src="images/btn_movie.png" width="51" height="16" alt=""/></a></li>
+          <li><a href="movie.php"><img src="images/btn_movie.png" width="51" height="16" alt=""/></a></li>
           <li><img src="images/navi_bar.png" width="1" height="16" alt=""/></li>
-          <li><a href="#"><img src="images/btn_faq.png" width="33" height="16" alt=""/></a></li>
+          <li><a href="faq.php"><img src="images/btn_faq.png" width="33" height="16" alt=""/></a></li>
         </ul>
       </div>
     </div>
