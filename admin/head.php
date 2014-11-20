@@ -85,10 +85,13 @@ if (isset($_SESSION['ss_mb_name']) == false)
                 <a href="buyer_list.php"><i class="fa fa-fw fa-table"></i> 이벤트 참여자 목록</a>
               </li>
               <li>
+                <a href="winner_list.php"><i class="fa fa-fw fa-table"></i> 이벤트 당첨자 목록</a>
+              </li>
+              <li>
                 <a href="answer_list.php"><i class="fa fa-fw fa-edit"></i> 답변 선택 목록</a>
               </li>
               <li>
-                <a href="share_media_count.php"><i class="fa fa-fw fa-bar-chart-o"></i> 공유 매체 목록</a>
+                <a href="share_media_count.php"><i class="fa fa-fw fa-bar-chart-o"></i> 공유 정보</a>
               </li>
             </ul>
           </div>
