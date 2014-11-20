@@ -37,9 +37,10 @@ switch ($_REQUEST['exec'])
 	break;
 
 	case "insert_name_phone" :
-		$mb_name	= $_REQUEST['mb_name'];
-		$mb_phone	= $_REQUEST['mb_phone'];
-		$goods_idx	= $_REQUEST['goods_idx'];
+		$mb_name		= $_REQUEST['mb_name'];
+		$mb_phone		= $_REQUEST['mb_phone'];
+		$goods_idx		= $_REQUEST['goods_idx'];
+		$buyer_gubun	= $_REQUEST['buyer_gubun'];
 
 		$buyer_info = OM_GetBuyerInfoByPhone($mb_phone);
 
@@ -49,7 +50,7 @@ switch ($_REQUEST['exec'])
 		{
 			$winner_chk = "F";
 		}else{
-			$insert_rs = InsertBuyerInfo($mb_name, $mb_phone, $goods_idx);
+			$insert_rs = InsertBuyerInfo($mb_name, $mb_phone, $goods_idx, $buyer_gubun);
 			if ($insert_rs)
 			{
 				$winner_chk = OM_WinCheck($goods_idx);

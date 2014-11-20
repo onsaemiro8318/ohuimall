@@ -234,12 +234,12 @@ function only_kor(obj)
 	}
 }
 
-function input_name()
+function input_name(gubun)
 {
 	var name_val		= $("#mb_name").val();
 	var phone_val		= $("#mb_phone").val();
 	var goods_idx_val	= $("#goods_idx").val();
-
+	var buyer_gubun		= gubun;
 	if (name_val == "" )
 	{
 		alert("이름을 입력해 주세요.");
@@ -277,9 +277,10 @@ function input_name()
 		type:"POST",
 		data:{
 			"exec" : "insert_name_phone",
-			"goods_idx" : goods_idx_val,
-			"mb_name"   : name_val,
-			"mb_phone"  : phone_val
+			"goods_idx"   : goods_idx_val,
+			"mb_name"     : name_val,
+			"mb_phone"    : phone_val,
+			"buyer_gubun" : buyer_gubun
 		},
 		url: "../main_exec.php",
 		success: function(response){
