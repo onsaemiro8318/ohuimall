@@ -74,12 +74,9 @@ if (isset($_SESSION['ss_mb_name']) == false)
                     <a href="daily_influx_count.php">일자별 매체 유입자 수</a>
                   </li>
                   <li>
-                    <a href="daily_test_count.php">일자별 테스트 응모자 수</a>
+                    <a href="daily_share_count.php">일자별 SNS 공유 수</a>
                   </li>
                 </ul>
-              </li>
-              <li>
-                <a href="media_connect.php"><i class="fa fa-fw fa-bar-chart-o"></i> 유입경로별 접속 정보</a>
               </li>
               <li>
                 <a href="buyer_list.php"><i class="fa fa-fw fa-table"></i> 이벤트 참여자 목록</a>
@@ -88,7 +85,7 @@ if (isset($_SESSION['ss_mb_name']) == false)
                 <a href="winner_list.php"><i class="fa fa-fw fa-table"></i> 이벤트 당첨자 목록</a>
               </li>
               <li>
-                <a href="answer_list.php"><i class="fa fa-fw fa-edit"></i> 답변 선택 목록</a>
+                <a href="goods_info.php"><i class="fa fa-fw fa-edit"></i> 상품별 당첨 정보</a>
               </li>
               <li>
                 <a href="share_media_count.php"><i class="fa fa-fw fa-bar-chart-o"></i> 공유 정보</a>
