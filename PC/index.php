@@ -59,19 +59,38 @@
 ?>
             <div class="t_soldout"><img src="images/txt_soldout.png" width="91" height="24" alt=""/></div>
 <?php
-		}
-    if(in_array($val['goods_idx'], $_gl['hot_data'][date(Ymd)]))
-    {
+			if(in_array($val['goods_idx'], $_gl['hot_data'][date(Ymd)]))
+			{
 ?>
             <div class="t_hot"><img src="images/tag_hot.jpg" width="37" height="19" alt=""/></div>
 <?php
-		}
+			}
+?>
+            <div class="list">
+              <p><a href="soldout.php?goods_idx=<?=$val['goods_idx']?>"><img src="images/thumb_product_1.jpg" alt=""/></a></p>
+              <p class="txt_name"><a href="soldout.php?goods_idx=<?=$val['goods_idx']?>"><img src="images/txt_product_name_1.jpg" width="213" height="57" alt=""/></a></p>
+              <p class="btn_block"><a href="soldout.php?goods_idx=<?=$val['goods_idx']?>"><img src="images/btn_buy_at_list.jpg" width="290" height="59" alt=""/></a></p>
+            </div>
+<?
+		}else{
+?>
+<?php
+			if(in_array($val['goods_idx'], $_gl['hot_data'][date(Ymd)]))
+			{
+?>
+            <div class="t_hot"><img src="images/tag_hot.jpg" width="37" height="19" alt=""/></div>
+<?php
+			}
 ?>
             <div class="list">
               <p><a href="goods_detail.php?goods_idx=<?=$val['goods_idx']?>"><img src="images/thumb_product_1.jpg" alt=""/></a></p>
               <p class="txt_name"><a href="goods_detail.php?goods_idx=<?=$val['goods_idx']?>"><img src="images/txt_product_name_1.jpg" width="213" height="57" alt=""/></a></p>
               <p class="btn_block"><a href="goods_detail.php?goods_idx=<?=$val['goods_idx']?>"><img src="images/btn_buy_at_list.jpg" width="290" height="59" alt=""/></a></p>
             </div>
+<?
+		}
+?>
+
           </li>
 <?
 	}
