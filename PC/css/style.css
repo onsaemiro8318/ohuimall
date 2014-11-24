@@ -103,7 +103,19 @@ body{
 .header .logo{
 	padding-top:20px;
 }
+.header .logo .inner{
+	width:100%;
+}
+.header .logo .inner div{
+	float:left;
+	width:50%;
+	text-align:left;
+}
+.header .logo div.right{
+	text-align:right;
+}
 .header .title{
+	width:100%;
 	text-align:center;
 	border-bottom:1px solid #d78b8b;
 	padding-bottom:20px;
@@ -127,6 +139,18 @@ body{
 }
 .content .slide_block{
 	padding-top:20px;
+	position:relative;
+}
+
+.content .slide_block .banner_block{
+	position:absolute;
+	right:-115px;
+	top:20px;
+	width:100px;
+	z-index:9999;
+}
+.content .slide_block .banner_block .one_banner{
+	padding-bottom:20px;
 }
 
 .list_block ul li{
@@ -151,6 +175,10 @@ body{
 }
 .list_block ul li .list p{
 	text-align:center;
+}
+
+.page .content{
+	position:relative;
 }
 
 .content .product_img{
