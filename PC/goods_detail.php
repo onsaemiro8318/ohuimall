@@ -368,6 +368,7 @@
 						$("#postcode2").val("");
 						$("#addr1").val("");
 						$("#addr2").val("");
+						$("#post_div").hide();
 					}
 				}
 
