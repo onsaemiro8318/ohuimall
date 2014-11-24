@@ -11,6 +11,11 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 	font-family: '돋움', Dotum, 'Apple SD Gothic Neo', Helvetica, sans-serif;
 	font-family: "Malgun Gothic";
 }
+input{
+	font-family: '돋움', Dotum, 'Apple SD Gothic Neo', Helvetica, sans-serif;
+	font-family: "Malgun Gothic";
+	font-weight:bold;
+}
 body {
 	line-height: 1
 }
@@ -148,17 +153,61 @@ body{
 	text-align:center;
 }
 
-
+.content .product_img{
+	position:relative;
+}
+.content .product_img .t_soldout{
+	position:absolute;
+	top:0;
+	width:100%;
+	padding:10px 0;
+	text-align:center;
+	background-color: rgba(0, 0, 0, 0.3);
+}
 .content .product_detail{
 	border:1px solid #ddd;
 	background:#fff;
 	padding:30px 100px;
+	border-top:none;
 }
-.content .product_detail .product_detail_img{
-	padding:10px 0;
+.content .product_detail .product_txt{
+	padding:30px 0;
+}
+.content .product_detail_img{
+	padding:20px 0;
+}
+
+.content .product_detail .img.add{
+	padding:20px 0 30px;
+}
+.content .product_detail .btn_block{
+	width:100%;
+	padding:0 0 30px;
+}
+.content .product_detail .btn_block .inner{
+	width:370px;
+	float:right;
+}
+.content .product_detail .btn_block .btn_getit{
+	padding:10px 0 0;
+	text-align:right;
+}
+
+.content .product_detail .btn_block .btn_share_inview{
+	width:370px;
+	padding-top:8px;
+}
+.content .product_detail .btn_block .btn_share_inview .btn_fb,
+.content .product_detail .btn_block .btn_share_inview .btn_kt{
+	float:right;
+	padding-left:5px;
+}
+.content .product_detail .btn_block .btn_share_inview .txt{
+	padding-top:15px;
+	float:left;
 }
 .txt_ship{
-	padding:20px 0;
+	padding:40px 0;
 }
 .txt_ship p{
 	text-align:center;
@@ -243,7 +292,7 @@ body{
 	text-align:right;
 }
 .wrap_pop .inner{
-	padding:0 70px 50px;
+	padding:0 70px 70px;
 }
 .wrap_pop .content .title{
 	text-align:center;
@@ -258,8 +307,15 @@ body{
 .wrap_pop .content .share_txt{
 	text-align:center;
 }
+.wrap_pop .content .btn_share_block{
+	padding-top:20px;
+}
 .wrap_pop .content .btn_share_block div{
 	float:left;
+}
+.wrap_pop .content .btn_share_block div.fb{
+	padding-left:250px;
+	padding-right:5px;
 }
 
 
@@ -270,6 +326,103 @@ body{
 	line-height:16px;
 }
 
+.wrap_pop .content.info .info_block{
+	padding:20px 0;
+}
+.wrap_pop .content.info .info_block ul{
+	padding:0;
+	margin:0;
+}
+.wrap_pop .content.info .info_block ul li{
+	display:block;
+	padding:5px 0;
+}
+.wrap_pop .content.info .info_block ul li .label,
+.wrap_pop .content.info .info_block ul li .input{
+	float:left;
+	width:140px;
+}
+.wrap_pop .content.info .info_block ul li .input {
+	width:400px;
+}
+.wrap_pop .content.info .info_block ul li .input input{
+	padding:5px;
+	width:380px;
+	font-size:14px;
+	font-weight:bold;
+}
+
+.wrap_pop .content.info .check_block{
+	padding-left:140px;
+	padding-bottom:30px;
+}
+.wrap_pop .content.info .check_block ul{
+	padding:0;
+	margin:0;
+}
+.wrap_pop .content.info .check_block ul li{
+	display:block;
+	padding:5px 0;	
+}
+.wrap_pop .content.info .check_block ul li .input,
+.wrap_pop .content.info .check_block ul li .label{
+	float:left;
+}
+.wrap_pop .content.info .check_block ul li .input{
+	padding-right:7px;
+}
+.wrap_pop .content.info .check_block ul li .label{
+	padding-top:1px;
+}
+.wrap_pop .content.address .info_block{
+	padding:40px 0 20px;
+}
+.wrap_pop .content.address .info_block .input_one{
+	width:100%;
+}
+.wrap_pop .content.address .info_block .input_one .label,
+.wrap_pop .content.address .info_block .input_one .input{
+	float:left;
+}
+.wrap_pop .content.address .info_block .input_one .label{
+	width:140px;
+	padding-top:4px;
+}
+.wrap_pop .content.address .info_block .input_one .input .inner{
+	padding:0;
+}
+.wrap_pop .content.address .info_block .input_one .input .inner .in,
+.wrap_pop .content.address .info_block .input_one .input .inner .dash,
+.wrap_pop .content.address .info_block .input_one .input .inner .btn{
+	float:left;
+}
+.wrap_pop .content.address .info_block .input_one .input .inner .dash{
+	width:30px;
+	text-align:center;
+	padding:5px 0;
+}
+.wrap_pop .content.address .info_block .input_one .input .inner .in{
+	width:100px;
+}
+.wrap_pop .content.address .info_block .input_one .input .inner .in input{
+	width:90px;
+	padding:5px;
+	font-size:13px;
+	font-weight:bold;
+}
+.wrap_pop .content.address .info_block .input_one .input .inner .btn{
+	padding-left:10px;
+}
+.wrap_pop .content.address .info_block .input_one.detail_num .input p{
+	margin:0;
+	padding:0 0 10px;
+}
+.wrap_pop .content.address .info_block .input_one.detail_num .input input{
+	width:380px;
+	padding:5px;
+	font-size:13px;
+	font-weight:bold;
+}
 
 /*clearfix*/
 .clearfix:after {
