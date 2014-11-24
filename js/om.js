@@ -48,7 +48,7 @@ function fb_share(name,detail,imgurl,gubun)
     picture: imgurl,
     caption: 'www.ohuimall.co.kr',
     //description: job + " - " + job_explain
-    description: "지금 오휘의 어려지는 쇼핑몰에서&nbsp;오늘을 가장 어리게 하는 마음을 가지세요&nbsp;지금 어려지는 쇼핑몰 마음 구매하기"
+    description: "<p>지금 오휘의 어려지는 쇼핑몰에서</p><p>오늘을 가장 어리게 하는 마음을 가지세요</p><p>지금 어려지는 쇼핑몰 마음 구매하기</p>"
   },
     function(response) {
       if (response && response.post_id) {
