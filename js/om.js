@@ -43,12 +43,12 @@ function fb_share(name,detail,imgurl,gubun)
   FB.ui(
   {
     method: 'feed',
-    name: '오늘을 가장 어리게',
+    name: "어려지는 쇼핑몰에서 '최근 본 어린마음'",
     link: 'http://ohuimall.co.kr/',
     picture: imgurl,
-    caption: 'ohuimall.co.kr',
+    caption: 'www.ohuimall.co.kr',
     //description: job + " - " + job_explain
-    description: "어려지는 쇼핑몰에서 '최근 본 어린마음' \n지금 오휘의 어려지는 쇼핑몰에서\n 오늘을 가장 어리게 하는 마음을 가지세요\n 지금 어려지는 쇼핑몰 마음 구매하기"
+    description: "지금 오휘의 어려지는 쇼핑몰에서%0A 오늘을 가장 어리게 하는 마음을 가지세요%0A 지금 어려지는 쇼핑몰 마음 구매하기"
   },
     function(response) {
       if (response && response.post_id) {
