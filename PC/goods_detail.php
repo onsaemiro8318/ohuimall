@@ -163,7 +163,7 @@
            <div class="btn_block clearfix">
            	   <div class="inner">
                    <div class="btn_getit">
-                        <a href="#"><img src="images/btn_buy.jpg"/></a>
+                        <a href="#input_1" class="popup-with-zoom-anim"><img src="images/btn_buy.jpg"/></a>
                    </div>
 
                    <div class="btn_share_inview clearfix">
