@@ -180,7 +180,18 @@
            <div class="btn_block clearfix">
            	   <div class="inner">
                    <div class="btn_getit">
+<?
+	if($soldout_cnt[goods_selcount] >= 10)	
+	{
+?>
+                        <a href="#" onclick="alert('품절되어 구매하실 수 없습니다.\n다른 상품을 구매해 주세요.');return false;"><img src="images/btn_buy.jpg"/></a>
+<?
+	}else{
+?>
                         <a href="#input_1" class="popup-with-zoom-anim"><img src="images/btn_buy.jpg"/></a>
+<?
+	}
+?>
                    </div>
 
                    <div class="btn_share_inview clearfix">
