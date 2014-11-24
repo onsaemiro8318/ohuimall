@@ -45,7 +45,8 @@ function fb_share(name,detail,imgurl,gubun)
     method: 'feed',
     name: "어려지는 쇼핑몰에서 '최근 본 어린마음'",
     link: 'http://ohuimall.co.kr/',
-    picture: imgurl,
+    //picture: imgurl,
+    picture: "http://www.tomorrowkids.or.kr/images/fb/jobimg_1.jpg",
     caption: 'www.ohuimall.co.kr',
     //description: job + " - " + job_explain
     description: "지금 오휘의 어려지는 쇼핑몰에서\n오늘을 가장 어리게 하는 마음을 가지세요\n지금 어려지는 쇼핑몰 마음 구매하기"
