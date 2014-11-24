@@ -312,6 +312,7 @@ body{
 	background:#000;
 }
 .wrap_pop{
+  margin: 0 auto;
 	background:url(../images/bg.jpg);
 	width:745px;
 }
