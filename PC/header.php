@@ -35,9 +35,16 @@
   </head>
 
   <body class="page">
-    <div class="header">
-      <div class="logo g_960"><a href="#"><img src="images/logo.png" width="76" height="21" alt=""/></a></div>
-      <div class="title"><a href="#"><img src="images/title.png" width="326" height="100" alt=""/></a></div>
+	<div class="header">
+        <div class="logo g_960">
+          <div class="inner clearfix">
+                <div class="left"><a href="#"><img src="images/logo.png" width="76" height="21" alt=""/></a></div>
+                <div class="right"><img src="images/txt_campaign_title.png" width="271" height="18" alt=""/></div>
+            </div>
+        </div>
+        <div class="title g_960">
+            <a href="#"><img src="images/title.png" width="326" height="100" alt=""/></a>
+        </div>
       <div class="navi">
         <div class="inner g_960">
           <ul class="clearfix">
