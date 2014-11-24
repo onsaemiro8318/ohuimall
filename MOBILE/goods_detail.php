@@ -1,9 +1,6 @@
 <?
 	$goods_idx	= $_REQUEST['goods_idx'];
 
-	if($view_flag != "y"){ 
-		setcookie("goods_view", $_COOKIE['goods_view'].",".$goods_idx, time()+(60*60*120)); 
-	}
 	// 설정파일
 	include_once "../config.php";
   	include_once "header.php";
@@ -17,6 +14,9 @@
 		if($val==$goods_idx){ 
 			$view_flag = "y"; 
 		}
+	}
+	if($view_flag != "y"){ 
+		setcookie("goods_view", $_COOKIE['goods_view'].",".$goods_idx, time()+(60*60*120)); 
 	}
 
 	$goods_info = OM_GetGoodsInfo($goods_idx);

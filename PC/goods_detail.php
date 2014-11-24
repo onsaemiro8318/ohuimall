@@ -1,10 +1,27 @@
 <?
+	$goods_idx	= $_REQUEST['goods_idx'];
+
+	// 최근 본 상품 쿠키 저장   $_COOKIE['goods_view'] =",4";  
+	//$view_arr = explode(",",$_COOKIE['goods_view']); 
+
+/*
+	while(list($key,$val) = each($view_arr)){ 
+		if($val==$goods_idx){ 
+			$view_flag = "y"; 
+		}
+	}
+*/
+	//if($view_flag != "y"){ 
+		setcookie("goods_view", $_COOKIE['goods_view'].",".$goods_idx, time()+(60*60*120)); 
+	//}
+
 	// 설정파일
 	include_once "../config.php";
   	include_once "header.php";
-	$goods_idx	= $_REQUEST['goods_idx'];
 
 	$goods_info = OM_GetGoodsInfo($goods_idx);
+
+
 ?>
     <input type="hidden" name="goods_idx" id="goods_idx" value="<?=$goods_idx?>">
 	<div class="content g_960">
