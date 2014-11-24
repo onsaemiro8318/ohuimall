@@ -298,34 +298,35 @@
             <ul>
               <li class="clearfix">
                 <div class="label"><img src="images/txt_name.jpg" width="38" height="21" alt=""/></div>
-                <div class="input"><input type="text" name="mb_name" id="mb_name" onblur="only_kor(this)"></div>
+                <div class="input">
+                  <input type="text" name="postcode1" id="postcode1" readonly> - 
+                  <input type="text" name="postcode2" id="postcode2" readonly>
+                  <input type="button" value="우편번호 찾기" onclick="show_post();return false;"></div>
               </li>
               <li class="clearfix">
                 <div class="label"><img src="images/txt_phonenum.jpg" width="99" height="21" alt=""/></div>
-                <div class="input"><input type="text" name="mb_phone" id="mb_phone" onkeyup="only_num(this)"></div>
-              </li>
-            </ul>
-          </div>
-          <div class="check_block">
-            <ul>
-              <li class="clearfix">
-                <div class="input"><input type="checkbox" name="agree1" id="agree1"></div>
-                <div class="label"><a href="#agree1_div" class="popup-with-zoom-anim"><img src="images/txt_notice_1.jpg" alt=""/></a></div>
-              </li>
-              <li class="clearfix">
-                <div class="input"><input type="checkbox" name="agree2" id="agree2"></div>
-                <div class="label"><a href="#agree2_div" class="popup-with-zoom-anim"><img src="images/txt_notice_2.jpg" alt=""/></a></div>
+                <div class="input">
+                  <input type="text" name="addr1" id="addr1">
+                  <input type="text" name="addr2" id="addr2">
+                </div>
               </li>
             </ul>
           </div>
           <div class="btn_block">
-            <a href="#" onclick="input_name('<?=$gubun?>');return false;"><img src="images/btn_input_01.jpg" width="250" height="59" alt=""/></a>
+            <a href="#" onclick="input_address();return false;"><img src="images/btn_input_01.jpg" width="250" height="59" alt=""/></a>
           </div>
         </div>
       </div>
     </div><!--end wrap_pop-->
 
 <!--  당첨자 추가 정보 받는 DIV 끝  -->
+
+<!--  주소검색 DIV 시작  -->
+    <div id="post_div" style="display:none;border:5px solid;position:fixed;width:95%;height:500px;margin-left:1%;top:50%;margin-top:-235px;overflow:hidden;-webkit-overflow-scrolling:touch;z-index:999999999999">
+      <img src="//i1.daumcdn.net/localimg/localimages/07/postcode/320/close.png" id="btnCloseLayer" style="cursor:pointer;position:absolute;right:-3px;top:-3px" onclick="closeDaumPostcode()" alt="닫기 버튼">
+    </div>
+<!--  주소검색 DIV 끝  -->
+
 
 
     <div id="fb-root"></div>
