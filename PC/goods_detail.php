@@ -256,7 +256,7 @@
       <!--  개인정보 활용동의 DIV 시작  -->
     	<div class="wrap_pop zoom-anim-dialog mfp-hide" id="agree1_div">
           <div class="header">
-                <div class="btn_close"><a href="#"><img src="images/btn_close.jpg" width="70" height="70" alt=""/></a></div>
+                <div class="btn_close"><a href="#input_1" class="first-popup-link"><img src="images/btn_close.jpg" width="70" height="70" alt=""/></a></div>
             </div>
         	<div class="inner">
                 <div class="content notice">
@@ -272,7 +272,7 @@
       <!--  개인정보 취급위탁동의 DIV 시작  -->
     	<div class="wrap_pop zoom-anim-dialog mfp-hide" id="agree2_div">
           <div class="header">
-                <div class="btn_close"><a href="#"><img src="images/btn_close.jpg" width="70" height="70" alt=""/></a></div>
+                <div class="btn_close"><a href="#input_1" class="first-popup-link"><img src="images/btn_close.jpg" width="70" height="70" alt=""/></a></div>
             </div>
         	<div class="inner">
                 <div class="content notice">
@@ -288,7 +288,7 @@
         <!--  당첨자 추가 정보 받는 DIV 시작  -->
       	<div class="wrap_pop zoom-anim-dialog mfp-hide" id="input_2">
             <div class="header">
-                  <div class="btn_close"><a href="#"><img src="images/btn_close.jpg" width="70" height="70" alt=""/></a></div>
+                  <div class="btn_close"><a onclick="javascript:close_div('input_2');" style="cursor:pointer"><img src="images/btn_close.jpg" width="70" height="70" alt=""/></a></div>
               </div>
           	<div class="inner">
                   <div class="content address">
