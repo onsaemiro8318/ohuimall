@@ -6,7 +6,7 @@
   
 ?>
 	<div class="content">
-    	<div class="slide_block g_960">
+    <div class="slide_block g_960">
       <div class="youtubebox">
         <ul class="bxslider">
 <?php
@@ -22,54 +22,47 @@
   }
 ?>
         </ul>
-      </div>        
-            <div class="banner_block">
-            	<div class="one_banner">
-                	<a href="#"><img src="images/banner_recent.jpg" alt=""/></a>
-                </div>
-                <div class="one_banner">
-                	<a href="#"><img src="images/banner_ohui.jpg" alt=""/></a>
-                </div>
-          </div>
-        </div>
-        <div class="list_block g_984">
-        	<ul class="clearfix">
+      </div>
+    </div>
+    <div class="list_block g_984">
+      <ul class="clearfix">
 <?php
 	$query 		= "SELECT * FROM ".$_gl['goods_info_table']." ";
 	$result 	= mysqli_query($my_db, $query);
 	while($goods_data = mysqli_fetch_array($result))
 	{
-?>            
-            	<li>
+?>
+      	<li>
 <?php
 		$soldout_query 		= "SELECT goods_selcount FROM ".$_gl['goods_info_table']." WHERE idx = ".$goods_data['idx']." ";
 		$soldout_result 	= mysqli_query($my_db, $soldout_query);
 		$soldout_cnt = mysqli_fetch_array($soldout_result);
 		if($soldout_cnt[goods_selcount] >= 10)	
 		{
-?>	                
-                	<div class="t_soldout"><img src="images/txt_soldout.png" width="91" height="24" alt=""/></div>
+?>			            
+          <div class="t_soldout"><img src="images/txt_soldout.png" width="91" height="24" alt=""/></div>
 <?php
 		}
     if(in_array($goods_data['idx'], $_gl['hot_data'][date(Ymd)]))
     {
-?>                   
-                    <div class="t_hot"><img src="images/tag_hot.jpg" width="37" height="19" alt=""/></div>
+?>          
+          <div class="t_hot"><img src="images/tag_hot.jpg" width="37" height="19" alt=""/></div>
 <?php
 		}
-?>                        
-                	<div class="list">
-       	    	    	<p><a href="goods_detail.php?goods_idx=<?=$goods_data['idx']?>"><img src="images/thumb_product_1.jpg" alt=""/></a></p>
-                        <p class="txt_name"><img src="images/txt_product_name_1.jpg" width="213" height="57" alt=""/></p>
-                        <p class="btn_block"><a href="#"><img src="images/btn_buy_at_list.jpg" width="290" height="59" alt=""/></a></p>
-                    </div>
-                </li>
+?>                  
+          <div class="list">
+       	    <p><a href="goods_detail.php?goods_idx=<?=$goods_data['idx']?>"><img src="images/thumb_product_1.jpg" alt=""/></a></p>
+            <p class="txt_name"><img src="images/txt_product_name_1.jpg" width="213" height="57" alt=""/></p>
+            <p class="btn_block"><a href="#"><img src="images/btn_buy_at_list.jpg" width="290" height="59" alt=""/></a></p>
+          </div>
+        </li>
 <?
 	}
-?>                   
-            </ul>
-        </div>
+?>        
+      </ul>
     </div>
+  </div>
+
 
 
 <?
