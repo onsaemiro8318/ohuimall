@@ -285,6 +285,7 @@ function input_name(gubun)
 		},
 		url: "../main_exec.php",
 		success: function(response){
+			alert(response);
 			if (response == "Y")
 			{
 				$("#winner_phone").val(phone_val);

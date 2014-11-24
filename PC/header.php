@@ -18,6 +18,7 @@
     <link href="http://cdn.poesis.kr/post/search.css" rel="stylesheet" media="all" />
     <!-- <link rel="stylesheet" href="../js/jquery.mobile/jquery.mobile-1.4.5.min.css" /> -->
     <script type='text/javascript' src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script type='text/javascript' src="../js/analytics.js.js"></script>
     <script type='text/javascript' src='../js/jquery-1.11.0.min.js'></script>
     <script type='text/javascript' src='../js/jquery.animsition.min.js'></script>
     <script type='text/javascript' src='../lib/iCheck/icheck.js'></script>
