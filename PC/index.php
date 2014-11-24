@@ -68,9 +68,9 @@
 		}
 ?>
             <div class="list">
-              <p><a href="goods_detail.php?goods_idx=<?=$goods_data['idx']?>"><img src="images/thumb_product_1.jpg" alt=""/></a></p>
-              <p class="txt_name"><a href="goods_detail.php?goods_idx=<?=$goods_data['idx']?>"><img src="images/txt_product_name_1.jpg" width="213" height="57" alt=""/></a></p>
-              <p class="btn_block"><a href="goods_detail.php?goods_idx=<?=$goods_data['idx']?>"><img src="images/btn_buy_at_list.jpg" width="290" height="59" alt=""/></a></p>
+              <p><a href="goods_detail.php?goods_idx=<?=$val['idx']?>"><img src="images/thumb_product_1.jpg" alt=""/></a></p>
+              <p class="txt_name"><a href="goods_detail.php?goods_idx=<?=$val['idx']?>"><img src="images/txt_product_name_1.jpg" width="213" height="57" alt=""/></a></p>
+              <p class="btn_block"><a href="goods_detail.php?goods_idx=<?=$val['idx']?>"><img src="images/btn_buy_at_list.jpg" width="290" height="59" alt=""/></a></p>
             </div>
           </li>
 <?
