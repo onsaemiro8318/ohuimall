@@ -284,6 +284,49 @@
     </div>
 <!--  개인정보 취급위탁동의 DIV 끝  -->
 
+<!--  당첨자 추가 정보 받는 DIV 시작  -->
+    <div class="wrap_pop zoom-anim-dialog mfp-hide" id="input_2">
+      <div class="header">
+        <div class="btn_close"><a onclick="javascript:close_div('input_2');" style="cursor:pointer"><img src="images/btn_close.jpg" width="70" height="70" alt=""/></a></div>
+      </div>
+      <div class="inner">
+        <div class="content info">
+          <div class="title">
+            <img src="images/title_info.jpg" width="382" height="66" alt=""/>
+          </div>
+          <div class="info_block">
+            <ul>
+              <li class="clearfix">
+                <div class="label"><img src="images/txt_name.jpg" width="38" height="21" alt=""/></div>
+                <div class="input"><input type="text" name="mb_name" id="mb_name" onblur="only_kor(this)"></div>
+              </li>
+              <li class="clearfix">
+                <div class="label"><img src="images/txt_phonenum.jpg" width="99" height="21" alt=""/></div>
+                <div class="input"><input type="text" name="mb_phone" id="mb_phone" onkeyup="only_num(this)"></div>
+              </li>
+            </ul>
+          </div>
+          <div class="check_block">
+            <ul>
+              <li class="clearfix">
+                <div class="input"><input type="checkbox" name="agree1" id="agree1"></div>
+                <div class="label"><a href="#agree1_div" class="popup-with-zoom-anim"><img src="images/txt_notice_1.jpg" alt=""/></a></div>
+              </li>
+              <li class="clearfix">
+                <div class="input"><input type="checkbox" name="agree2" id="agree2"></div>
+                <div class="label"><a href="#agree2_div" class="popup-with-zoom-anim"><img src="images/txt_notice_2.jpg" alt=""/></a></div>
+              </li>
+            </ul>
+          </div>
+          <div class="btn_block">
+            <a href="#" onclick="input_name('<?=$gubun?>');return false;"><img src="images/btn_input_01.jpg" width="250" height="59" alt=""/></a>
+          </div>
+        </div>
+      </div>
+    </div><!--end wrap_pop-->
+
+<!--  당첨자 추가 정보 받는 DIV 끝  -->
+
 
     <div id="fb-root"></div>
 	<script src="http://dmaps.daum.net/map_js_init/postcode.js"></script>
