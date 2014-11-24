@@ -48,7 +48,7 @@ function fb_share(name,detail,imgurl,gubun)
     picture: imgurl,
     caption: 'ohuimall.co.kr',
     //description: job + " - " + job_explain
-    description: detail
+    description: "어려지는 쇼핑몰에서 '최근 본 어린마음'\n\n지금 오휘의 어려지는 쇼핑몰에서\n오늘을 가장 어리게 하는 마음을 가지세요\n\n지금 어려지는 쇼핑몰 마음 구매하기"
   },
     function(response) {
       if (response && response.post_id) {
@@ -73,7 +73,7 @@ function kt_share(name,detail,imgurl,gubun)
   var media = "kt";
 	Kakao.Link.sendTalkLink({
 		//container: '#kakao-link-btn',
-		label: detail,
+		label: "오늘을 어리게 하는 마음을\n파는 곳 들어봤어?\n\n얼굴뿐만 아니라\n이제 마음도 안티에이징 하자고!\n\n지금 어려지는 쇼핑몰에서\n마음 쇼핑하기.",
 		image: {
 			src: imgurl,
 			width: '300',
