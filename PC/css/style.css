@@ -335,9 +335,10 @@ body{
 }
 .wrap_pop .content .share_txt{
 	text-align:center;
+	padding-top:20px
 }
 .wrap_pop .content .btn_share_block{
-	padding-top:20px;
+	padding-top:10px;
 }
 .wrap_pop .content .btn_share_block div{
 	float:left;
