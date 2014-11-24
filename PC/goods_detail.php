@@ -198,9 +198,9 @@
                        <div class="txt">
                          <img src="images/share_txt.jpg" alt=""/> 
                        </div>
-                      <div class="btn_kt">
+                      <!-- <div class="btn_kt">
                           <a href="#" onclick="kt_share('<?=$goods_info['goods_name']?>','<?=$goods_info['goods_detail']?>','<?=$goods_info['goods_imgurl']?>','<?=$gubun?>');"><img src="images/btn_kt.jpg" alt=""/></a>
-                      </div>
+                      </div> -->
                       <div class="btn_fb">
                           <a href="#" onclick="fb_share('<?=$goods_info['goods_name']?>','<?=$goods_info['goods_detail']?>','<?=$goods_info['goods_imgurl']?>','<?=$gubun?>');"><img src="images/btn_fb.jpg" alt=""/></a>
                       </div>
@@ -275,7 +275,7 @@
                  </div>
                  <div class="btn_share_block clearfix">
                  		<div class="fb"><a href="#" onclick="javascript:fb_share('<?=$goods_info['goods_name']?>','<?=$goods_info['goods_detail']?>','<?=$goods_info['goods_imgurl']?>','<?=$gubun?>');"><img src="images/btn_fb.jpg" alt=""/></a></div>
-                      <div class="kt"><a href="#" onclick="javascript:kt_share('<?=$goods_info['goods_name']?>','<?=$goods_info['goods_detail']?>','<?=$goods_info['goods_imgurl']?>','<?=$gubun?>');"><img src="images/btn_kt.jpg" alt=""/></a></div>
+                      <!-- <div class="kt"><a href="#" onclick="javascript:kt_share('<?=$goods_info['goods_name']?>','<?=$goods_info['goods_detail']?>','<?=$goods_info['goods_imgurl']?>','<?=$gubun?>');"><img src="images/btn_kt.jpg" alt=""/></a></div> -->
                  </div>
             </div>
   	  </div>
