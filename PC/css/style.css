@@ -305,7 +305,12 @@ body{
 	margin-top:20px;
 }
 
-
+.input_notice{
+  margin: 0;
+	font-size:13px;
+	color:#5c5c5c;
+	padding-left: 150px;
+}
 
 /*pop*/
 .pop_bg{
