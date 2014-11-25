@@ -329,6 +329,7 @@ function close_div(popup)
 		$("#postcode2").val("");
 		$("#addr1").val("");
 		$("#addr2").val("");
+		$("#post_div").hide();
 		magnificPopup.close();
 	}
 }
