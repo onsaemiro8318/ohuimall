@@ -236,8 +236,8 @@
                         <div class="label"><img src="images/txt_phonenum.jpg" width="99" height="21" alt=""/></div>
                         <div class="input"><input type="text" name="mb_phone" id="mb_phone" onkeyup="only_num(this)"></div>
                   </li>
-                  <li>
-                    <p class="input_notice">'-'없이 번호만 입력해주세요.</p>
+                  <li class="input_notice">
+                    <p>'-'없이 번호만 입력해주세요.</p>
                   </li>
                 </ul>
                </div>

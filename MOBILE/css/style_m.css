@@ -195,6 +195,13 @@ body {
 	padding-left: 10px;
 }
 
+.input_notice p {
+  margin: 0;
+  font-size: 11px;
+  color: #5c5c5c;
+  padding-left: 31%;
+  margin-bottom: 11px;
+}
 
 /*footer*/
 .footer {
