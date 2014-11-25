@@ -38,7 +38,7 @@
             <a href="#"><img src="images/banner_recent.jpg" alt=""/></a>
           </div>
           <div class="one_banner">
-            <a href="#"><img src="images/banner_ohui.jpg" alt=""/></a>
+            <a href="http://www.ohui.co.kr/product/detail.jsp?pid=ACM06720&cid1=2&cid2=E" target="_blank"><img src="images/banner_ohui.jpg" alt=""/></a>
           </div>
         </div>
       </div>
