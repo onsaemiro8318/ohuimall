@@ -12,7 +12,7 @@
       <div class="txt t02">
         <h2>문의</h2>
         <ul>
-          <li>이메일 : ju.lee@minivertising.kr</li>
+          <li>이메일 : je.lee@minivertising.kr</li>
           <li>전화 : 070-4888-3580</li>           
         </ul>
       </div>
