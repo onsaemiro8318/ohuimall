@@ -12,13 +12,13 @@
 		return $info;
 	}
 
-	// 회원정보 (phone)
+	// 회원정보 (phone) - 현재 날짜에 참여 했는지 확인
 	function OM_GetBuyerInfoByPhone($phone)
 	{
 		global $_gl;
 		global $my_db;
 
-		$query 		= "SELECT * FROM ".$_gl['buyer_info_table']." WHERE buyer_phone='".$phone."'";
+		$query 		= "SELECT * FROM ".$_gl['buyer_info_table']." WHERE buyer_phone='".$phone."' AND buyer_date like '%".date('Y-m-d')."%'";
 		$result 	= mysqli_query($my_db, $query);
 		$info		= mysqli_num_rows($result);
 
@@ -47,7 +47,7 @@
 		$result		= mysqli_query($my_db, $query);
 	}
 
-	// 오늘 당첨 인원 
+	// 오늘 구매 인원 
 	function OM_TodayBuyCnt()
 	{
 		global $_gl;
@@ -69,6 +69,18 @@
 		$result 	= mysqli_query($my_db, $query);
 		$info		= mysqli_num_rows($result);
 
+		return $info;
+	}
+	function OM_WinnerByPhone($phone)
+	{
+		global $_gl;
+		global $my_db;
+
+		$query 		= "SELECT * FROM ".$_gl['winner_info_table']." WHERE winner_phone = '".$phone."'";
+		$result 	= mysqli_query($my_db, $query);
+		$info		= mysqli_num_rows($result);
+
+		return $info;
 	}
 
 	function OM_GoodsWinUpdate($idx)
@@ -79,7 +91,7 @@
 		$query 		= "UPDATE ".$_gl['goods_info_table']." SET goods_selcount = goods_selcount + 1 WHERE idx = '".$idx."'";
 		$result 	= mysqli_query($my_db, $query);
 	}
-	// 당첨자 체크 로직
+	// 당첨자 체크 로직 - 기존 당첨자도 체크
 	function OM_WinCheck($idx)
 	{
 		global $_gl;
@@ -87,6 +99,7 @@
 
 		$chkwin = "N";
 		// 하루에 10명 당첨
+
 
 		// 당일 구매자 수 조회
 		$today_cnt = OM_TodayBuyCnt();
@@ -117,7 +130,6 @@
 				}
 			}
 		}
-
 		return $chkwin;
 
 	}

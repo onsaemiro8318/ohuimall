@@ -301,8 +301,11 @@ function input_name(gubun)
 					},
 					type: 'inline'
 				}, 0);
+			}else if (response == "W"){
+				alert('곧 도착될 선물을 기다려주세요!');
+				$.magnificPopup.close();
 			}else{
-				alert('이미 이벤트에 참여하셨습니다.');
+				alert('내일 또 참여해주세요!.');
 				$.magnificPopup.close();
 			}
 		}

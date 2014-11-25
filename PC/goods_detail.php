@@ -315,6 +315,7 @@
         </div><!--end wrap_pop-->
         <!--  당첨자 추가 정보 받는 DIV 시작  -->
       	<div class="wrap_pop zoom-anim-dialog mfp-hide" id="input_2">
+      <input type="hidden" name="winner_phone" id="winner_phone">
             <div class="header">
                   <div class="btn_close"><a onclick="javascript:close_div('input_2');" style="cursor:pointer"><img src="images/btn_close.jpg" width="70" height="70" alt=""/></a></div>
               </div>
