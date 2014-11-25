@@ -103,7 +103,17 @@
 
 		// 당일 구매자 수 조회
 		$today_cnt = OM_TodayBuyCnt();
-		$winner_array = array(2,10,35,80,112,145,175,200,230,280);
+		if (date("Y-m-d") <= "2014-12-07")
+		{
+			$winner_array = array(2,35,112,230);
+			$max_winner_cnt = 4;
+		}else if(date("Y-m-d") <= "2014-12-09" && date("Y-m-d") > "2014-12-07"){
+			$winner_array = array(2,10,35,80,112,145,175,200,230,280,300);
+			$max_winner_cnt = 11;
+		}else{
+			$winner_array = array(2,10,35,80,112,145,175,200,230,280);
+			$max_winner_cnt = 10;
+		}
 
 		foreach ($winner_array as $key => $val)
 		{
@@ -118,7 +128,7 @@
 		if ($today_cnt > 280)
 		{
 			$today_winner = OM_TodayWinnerYN();
-			if ($today_winner < 10)
+			if ($today_winner < $max_winner_cnt)
 			{
 				foreach ($winner_add_array as $key2 => $val2)
 				{

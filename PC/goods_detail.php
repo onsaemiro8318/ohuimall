@@ -325,6 +325,13 @@
                 </div>
               </div>
             </div>
+            <div class="input_one detail_num clearfix">
+              <div class="label"><img src="images/txt_address_detail.jpg" width="75" height="22" alt=""/></div>
+              <div class="input">
+                <p class="first"><input type="text" name="addr1" id="addr1"></p>
+                <p><input type="text" name="addr2" id="addr2"></p>
+              </div>
+            </div>
           </div>
           <div class="btn_block">
             <a href="#" onclick="input_address();return false;"><img src="images/btn_input_01.jpg" width="250" height="59" alt=""/></a>
