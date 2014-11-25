@@ -305,7 +305,7 @@ function input_name(gubun)
 				alert('곧 도착될 선물을 기다려주세요!');
 				$.magnificPopup.close();
 			}else{
-				alert('내일 또 참여해주세요!.');
+				alert('내일 또 참여해주세요!');
 				$.magnificPopup.close();
 			}
 		}
