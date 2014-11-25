@@ -42,9 +42,9 @@
 		{
 			$buyer_goods[]	= $buyer_daily_data['buyer_goods'];
 			$buyer_cnt[]	= $buyer_daily_data['buyer_cnt'];
-			$pc_query		= "SELECT * FROM ".$_gl['buyer_info_table']." WHERE buyer_date LIKE  '%".$daily_date."%' AND buyer_goods='".$media_daily_data['buyer_goods']."' AND gubun='PC'";
+			$pc_query		= "SELECT * FROM ".$_gl['buyer_info_table']." WHERE buyer_date LIKE  '%".$daily_date."%' AND buyer_goods='".$media_daily_data['buyer_goods']."' AND buyer_gubun='PC'";
 			$pc_count		= mysqli_num_rows(mysqli_query($my_db, $pc_query));
-			$mobile_query	= "SELECT * FROM ".$_gl['buyer_info_table']." WHERE buyer_date LIKE  '%".$daily_date."%' AND buyer_goods='".$media_daily_data['buyer_goods']."' AND gubun='MOBILE'";
+			$mobile_query	= "SELECT * FROM ".$_gl['buyer_info_table']." WHERE buyer_date LIKE  '%".$daily_date."%' AND buyer_goods='".$media_daily_data['buyer_goods']."' AND buyer_gubun='MOBILE'";
 			$mobile_count	= mysqli_num_rows(mysqli_query($my_db, $mobile_query));
 			$pc_cnt[]		= $pc_count;
 			$mobile_cnt[]	= $mobile_count;
