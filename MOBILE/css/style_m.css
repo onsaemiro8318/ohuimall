@@ -203,6 +203,15 @@ body {
   margin-bottom: 11px;
 }
 
+.agree_pop{
+  height:450px;
+}
+
+.agree_box{
+  overflow:auto;
+  height:300px;
+}
+
 /*footer*/
 .footer {
 	font-size: 11px;
