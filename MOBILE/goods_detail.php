@@ -190,7 +190,7 @@
           </div>
           <div class="input_one name clearfix">
             <div class="label">휴대폰번호</div>
-            <div class="input"><input type="text" name="mb_phone" id="mb_phone" onkeyup="only_num(this)"></div>
+            <div class="input"><input type="tel" name="mb_phone" id="mb_phone" onkeyup="only_num(this)"></div>
           </div>
           <div class="input_notice"><p>'-'없이 번호만 입력해주세요.</p></div>
         </div>
