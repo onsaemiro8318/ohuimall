@@ -165,7 +165,7 @@
         <div class="btn_block clearfix">
           <div class="inner">
             <div class="btn_getit">
-              <a href="#"><img src="images/btn_buy.jpg"/></a>
+              <a href="#input_1" class="popup-with-zoom-anim"><img src="images/btn_buy.jpg"/></a>
             </div>
             <div class="btn_share_inview clearfix">
               <div class="txt">
@@ -265,7 +265,16 @@
             <img src="images/title_notice_01.jpg" alt=""/>
           </div>
           <div class="txt_block">
-          개인정보동의
+            <p> ■ 개인정보의 수집 및 이용 등에 관한 동의서 </p>
+            <p>&nbsp;</p>
+            <p>㈜엘지생활건강(이하 "엘지생활건강")은 이벤트 참여를 위한 개인정보 수집 이용을 위하여 다음과 같이 귀하의 동의를 받고자 합니다.</p> 
+            <p>&nbsp;</p>
+            <p>- 구분: 필수항목</p>
+            <p>- 개인정보 수집항목: 이름, 휴대폰 번호, 배송받으실 주소, Cookie와 URL 등을 포함하는 Browsing Session 정보</p>
+            <p>- 수집목적: 이벤트 참여 및 진행</p>
+            <p>- 보유 및 이용기간: 이벤트 종료 후 3개월 간, 3개월 이후 즉시 파기</p>
+            <p>&nbsp;</p>
+            <p>엘지생활건강은 이벤트 진행을 위하여 개인정보를 수집하고 있습니다. 제공받은 고객의 정보는 이벤트 진행에 한하여 이용되며 이벤트 목적 이외로 이용되지 않습니다. </p>
           </div>
         </div>
       </div>
@@ -282,7 +291,16 @@
             <img src="images/title_notice_02.jpg" alt=""/>
           </div>
           <div class="txt_block">
-          개인정보취급위탁
+            <p>■ 개인정보의 취급위탁 동의서</p>
+            <p>&nbsp;</p>
+            <p>㈜엘지생활건강(이하 "엘지생활건강")은 이벤트 참여를 위한 개인정보 취급위탁을 위하여 다음과 같이 귀하의 동의를 받고자 합니다.</p> 
+            <p>&nbsp;</p>
+            <p>- 정보 제공 제휴사: 미니버타이징</p>
+            <p>- 개인정보 항목: 이름, 휴대폰 번호, 배송받으실 주소</p>
+            <p>- 이용목적: 이벤트 당첨 확인 및 당첨 안내 업무</p>
+            <p>- 보유 및 이용기간: 이벤트 종료 후 3개월 간, 3개월 이후 즉시 파기</p>
+            <p>&nbsp;</p>
+            <p>엘지생활건강은 이벤트 당첨 확인 및 안내 업무를 위하여 고객의 정보를 위탁하고 있으며, 명시된 업무 이외의 내용으로 고객의 정보를 위탁하거나 제공하지 않습니다.</p>
           </div>
         </div>
       </div>
@@ -309,13 +327,6 @@
                   <div class="in"><input type="text" name="postcode2" id="postcode2" readonly></div>
                   <div class="btn"><a onclick="show_post();return false;"><img src="images/btn_search.jpg" width="50"/></a></div>
                 </div>
-              </div>
-            </div>
-            <div class="input_one detail_num clearfix">
-              <div class="label"><img src="images/txt_address_detail.jpg" width="75" height="22" alt=""/></div>
-              <div class="input">
-                <p class="first"><input type="text" name="addr1" id="addr1"></p>
-                <p><input type="text" name="addr2" id="addr2"></p>
               </div>
             </div>
           </div>
