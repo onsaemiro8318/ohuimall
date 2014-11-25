@@ -14,18 +14,18 @@
        <div class="product_img">
        		<!--품절시-->
          <div class="t_soldout"><img src="images/txt_soldout.png" alt=""/></div>
-   	   	 <div class="img"><img src="images/big_product_1.jpg" alt="" border="0"/></div>
+   	   	 <div class="img"><img src="images/big_product_<?=$goods_idx?>.jpg" alt="" border="0"/></div>
        </div>
        <div class="product_detail">
        	   <div class="product_txt">
-       	   	<img src="images/big_product_1_txt.jpg" alt=""/> 
+       	   	<img src="images/big_product_<?=$goods_idx?>_txt.jpg" alt=""/> 
            </div>
-           <div class="img add"><img src="images/big_product_1_gift.jpg" alt=""/></div>
+           <div class="img add"><img src="images/big_product_<?=$goods_idx?>_gift.jpg" alt=""/></div>
            
       </div> 
 
      <div class="product_detail_img">
-        <img src="images/big_product_1_detail.jpg" width="960" height="608" alt=""/>
+        <img src="images/big_product_<?=$goods_idx?>_detail.jpg" width="960" height="608" alt=""/>
      </div>
      
     </div>

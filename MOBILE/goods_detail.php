@@ -350,7 +350,7 @@
 <!--  당첨자 추가 정보입력 DIV 끝  -->
 
 <!--  주소검색 DIV 시작  -->
-    <div id="post_div" style="display:none;border:5px solid;position:fixed;width:95%;height:430px;margin-left:1%;top:50%;margin-top:-235px;overflow:auto;-webkit-overflow-scrolling:touch;z-index:999999999999">
+    <div id="post_div" style="display:none;border:5px solid;position:relative;width:95%;height:430px;margin-left:3%;top:50%;margin-top:-485px;overflow:auto;-webkit-overflow-scrolling:touch;z-index:999999999999">
       <img src="//i1.daumcdn.net/localimg/localimages/07/postcode/320/close.png" id="btnCloseLayer" style="cursor:pointer;position:absolute;right:-3px;top:-3px" onclick="closeDaumPostcode()" alt="닫기 버튼">
     </div>
 <!--  주소검색 DIV 끝  -->
