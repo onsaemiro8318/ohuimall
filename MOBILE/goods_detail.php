@@ -219,13 +219,16 @@
         <a href="javascript:magnificPopup.close();"><img src="images/btn_close.jpg" width="26" alt=""/></a>
       </div>
       <div class="content fail">
-        <div class="title">
-          <img src="images/pop_title_fail.jpg"/>
+      	<div class="title">
+     	    <img src="images/pop_title_fail.jpg"/>
         </div>
         <div class="f_img">
-          <img src="images/pop_title_fail_img_p_<?=$goods_idx?>.jpg" alt=""/>
+     	   	<img src="images/pop_title_fail_img_p_<?=$goods_idx?>.jpg" alt=""/>
         </div>
         <div class="btn_share clearfix">
+          <div class="txt">
+            <img src="images/share_txt.jpg.jpg" width="170" >
+          </div>
           <div class="btn_fb">
             <a href="#" onclick="javascript:fb_share('<?=$goods_info['goods_name']?>','<?=$goods_info['goods_detail']?>','<?=$goods_info['goods_imgurl']?>','<?=$gubun?>');"><img src="images/btn_fb.jpg" width="40" alt=""/></a>
           </div>
