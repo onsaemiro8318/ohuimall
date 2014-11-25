@@ -270,9 +270,7 @@
           <img src="images/pop_title_notice_1.jpg" width="145" alt=""/>
         </div>
         <div class="txt_block agree_box">
-        <p> ■ 개인정보의 수집 및 이용 등에 관한 동의서 </p>
-        <p>&nbsp;</p>
-        <p>㈜엘지생활건강(이하 "엘지생활건강")은 이벤트 참여를 위한 개인정보 수집 이용을 위하여 다음과 같이 귀하의 동의를 받고자 합니다.</p> 
+        <p>(주)엘지생활건강(이하 "엘지생활건강")은 이벤트 참여를 위한 개인정보 수집 이용을 위하여 다음과 같이 귀하의 동의를 받고자 합니다.</p> 
         <p>&nbsp;</p>
         <p>- 구분: 필수항목</p>
         <p>- 개인정보 수집항목: 이름, 휴대폰 번호, 배송받으실 주소, Cookie와 URL 등을 포함하는 Browsing Session 정보</p>
@@ -295,8 +293,6 @@
           <img src="images/pop_title_notice_2.jpg" width="175" alt=""/>
         </div>
         <div class="txt_block agree_box">
-        <p>■ 개인정보의 취급위탁 동의</p>
-        <p>&nbsp;</p>
         <p>(주)엘지생활건강(이하 "엘지생활건강")은 이벤트 참여를 위한 개인정보 수집 이용을 위하여 다음과 같이 귀하의 동의를 받고자 합니다.</p>         
         <p>&nbsp;</p>        
         <p>- 정보 제공 제휴사: 미니버타이징</p>
