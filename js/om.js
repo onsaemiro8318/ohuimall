@@ -213,7 +213,7 @@ function input_address()
 		},
 		url: "../main_exec.php",
 		success: function(response){
-			location.href = "buy_comp.php?goods_idx=" + goods_idx_val;
+			location.href = "buy_comp.php?goods_idx=" + goods_idx_val + "&phone=" + winner_phone_val;
 		}
 	});
 

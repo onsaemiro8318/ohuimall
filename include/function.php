@@ -12,6 +12,19 @@
 		return $info;
 	}
 
+	// 당첨자정보 (phone)
+	function OM_GetWinnerInfo($phone)
+	{
+		global $_gl;
+		global $my_db;
+
+		$query 		= "SELECT * FROM ".$_gl['winner_info_table']." WHERE winner_phone='".$phone."'";
+		$result 	= mysqli_query($my_db, $query);
+		$info		= mysqli_fetch_array($result);
+
+		return $info;
+	}
+
 	// 회원정보 (phone) - 현재 날짜에 참여 했는지 확인
 	function OM_GetBuyerInfoByPhone($phone)
 	{
