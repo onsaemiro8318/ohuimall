@@ -51,10 +51,10 @@
 ?>
           <li>
 <?php
-		$soldout_query 		= "SELECT goods_selcount FROM ".$_gl['goods_info_table']." WHERE idx = ".$val['goods_idx']." ";
+		$soldout_query 		= "SELECT goods_selcount, goods_total_stock FROM ".$_gl['goods_info_table']." WHERE idx = ".$val['goods_idx']." ";
 		$soldout_result 	= mysqli_query($my_db, $soldout_query);
 		$soldout_cnt = mysqli_fetch_array($soldout_result);
-		if($soldout_cnt[goods_selcount] >= $soldout_cnt[goods_total_stock])	
+		if($soldout_cnt['goods_selcount'] >= $soldout_cnt['goods_total_stock'])	
 		{
 ?>
             <div class="t_soldout"><img src="images/txt_soldout.png" width="91" height="24" alt=""/></div>
