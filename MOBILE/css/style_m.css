@@ -195,7 +195,30 @@ body {
 	padding-left: 10px;
 }
 
+.input_notice p {
+  margin: 0;
+  font-size: 11px;
+  color: #5c5c5c;
+  padding-left: 31%;
+  margin-bottom: 11px;
+}
 
+.bxslider{
+  margin-top:20px;
+}
+
+.agree_pop{
+  height:400px;
+}
+
+.agree_box{
+  overflow:auto;
+  height:250px;
+}
+
+.agree_box p{
+  margin: 0;
+}
 /*footer*/
 .footer {
 	font-size: 11px;

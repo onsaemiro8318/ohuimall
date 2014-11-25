@@ -13,7 +13,7 @@
     <link href="css/style_m.css" rel="stylesheet" type="text/css">
     <link href="css/normalize.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="../lib/iCheck/skins/all.css">
-    <link rel="stylesheet" href="../lib/bxslider/jquery.bxslider.css">
+    <link rel="stylesheet" href="../lib/bxslider/m.jquery.bxslider.css">
     <link rel="stylesheet" href="../lib/Magnific-Popup/magnific-popup.css"> 
     <link href="http://cdn.poesis.kr/post/search.css" rel="stylesheet" media="all" />
     <link rel="stylesheet" href="../lib/touchTouch/touchTouch.css"> 
