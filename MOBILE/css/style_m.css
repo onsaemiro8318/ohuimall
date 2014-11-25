@@ -143,6 +143,16 @@ body {
 	bottom: 2px;
 	z-index: 998;
 }
+.content .list_block ul li div.t_hot {
+	position: absolute;
+	z-index: 999;
+	top:24%;
+	left:50%;
+	width:7%;
+}
+.content .list_block ul li div.t_hot img{
+	width:100%;
+}
 .content .list_block ul li div.list {
 	width: 100%;
 	z-index: 997;
