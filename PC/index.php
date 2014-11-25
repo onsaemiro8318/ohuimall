@@ -108,28 +108,29 @@
 
 	<script type='text/javascript'>
 	// 메인 배너 slider
-	$('.bxslider').bxSlider({
+	var slider = $('.bxslider').bxSlider({
 		video: true,
 		useCSS: false,
 		reponsive: false,
 		auto: true,
 		speed: 300
 	});
+	//slider = $('.bxslider').bxSlider();
 
     // 유튜브 반복 재생
     var controllable_player,start, 
     statechange = function(e){
-    	if(e.data === 0){controllable_player.seekTo(0); controllable_player.playVideo()}
-
+    	if(e.data === 0){controllable_player.seekTo(0); controllable_player.playVideo(); }
+		slider.stopAuto();
     };
     function onYouTubeIframeAPIReady() {
-    controllable_player = new YT.Player('ytplayer', {events: {'onStateChange': statechange}}); 
+		controllable_player = new YT.Player('ytplayer', {events: {'onStateChange': statechange}}); 
     }
 
     if(window.opera){
-    addEventListener('load', onYouTubeIframeAPIReady, false);
+		addEventListener('load', onYouTubeIframeAPIReady, false);
     }
-    setTimeout(function(){
+	setTimeout(function(){
     	if (typeof(controllable_player) == 'undefined'){
     		onYouTubeIframeAPIReady();
     	}
