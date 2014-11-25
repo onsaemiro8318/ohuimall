@@ -66,7 +66,7 @@
 
 	<script type='text/javascript'>
 	// 메인 배너 slider
-	$('.bxslider').bxSlider({
+	var slider = $('.bxslider').bxSlider({
 		video: true,
 		useCSS: false,
 		reponsive: false,
@@ -78,6 +78,7 @@
     var controllable_player,start, 
     statechange = function(e){
     	if(e.data === 0){controllable_player.seekTo(0); controllable_player.playVideo()}
+		slider.stopAuto();
 
     };
     function onYouTubeIframeAPIReady() {
