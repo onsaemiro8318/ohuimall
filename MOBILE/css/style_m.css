@@ -335,11 +335,11 @@ body.pop_bg{
 	display:inline-block;
 }
 .popup .content{
-	padding:20px 0 40px;
+	padding:15px 0 25px;
 }
 .popup .content .title{
 	text-align:center;
-	padding-bottom:20px;
+	padding-bottom:15px;
 }
 .popup .content .info_block{
 	padding:10px 30px;
@@ -404,19 +404,26 @@ padding: 0 20px 15px;
 }
 .popup .content.fail .btn_share{
 	width:100%;
+	padding-top:15px;
+}
+.popup .content.fail .btn_share .txt{
+	width:170px;
+	float:left;
+	padding-left:20px;
 	padding-top:10px;
 }
-.popup .content.fail .btn_share div{
-	width:49%;
-	float:left;
+.popup .content.fail .btn_share div.btn_fb{
+	width:45px;
+	float:right;
 	text-align:right;
-	padding-right:1%;
+	padding-right:20px;
 }
 .popup .content.fail .btn_share div.btn_kt{
-	text-align:left;
-	padding-left:1%;
-	padding-right:0;
+	width:45px;
 	float:right;
+	text-align:right;
+	padding-right:0;
+	
 }
 
 
