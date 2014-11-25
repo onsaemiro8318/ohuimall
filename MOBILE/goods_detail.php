@@ -166,8 +166,8 @@
 <?php
 		}
 ?>		
-        <div class="img"><img src="images/big_product_1.jpg" alt="" border="0"/></div>
-        <div class="img add"><img src="images/big_product_1_gift.jpg" alt=""/></div>
+        <div class="img"><img src="images/big_product_<?=$goods_idx?>.jpg" alt="" border="0"/></div>
+        <div class="img add"><img src="images/big_product_<?=$goods_idx?>_gift.jpg" alt=""/></div>
       </div>
       <div class="btn_getit">
         <!-- <a href="#" onclick="javascript:buy_goods('<?=$goods_idx?>')"><img src="images/btn_getit.jpg"/></a> -->
@@ -246,7 +246,7 @@
           <img src="images/pop_title_fail.jpg"/>
         </div>
         <div class="f_img">
-          <img src="images/pop_title_fail_img_p_01.jpg" alt=""/>
+          <img src="images/pop_title_fail_img_p_<?=$goods_idx?>.jpg" alt=""/>
         </div>
         <div class="btn_share clearfix">
           <div class="btn_fb">
@@ -350,8 +350,11 @@
 <!--  당첨자 추가 정보입력 DIV 끝  -->
 
 <!--  주소검색 DIV 시작  -->
-    <div id="post_div" style="display:none;border:5px solid;position:fixed;width:95%;height:430px;margin-left:1%;top:50%;margin-top:-235px;overflow:auto;-webkit-overflow-scrolling:touch;z-index:999999999999">
+    <!-- <div id="post_div" style="display:none;border:5px solid;position:fixed;width:95%;height:430px;margin-left:1%;top:50%;margin-top:-235px;overflow:auto;-webkit-overflow-scrolling:touch;z-index:999999999999">
       <img src="//i1.daumcdn.net/localimg/localimages/07/postcode/320/close.png" id="btnCloseLayer" style="cursor:pointer;position:absolute;right:-3px;top:-3px" onclick="closeDaumPostcode()" alt="닫기 버튼">
+    </div> -->
+    <div id="post_div" style="display:none;position:absolute;width:100%;height:430px;margin-top:-30%;overflow:hidden;-webkit-overflow-scrolling:touch;z-index:999999999999">
+      <img src="//i1.daumcdn.net/localimg/localimages/07/postcode/320/close.png" id="btnCloseLayer" style="cursor:pointer;position:absolute;" onclick="closeDaumPostcode()" alt="닫기 버튼">
     </div>
 <!--  주소검색 DIV 끝  -->
 

@@ -46,7 +46,7 @@
 		}
 ?>
             <div class="list">
-              <a href="goods_detail.php?goods_idx=<?=$goods_data['idx']?>"><img src="images/thumb_product_1.jpg" alt=""/></a>
+              <a href="goods_detail.php?goods_idx=<?=$goods_data['idx']?>"><img src="images/thumb_product_<?=$goods_idx?>.jpg" alt=""/></a>
             </div>
           </li>
 <?

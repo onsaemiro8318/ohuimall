@@ -15,7 +15,7 @@
           <img src="images/pop_title_fail.jpg"/>
         </div>
         <div class="f_img">
-          <img src="images/pop_title_fail_img_p_01.jpg" alt=""/>
+          <img src="images/pop_title_fail_img_p_<?=$goods_idx?>.jpg" alt=""/>
         </div>
         <div class="btn_share clearfix">
           <div class="btn_fb">
