@@ -31,6 +31,7 @@
     <script type="text/javascript" src="../lib/bxslider/plugins/jquery.fitvids.js"></script>
     <script type="text/javascript" src="../lib/bxslider/jquery.bxslider.js"></script>
     <script type="text/javascript" src="../lib/Magnific-Popup/jquery.magnific-popup.js"></script>
+    <script type="text/javascript" src="../js/jquery.fitvids.js"></script>
     <!-- <script src="js/vendor/modernizr-2.6.2.min.js"></script> -->
 
   </head>
