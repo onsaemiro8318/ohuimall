@@ -362,8 +362,8 @@
 			$('.popup-with-zoom-anim').magnificPopup({
 				type: 'inline',
 				fixedContentPos: true,
-				fixedBgPos: true,
-				overflowY: 'hidden',
+				fixedBgPos: false,
+				overflowY: 'auto',
 				closeBtnInside: true,
 				//preloader: false,
 				midClick: true,
@@ -433,6 +433,7 @@
 		function show_post()
 		{
 			$("#post_div").show();
+
 			showDaumPostcode();
 		}
 
