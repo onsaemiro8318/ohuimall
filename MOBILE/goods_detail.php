@@ -261,7 +261,7 @@
 <!--  미당첨 페이지 DIV 끝  -->
 
 <!--  개인정보 활용동의 DIV 시작  -->
-    <div class="popup big zoom-anim-dialog mfp-hide" id="agree1_div">
+    <div class="popup big zoom-anim-dialog mfp-hide agree_pop" id="agree1_div">
       <div class="btn_close">
         <a href="#input_1" class="first-popup-link"><img src="images/btn_close.jpg" width="26" alt=""/></a>
       </div>
@@ -269,7 +269,7 @@
         <div class="title">
           <img src="images/pop_title_notice_1.jpg" width="145" alt=""/>
         </div>
-        <div class="txt_block">
+        <div class="txt_block agree_box">
         <p> ■ 개인정보의 수집 및 이용 등에 관한 동의서 </p>
         <p>&nbsp;</p>
         <p>㈜엘지생활건강(이하 "엘지생활건강")은 이벤트 참여를 위한 개인정보 수집 이용을 위하여 다음과 같이 귀하의 동의를 받고자 합니다.</p> 
@@ -286,7 +286,7 @@
 <!--  개인정보 활용동의 DIV 끝  -->
 
 <!--  개인정보 취급위탁동의 DIV 시작  -->
-    <div class="popup big zoom-anim-dialog mfp-hide" id="agree2_div">
+    <div class="popup big zoom-anim-dialog mfp-hide agree_pop" id="agree2_div">
       <div class="btn_close">
         <a href="#input_1" class="first-popup-link"><img src="images/btn_close.jpg" width="26" alt=""/></a>
       </div>
@@ -294,10 +294,10 @@
         <div class="title">
           <img src="images/pop_title_notice_2.jpg" width="175" alt=""/>
         </div>
-        <div class="txt_block">
+        <div class="txt_block agree_box">
         <p>■ 개인정보의 취급위탁 동의</p>
         <p>&nbsp;</p>
-        <p>㈜엘지생활건강(이하 "엘지생활건강")은 이벤트 참여를 위한 개인정보 수집 이용을 위하여 다음과 같이 귀하의 동의를 받고자 합니다.</p>         
+        <p>(주)엘지생활건강(이하 "엘지생활건강")은 이벤트 참여를 위한 개인정보 수집 이용을 위하여 다음과 같이 귀하의 동의를 받고자 합니다.</p>         
         <p>&nbsp;</p>        
         <p>- 정보 제공 제휴사: 미니버타이징</p>
         <p>- 개인정보 항목: 이름, 휴대폰 번호, 배송받으실 주소</p>
