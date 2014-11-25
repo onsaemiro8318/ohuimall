@@ -25,7 +25,7 @@
                 </thead>
                 <tbody>
 <?php
-	$daily_date_query	= "SELECT buyer_date FROM ".$_gl['buyer_info_table']." Group by substr(buyer_date,1,10)";
+	$daily_date_query	= "SELECT buyer_date FROM ".$_gl['buyer_info_table']." WHERE buyer_date <> '0000-00-00' Group by substr(buyer_date,1,10)";
 	$date_res			= mysqli_query($my_db, $daily_date_query);
 	while($date_daily_data = mysqli_fetch_array($date_res))
 	{
