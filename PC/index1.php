@@ -132,7 +132,7 @@
           </ul>
         </div>
         <div class="banner_block">
-          <div class="one_banner">
+          <div>
             <img src="images/list_title.jpg" alt=""/>
           </div>
           <div class="one_banner">
