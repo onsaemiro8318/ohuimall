@@ -194,7 +194,10 @@
   </head>
   <body>
     <div class="header">
-      <div class="logo_block"><a href="http://www.ohui.co.kr/" target="_blank"><img src="images/logo.png" width="60" alt="" boder="0"/></a></div>
+      <div class="logo_block clearfix">
+        <div class="logo"><a href="http://www.ohui.co.kr/" target="_blank"><img src="images/logo.png" width="60" alt="" boder="0"/></a></div>
+        <div class="logo_title"><img src="images/logo_title.png" width="120" alt=""/></div>
+      </div>
       <div class="title_block"><a href="index.php"><img src="images/title.jpg" width="200" boder="0" /></a></div>
       <div class="menu_block">
         <ul class="clearfix">
