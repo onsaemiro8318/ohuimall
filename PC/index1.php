@@ -133,7 +133,10 @@
         </div>
         <div class="banner_block">
           <div class="one_banner">
-            <a href="#"><img src="images/banner_recent.jpg" alt=""/></a>
+            <img src="images/list_title.jpg" alt=""/>
+          </div>
+          <div class="one_banner">
+            <a href="http://ohuimall.co.kr/PC/goods_detail<?=$end_view?>.php"><img src="images/banner_recent_<?=$end_view?>.jpg" alt=""/></a>
           </div>
           <div class="one_banner">
             <a href="http://www.ohui.co.kr/product/detail.jsp?pid=ACM06720&cid1=2&cid2=E" target="_blank"><img src="images/banner_ohui.jpg" alt=""/></a>
