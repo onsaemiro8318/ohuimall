@@ -39,12 +39,30 @@ function buy_goods(idx)
 
 function fb_share(name,detail,imgurl,gubun)
 {
+	var sTop=window.screen.height/2-(280);
+	var sLeft=window.screen.width/2-(310);
+	var media = "fb";
+
+	var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://ohuimall.co.kr/?media=fb'),'sharer','toolbar=0,status=0,width=600,height=325,top='+sTop+',left='+sLeft);
+
+	$.ajax({
+		type   : "POST",
+		async  : false,
+		url    : "../main_exec.php",
+		data:{
+			"exec" : "insert_share_info",
+			"media" : media,
+			"gubun" : gubun
+		}
+	});
+
+/*
   var media = "fb";
   FB.ui(
   {
     method: 'feed',
     name: "어려지는 쇼핑몰에서 '최근 본 어린마음'",
-    link: 'http://ohuimall.co.kr/',
+    link: 'http://ohuimall.co.kr/?media=fb',
     //picture: imgurl,
     picture: "http://www.tomorrowkids.or.kr/images/fb/jobimg_1.jpg",
     caption: 'www.ohuimall.co.kr',
@@ -66,6 +84,7 @@ function fb_share(name,detail,imgurl,gubun)
       }
     }
   );
+*/
 }
 
 
