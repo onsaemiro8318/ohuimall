@@ -135,6 +135,13 @@
             <div class="t_soldout"><img src="images/txt_soldout.png" width="60" alt=""/></div>
 <?php
 		}
+
+		if(in_array($goods_data['idx'], $_gl['hot_data'][date("Ymd")]))
+		{
+?>
+            <div class="t_hot"><img src="images/tag_hot.jpg" alt=""/></div>
+<?php
+		}
 ?>
             <div class="list">
               <a href="goods_detail<?=$goods_data['idx']?>.php"><img src="images/thumb_product_<?=$goods_idx?>.jpg" alt=""/></a>
