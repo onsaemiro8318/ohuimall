@@ -319,13 +319,13 @@
         </div>
         <div class="btn_share clearfix">
           <div class="txt">
-            <img src="images/share_txt.jpg.jpg" width="170" >
+            <img src="images/share_txt.jpg" width="165" >
           </div>
           <div class="btn_fb">
-            <a href="#" onclick="javascript:fb_share('<?=$goods_info['goods_name']?>','<?=$goods_info['goods_detail']?>','<?=$goods_info['goods_imgurl']?>','<?=$gubun?>','<?=$goods_info['idx']?>');"><img src="images/btn_fb.jpg" width="40" alt=""/></a>
+            <a href="#" onclick="javascript:fb_share('<?=$goods_info['goods_name']?>','<?=$goods_info['goods_detail']?>','<?=$goods_info['goods_imgurl']?>','<?=$gubun?>','<?=$goods_info['idx']?>');"><img src="images/btn_fb.jpg" width="38" alt=""/></a>
           </div>
           <div class="btn_kt">
-            <a href="#" onclick="javascript:kt_share('<?=$goods_info['goods_name']?>','<?=$goods_info['goods_detail']?>','<?=$goods_info['goods_imgurl']?>','<?=$gubun?>');"><img src="images/btn_kt.jpg" width="40" alt=""/></a>
+            <a href="#" onclick="javascript:kt_share('<?=$goods_info['goods_name']?>','<?=$goods_info['goods_detail']?>','<?=$goods_info['goods_imgurl']?>','<?=$gubun?>');"><img src="images/btn_kt.jpg" width="38" alt=""/></a>
           </div>
         </div>
       </div>
