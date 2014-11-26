@@ -319,7 +319,7 @@ body{
 .wrap_pop{
   margin: 0 auto;
 	background:url(../images/bg.jpg);
-	width:745px;
+	width:650px;
 }
 .wrap_pop .header .btn_close{
 	padding:0;
@@ -420,7 +420,7 @@ body{
 	float:left;
 }
 .wrap_pop .content.address .info_block .input_one .label{
-	width:140px;
+	width:100px;
 	padding-top:4px;
 }
 .wrap_pop .content.address .info_block .input_one .input .inner{
