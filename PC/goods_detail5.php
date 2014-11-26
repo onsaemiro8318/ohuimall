@@ -1,5 +1,5 @@
 <?
-	$goods_idx	= "1";
+	$goods_idx	= "5";
 
 	// 최근 본 상품 쿠키 저장   $_COOKIE['goods_view'] =",4";  
 	//$view_arr = explode(",",$_COOKIE['goods_view']); 
