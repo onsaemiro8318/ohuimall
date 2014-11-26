@@ -189,6 +189,9 @@ body {
 .content .product_img .img img {
 	width: 100%;
 }
+.content .product_img .img.add2{
+	padding-top:40px;
+}
 .content .btn_getit {
 	width: 100%;
 	text-align: center;
