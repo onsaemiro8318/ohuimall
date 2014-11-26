@@ -88,8 +88,18 @@ body {
 	z-index: 10000;
 }
 .header .logo_block {
+	padding:0 3%;
+	width:94%;
 	padding-top: 10px;
-	padding-left: 10px;
+}
+.header .logo_block .logo,
+.header .logo_block .logo_title{
+	float:left;
+	width:50%;
+}
+.header .logo_block .logo_title{
+	float:right;
+	text-align:right;
 }
 .header .title_block {
 	text-align: center;
