@@ -55,7 +55,7 @@
       <div class="menu_block">
         <ul class="clearfix">
 <?
-	if (strpos($_SERVER["PHP_SELF"],"index.php") !== false)
+	if (strpos($_SERVER["PHP_SELF"],"index") !== false)
 	{
 ?>
           <li><a href="index.php"><img src="images/btn_navi_mall_02.jpg" width="40" alt=""/></a></li>
