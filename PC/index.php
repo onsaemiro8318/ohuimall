@@ -51,27 +51,46 @@
 ?>
           <li>
 <?php
-		$soldout_query 		= "SELECT goods_selcount FROM ".$_gl['goods_info_table']." WHERE idx = ".$val['goods_idx']." ";
+		$soldout_query 		= "SELECT goods_selcount, goods_total_stock FROM ".$_gl['goods_info_table']." WHERE idx = ".$val['goods_idx']." ";
 		$soldout_result 	= mysqli_query($my_db, $soldout_query);
 		$soldout_cnt = mysqli_fetch_array($soldout_result);
-		if($soldout_cnt[goods_selcount] >= 10)	
+		if($soldout_cnt['goods_selcount'] >= $soldout_cnt['goods_total_stock'])	
 		{
 ?>
             <div class="t_soldout"><img src="images/txt_soldout.png" width="91" height="24" alt=""/></div>
 <?php
-		}
-    if(in_array($val['goods_idx'], $_gl['hot_data'][date(Ymd)]))
-    {
+			if(in_array($val['goods_idx'], $_gl['hot_data'][date(Ymd)]))
+			{
 ?>
             <div class="t_hot"><img src="images/tag_hot.jpg" width="37" height="19" alt=""/></div>
 <?php
-		}
+			}
 ?>
             <div class="list">
-              <p><a href="goods_detail.php?goods_idx=<?=$val['goods_idx']?>"><img src="images/thumb_product_1.jpg" alt=""/></a></p>
-              <p class="txt_name"><a href="goods_detail.php?goods_idx=<?=$val['goods_idx']?>"><img src="images/txt_product_name_1.jpg" width="213" height="57" alt=""/></a></p>
+              <p><a href="soldout.php?goods_idx=<?=$val['goods_idx']?>"><img src="images/thumb_product_<?=$val['goods_idx']?>.jpg" alt=""/></a></p>
+              <p class="txt_name"><a href="soldout.php?goods_idx=<?=$val['goods_idx']?>"><img src="images/txt_product_name_<?=$val['goods_idx']?>.jpg" width="213" height="57" alt=""/></a></p>
+              <p class="btn_block"><a href="soldout.php?goods_idx=<?=$val['goods_idx']?>"><img src="images/btn_buy_at_list_out.jpg" width="290" height="59" alt=""/></a></p>
+            </div>
+<?
+		}else{
+?>
+<?php
+			if(in_array($val['goods_idx'], $_gl['hot_data'][date(Ymd)]))
+			{
+?>
+            <div class="t_hot"><img src="images/tag_hot.jpg" width="37" height="19" alt=""/></div>
+<?php
+			}
+?>
+            <div class="list">
+              <p><a href="goods_detail.php?goods_idx=<?=$val['goods_idx']?>"><img src="images/thumb_product_<?=$val['goods_idx']?>.jpg" alt=""/></a></p>
+              <p class="txt_name"><a href="goods_detail.php?goods_idx=<?=$val['goods_idx']?>"><img src="images/txt_product_name_<?=$val['goods_idx']?>.jpg" width="213" height="57" alt=""/></a></p>
               <p class="btn_block"><a href="goods_detail.php?goods_idx=<?=$val['goods_idx']?>"><img src="images/btn_buy_at_list.jpg" width="290" height="59" alt=""/></a></p>
             </div>
+<?
+		}
+?>
+
           </li>
 <?
 	}
@@ -89,28 +108,29 @@
 
 	<script type='text/javascript'>
 	// 메인 배너 slider
-	$('.bxslider').bxSlider({
+	var slider = $('.bxslider').bxSlider({
 		video: true,
 		useCSS: false,
-		reponsive: false,
+		responsive: false,
 		auto: true,
 		speed: 300
 	});
+	//slider = $('.bxslider').bxSlider();
 
     // 유튜브 반복 재생
     var controllable_player,start, 
     statechange = function(e){
-    	if(e.data === 0){controllable_player.seekTo(0); controllable_player.playVideo()}
-
+    	if(e.data === 0){controllable_player.seekTo(0); controllable_player.playVideo(); }
+		slider.stopAuto();
     };
     function onYouTubeIframeAPIReady() {
-    controllable_player = new YT.Player('ytplayer', {events: {'onStateChange': statechange}}); 
+		controllable_player = new YT.Player('ytplayer', {events: {'onStateChange': statechange}}); 
     }
 
     if(window.opera){
-    addEventListener('load', onYouTubeIframeAPIReady, false);
+		addEventListener('load', onYouTubeIframeAPIReady, false);
     }
-    setTimeout(function(){
+	setTimeout(function(){
     	if (typeof(controllable_player) == 'undefined'){
     		onYouTubeIframeAPIReady();
     	}

@@ -49,6 +49,14 @@ switch ($_REQUEST['exec'])
 		if ($buyer_info > 0)
 		{
 			$winner_chk = "F";
+			
+			$userWinnerYN = OM_WinnerByPhone($mb_phone);
+
+			if ($userWinnerYN > 0)
+			{
+				$winner_chk = "W";
+			}
+
 		}else{
 			$insert_rs = InsertBuyerInfo($mb_name, $mb_phone, $goods_idx, $buyer_gubun);
 			if ($insert_rs)

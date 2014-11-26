@@ -154,35 +154,12 @@
     <input type="hidden" name="goods_idx" id="goods_idx" value="<?=$goods_idx?>">
     <div class="content">
       <div class="product_img">
-        <!--품절시-->
-<?php
-		$soldout_query 		= "SELECT goods_selcount FROM ".$_gl['goods_info_table']." WHERE idx = ".$goods_idx." ";
-		$soldout_result 	= mysqli_query($my_db, $soldout_query);
-		$soldout_cnt = mysqli_fetch_array($soldout_result);
-		if($soldout_cnt[goods_selcount] >= 10)	
-		{
-?>			  		
-        <div class="t_soldout"><img src="images/txt_soldout.png" width="60" alt=""/></div>
-<?php
-		}
-?>		
-        <div class="img"><img src="images/big_product_1.jpg" alt="" border="0"/></div>
-        <div class="img add"><img src="images/big_product_1_gift.jpg" alt=""/></div>
+        <div class="img"><img src="images/big_product_<?=$goods_idx?>.jpg" alt="" border="0"/></div>
+        <div class="img add"><img src="images/big_product_<?=$goods_idx?>_gift.jpg" alt=""/></div>
       </div>
       <div class="btn_getit">
         <!-- <a href="#" onclick="javascript:buy_goods('<?=$goods_idx?>')"><img src="images/btn_getit.jpg"/></a> -->
-<?
-	if($soldout_cnt[goods_selcount] >= 10)	
-	{
-?>
-        <a href="#" onclick="alert('품절되어 구매하실 수 없습니다.\n다른 상품을 구매해 주세요.');return false;"><img src="images/btn_getit.jpg"/></a>
-<?
-	}else{
-?>
         <a href="#input_1" class="popup-with-zoom-anim"><img src="images/btn_getit.jpg"/></a>
-<?
-	}
-?>
       </div> 
       <div class="btn_share_inview clearfix">
         <div class="txt">
@@ -215,6 +192,7 @@
             <div class="label">휴대폰번호</div>
             <div class="input"><input type="text" name="mb_phone" id="mb_phone" onkeyup="only_num(this)"></div>
           </div>
+          <div class="input_notice"><p>'-'없이 번호만 입력해주세요.</p></div>
         </div>
         <div class="check_block">
           <div class="check_one clearfix">
@@ -245,7 +223,7 @@
           <img src="images/pop_title_fail.jpg"/>
         </div>
         <div class="f_img">
-          <img src="images/pop_title_fail_img_p_01.jpg" alt=""/>
+          <img src="images/pop_title_fail_img_p_<?=$goods_idx?>.jpg" alt=""/>
         </div>
         <div class="btn_share clearfix">
           <div class="btn_fb">
@@ -260,7 +238,7 @@
 <!--  미당첨 페이지 DIV 끝  -->
 
 <!--  개인정보 활용동의 DIV 시작  -->
-    <div class="popup big zoom-anim-dialog mfp-hide" id="agree1_div">
+    <div class="popup big zoom-anim-dialog mfp-hide agree_pop" id="agree1_div">
       <div class="btn_close">
         <a href="#input_1" class="first-popup-link"><img src="images/btn_close.jpg" width="26" alt=""/></a>
       </div>
@@ -268,15 +246,22 @@
         <div class="title">
           <img src="images/pop_title_notice_1.jpg" width="145" alt=""/>
         </div>
-        <div class="txt_block">
-        txt
+        <div class="txt_block agree_box">
+        <p>(주)엘지생활건강(이하 "엘지생활건강")은 이벤트 참여를 위한 개인정보 수집 이용을 위하여 다음과 같이 귀하의 동의를 받고자 합니다.</p> 
+        <p>&nbsp;</p>
+        <p>- 구분: 필수항목</p>
+        <p>- 개인정보 수집항목: 이름, 휴대폰 번호, 배송받으실 주소, Cookie와 URL 등을 포함하는 Browsing Session 정보</p>
+        <p>- 수집목적: 이벤트 참여 및 진행</p>
+        <p>- 보유 및 이용기간: 이벤트 종료 후 3개월 간, 3개월 이후 즉시 파기</p>
+        <p>&nbsp;</p>
+        <p>엘지생활건강은 이벤트 진행을 위하여 개인정보를 수집하고 있습니다. 제공받은 고객의 정보는 이벤트 진행에 한하여 이용되며 이벤트 목적 이외로 이용되지 않습니다. </p>
         </div>
       </div>
     </div>
 <!--  개인정보 활용동의 DIV 끝  -->
 
 <!--  개인정보 취급위탁동의 DIV 시작  -->
-    <div class="popup big zoom-anim-dialog mfp-hide" id="agree2_div">
+    <div class="popup big zoom-anim-dialog mfp-hide agree_pop" id="agree2_div">
       <div class="btn_close">
         <a href="#input_1" class="first-popup-link"><img src="images/btn_close.jpg" width="26" alt=""/></a>
       </div>
@@ -284,8 +269,15 @@
         <div class="title">
           <img src="images/pop_title_notice_2.jpg" width="175" alt=""/>
         </div>
-        <div class="txt_block">
-        txt
+        <div class="txt_block agree_box">
+        <p>(주)엘지생활건강(이하 "엘지생활건강")은 이벤트 참여를 위한 개인정보 수집 이용을 위하여 다음과 같이 귀하의 동의를 받고자 합니다.</p>         
+        <p>&nbsp;</p>        
+        <p>- 정보 제공 제휴사: 미니버타이징</p>
+        <p>- 개인정보 항목: 이름, 휴대폰 번호, 배송받으실 주소</p>
+        <p>- 이용목적: 이벤트 당첨 확인 및 당첨 안내 업무</p>
+        <p>- 보유 및 이용기간: 이벤트 종료 후 3개월 간, 3개월 이후 즉시 파기</p>
+        <p>&nbsp;</p>
+        <p>엘지생활건강은 이벤트 당첨 확인 및 안내 업무를 위하여 고객의 정보를 위탁하고 있으며, 명시된 업무 이외의 내용으로 고객의 정보를 위탁하거나 제공하지 않습니다.</p>
         </div>
       </div>
     </div>
@@ -335,8 +327,11 @@
 <!--  당첨자 추가 정보입력 DIV 끝  -->
 
 <!--  주소검색 DIV 시작  -->
-    <div id="post_div" style="display:none;border:5px solid;position:fixed;width:95%;height:500px;margin-left:1%;top:50%;margin-top:-235px;overflow:hidden;-webkit-overflow-scrolling:touch;z-index:999999999999">
+    <!-- <div id="post_div" style="display:none;border:5px solid;position:fixed;width:95%;height:430px;margin-left:1%;top:50%;margin-top:-235px;overflow:auto;-webkit-overflow-scrolling:touch;z-index:999999999999">
       <img src="//i1.daumcdn.net/localimg/localimages/07/postcode/320/close.png" id="btnCloseLayer" style="cursor:pointer;position:absolute;right:-3px;top:-3px" onclick="closeDaumPostcode()" alt="닫기 버튼">
+    </div> -->
+    <div id="post_div" style="display:none;position:fixed;width:100%;height:100%;top:0px;overflow:hidden;-webkit-overflow-scrolling:touch;z-index:99998">
+      <img src="//i1.daumcdn.net/localimg/localimages/07/postcode/320/close.png" id="btnCloseLayer" style="cursor:pointer;position:absolute;right:0px;top:0px;z-index:99999" onclick="closeDaumPostcode()" alt="닫기 버튼">
     </div>
 <!--  주소검색 DIV 끝  -->
 
@@ -347,8 +342,8 @@
 			$('.popup-with-zoom-anim').magnificPopup({
 				type: 'inline',
 				fixedContentPos: true,
-				fixedBgPos: true,
-				overflowY: 'hidden',
+				fixedBgPos: false,
+				overflowY: 'auto',
 				closeBtnInside: true,
 				//preloader: false,
 				midClick: true,
@@ -364,6 +359,7 @@
 						$("#postcode2").val("");
 						$("#addr1").val("");
 						$("#addr2").val("");
+						$("#post_div").hide();
 					}
 				}
 
@@ -417,6 +413,7 @@
 		function show_post()
 		{
 			$("#post_div").show();
+
 			showDaumPostcode();
 		}
 

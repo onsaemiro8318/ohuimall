@@ -30,7 +30,9 @@
 ?>
 
 <script type='text/javascript'>
-	var toggle_flag = 0;
+	var toggle_flag1 = 0;
+	var toggle_flag2 = 0;
+	var toggle_flag3 = 0;
 
 	$(document).ready(function() {
 		$("#faq_box dd").hide();
@@ -39,13 +41,34 @@
 	function faq_toggle(idx){
 		var faq_con = "#faq_con" + idx;
 		$(faq_con).slideToggle( "normal", function(){
-			if (toggle_flag == 0)
+			if (idx == 1)
 			{
-				$("#arrow_faq" + idx).attr("src","images/arrow_faq2.jpg");
-				toggle_flag = 1;
+				if (toggle_flag1 == 0)
+				{
+					$("#arrow_faq" + idx).attr("src","images/arrow_faq2.jpg");
+					toggle_flag1 = 1;
+				}else{
+					$("#arrow_faq" + idx).attr("src","images/arrow_faq.jpg");
+					toggle_flag1 = 0;
+				}
+			}else if (idx == 2){
+				if (toggle_flag2 == 0)
+				{
+					$("#arrow_faq" + idx).attr("src","images/arrow_faq2.jpg");
+					toggle_flag2 = 1;
+				}else{
+					$("#arrow_faq" + idx).attr("src","images/arrow_faq.jpg");
+					toggle_flag2 = 0;
+				}
 			}else{
-				$("#arrow_faq" + idx).attr("src","images/arrow_faq.jpg");
-				toggle_flag = 0;
+				if (toggle_flag3 == 0)
+				{
+					$("#arrow_faq" + idx).attr("src","images/arrow_faq2.jpg");
+					toggle_flag3 = 1;
+				}else{
+					$("#arrow_faq" + idx).attr("src","images/arrow_faq.jpg");
+					toggle_flag3 = 0;
+				}
 			}
 		});
 	}

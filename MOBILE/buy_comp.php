@@ -14,7 +14,7 @@
         [첫 연애편지를 받은 마음] 입니다.</p>
       </div> 
       <div class="product_img">
-        <img src="images/buy_comp_product_1.jpg" alt="" border="0"/> 
+        <img src="images/buy_comp_product_<?=$goods_idx?>.jpg" alt="" border="0"/> 
       </div>
       <div class="info_detail d1">
         <h3><img src="images/title_buy_comp_detail.jpg" width="94" /></h3>

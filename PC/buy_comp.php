@@ -9,7 +9,7 @@
 ?>
     <div class="content g_960">       
       <div class="product_buy_end">
-        <img src="images/buy_end_product_img_1.jpg" width="959" height="493" alt=""/>
+        <img src="images/buy_end_product_img_<?=$goods_idx?>.jpg" width="959" height="493" alt=""/>
       </div>
       <div class="txt_ship">
         <p><img src="images/txt_shipping.jpg" width="303" height="33" alt=""/></p>

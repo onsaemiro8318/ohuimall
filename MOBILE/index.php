@@ -35,10 +35,10 @@
 
           <li>
 <?php
-		$soldout_query 		= "SELECT goods_selcount FROM ".$_gl['goods_info_table']." WHERE idx = ".$goods_data['idx']." ";
+		$soldout_query 		= "SELECT goods_selcount, goods_total_stock FROM ".$_gl['goods_info_table']." WHERE idx = ".$goods_data['idx']." ";
 		$soldout_result 	= mysqli_query($my_db, $soldout_query);
 		$soldout_cnt = mysqli_fetch_array($soldout_result);
-		if($soldout_cnt[goods_selcount] >= 10)
+		if($soldout_cnt['goods_selcount'] >= $soldout_cnt['goods_total_stock'])	
 		{
 ?>
             <div class="t_soldout"><img src="images/txt_soldout.png" width="60" alt=""/></div>
@@ -46,7 +46,7 @@
 		}
 ?>
             <div class="list">
-              <a href="goods_detail.php?goods_idx=<?=$goods_data['idx']?>"><img src="images/thumb_product_1.jpg" alt=""/></a>
+              <a href="goods_detail.php?goods_idx=<?=$goods_data['idx']?>"><img src="images/thumb_product_<?=$goods_idx?>.jpg" alt=""/></a>
             </div>
           </li>
 <?
@@ -66,7 +66,7 @@
 
 	<script type='text/javascript'>
 	// 메인 배너 slider
-	$('.bxslider').bxSlider({
+	var slider = $('.bxslider').bxSlider({
 		video: true,
 		useCSS: false,
 		reponsive: false,
@@ -78,6 +78,7 @@
     var controllable_player,start, 
     statechange = function(e){
     	if(e.data === 0){controllable_player.seekTo(0); controllable_player.playVideo()}
+		slider.stopAuto();
 
     };
     function onYouTubeIframeAPIReady() {
