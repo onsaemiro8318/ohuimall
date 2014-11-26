@@ -72,7 +72,7 @@
         <div class="inner g_960">
           <ul class="clearfix">
 <?
-	if (strpos($_SERVER["PHP_SELF"],"index.php") !== false)
+	if (strpos($_SERVER["PHP_SELF"],"index") !== false)
 	{
 ?>
             <li><a href="index.php"><img src="images/btn_mall_02.png" width="47" height="20" alt=""/></a></li>
