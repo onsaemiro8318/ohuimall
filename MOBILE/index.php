@@ -76,7 +76,7 @@
 	var slider = $('.bxslider').bxSlider({
 		video: true,
 		useCSS: false,
-		reponsive: false,
+		responsive: false,
 		auto: true,
 		speed: 300
 	});
