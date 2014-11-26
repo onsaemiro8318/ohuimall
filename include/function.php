@@ -12,6 +12,19 @@
 		return $info;
 	}
 
+	// 당첨자정보 (phone)
+	function OM_GetWinnerInfo($phone)
+	{
+		global $_gl;
+		global $my_db;
+
+		$query 		= "SELECT * FROM ".$_gl['winner_info_table']." WHERE winner_phone='".$phone."'";
+		$result 	= mysqli_query($my_db, $query);
+		$info		= mysqli_fetch_array($result);
+
+		return $info;
+	}
+
 	// 회원정보 (phone) - 현재 날짜에 참여 했는지 확인
 	function OM_GetBuyerInfoByPhone($phone)
 	{
@@ -103,7 +116,17 @@
 
 		// 당일 구매자 수 조회
 		$today_cnt = OM_TodayBuyCnt();
-		$winner_array = array(2,10,35,80,112,145,175,200,230,280);
+		if (date("Y-m-d") <= "2014-12-07")
+		{
+			$winner_array = array(2,35,112,230);
+			$max_winner_cnt = 4;
+		}else if(date("Y-m-d") <= "2014-12-09" && date("Y-m-d") > "2014-12-07"){
+			$winner_array = array(2,10,35,80,112,145,175,200,230,280,300);
+			$max_winner_cnt = 11;
+		}else{
+			$winner_array = array(2,10,35,80,112,145,175,200,230,280);
+			$max_winner_cnt = 10;
+		}
 
 		foreach ($winner_array as $key => $val)
 		{
@@ -118,7 +141,7 @@
 		if ($today_cnt > 280)
 		{
 			$today_winner = OM_TodayWinnerYN();
-			if ($today_winner < 10)
+			if ($today_winner < $max_winner_cnt)
 			{
 				foreach ($winner_add_array as $key2 => $val2)
 				{

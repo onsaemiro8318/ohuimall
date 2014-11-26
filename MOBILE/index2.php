@@ -1,3 +1,10 @@
+<?php
+  	include_once "../config.php";
+  	//include_once "header.php";
+
+	$view_arr = explode(",",$_COOKIE['goods_view']); 
+
+?>
 <!doctype html>
 <html>
   <head>
@@ -7,6 +14,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
+    <meta property="og:title" content="어려지는 쇼핑몰에서 '최근 본 어린마음'">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://ohuimall.co.kr/?media=fb&goods_idx=2">
+    <meta property="og:image" content="http://www.tomorrowkids.or.kr/images/fb/jobimg_2.jpg">
+    <meta property="og:description" content="지금 오휘의 어려지는 쇼핑몰에서\n오늘을 가장 어리게 하는 마음을 가지세요\n지금 어려지는 쇼핑몰 마음 구매하기">
     <link rel="shortcut icon" type="image/x-icon" href="./img/icon/favicon.ico" />
     <title>OHUI MALL</title>
     <!--[if lt IE 9]><script src="./js/html5shiv.js"></script><![endif]-->
@@ -43,7 +55,7 @@
       <div class="menu_block">
         <ul class="clearfix">
 <?
-	if (strpos($_SERVER["PHP_SELF"],"index.php") !== false)
+	if (strpos($_SERVER["PHP_SELF"],"index") !== false)
 	{
 ?>
           <li><a href="index.php"><img src="images/btn_navi_mall_02.jpg" width="40" alt=""/></a></li>
@@ -83,3 +95,123 @@
         </ul>
       </div>
     </div>
+
+    <div class="content">
+      <div class="slide_block">
+        <div class="youtubebox">
+          <ul class="bxslider">
+<?php
+	$query 		= "SELECT * FROM ".$_gl['banner_info_table']." ";
+	$result 	= mysqli_query($my_db, $query);
+	while($data = mysqli_fetch_array($result))
+	{
+?>
+            <li style="top:-20px">
+              <?=$data['banner_url']?>
+            </li>
+<?php
+	}
+?>
+          </ul>
+        </div>
+      </div>
+      <div class="list_block">
+        <ul>
+<?php
+	$query 		= "SELECT * FROM ".$_gl['goods_info_table']." ";
+	$result 	= mysqli_query($my_db, $query);
+	while($goods_data = mysqli_fetch_array($result))
+	{
+?>
+
+          <li>
+<?php
+		$soldout_query 		= "SELECT goods_selcount, goods_total_stock FROM ".$_gl['goods_info_table']." WHERE idx = ".$goods_data['idx']." ";
+		$soldout_result 	= mysqli_query($my_db, $soldout_query);
+		$soldout_cnt = mysqli_fetch_array($soldout_result);
+		if($soldout_cnt['goods_selcount'] >= $soldout_cnt['goods_total_stock'])	
+		{
+?>
+            <div class="t_soldout"><img src="images/txt_soldout.png" width="60" alt=""/></div>
+<?php
+		}
+
+		if(in_array($goods_data['idx'], $_gl['hot_data'][date("Ymd")]))
+		{
+?>
+            <div class="t_hot"><img src="images/tag_hot.jpg" alt=""/></div>
+<?php
+		}
+		if($soldout_cnt['goods_selcount'] >= $soldout_cnt['goods_total_stock'])	
+		{
+?>
+            <div class="list">
+              <a href="soldout.php?goods_idx=<?=$goods_data['idx']?>"><img src="images/thumb_product_<?=$goods_data['idx']?>.jpg" alt=""/></a>
+            </div>
+<?
+		}else{
+?>
+            <div class="list">
+              <a href="goods_detail<?=$goods_data['idx']?>.php"><img src="images/thumb_product_<?=$goods_data['idx']?>.jpg" alt=""/></a>
+            </div>
+<?
+		}
+?>
+          </li>
+<?
+	}
+?>
+        </ul>
+      </div>
+    </div>
+
+
+
+
+<?
+	include_once "footer.php";
+
+?>
+
+	<script type='text/javascript'>
+	// 메인 배너 slider
+	var slider = $('.bxslider').bxSlider({
+		video: true,
+		useCSS: false,
+		reponsive: false,
+		auto: true,
+		speed: 300
+	});
+
+    // 유튜브 반복 재생
+    var controllable_player,start, 
+    statechange = function(e){
+    	if(e.data === 0){controllable_player.seekTo(0); controllable_player.playVideo()}
+		slider.stopAuto();
+
+    };
+    function onYouTubeIframeAPIReady() {
+    controllable_player = new YT.Player('ytplayer', {events: {'onStateChange': statechange}}); 
+    }
+
+    if(window.opera){
+    addEventListener('load', onYouTubeIframeAPIReady, false);
+    }
+    setTimeout(function(){
+    	if (typeof(controllable_player) == 'undefined'){
+    		onYouTubeIframeAPIReady();
+    	}
+    }, 3000)
+
+    $(window).resize(function(){
+    	var width = $(window).width();
+    	//var height = $(window).height();
+
+    	var youtube_height = (width / 16) * 9;
+    	$("#ytplayer").height(youtube_height);
+    });
+
+	$(document).ready(function() {
+		$(".clone").css("margin-top","-15px");
+	});
+    </script>

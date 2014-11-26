@@ -1,6 +1,6 @@
 <?php
-  	include_once "../config.php";
-  	include_once "header.php";
+	include_once "../config.php";
+	include_once "header.php";
 
 	$view_arr	= explode(",",$_COOKIE['goods_view']); 
 	$end_view	= end($view_arr);
@@ -12,8 +12,14 @@
 	while($data = @mysqli_fetch_array($result))
 	{
 		$goods_array[$i]['goods_idx']		= $data['idx'];
+		$goods_array[$i]['goods_name']		= $data['goods_name'];
 		$i++;
 	}
+
+	if (isset($end_view) == true)
+		$recent_image = "images/banner_recent_".$end_view.".jpg";
+	else
+		$recent_image = "images/banner_recent_no.jpg";
 ?>
     <div class="content">
       <div class="slide_block g_960">
@@ -34,11 +40,14 @@
           </ul>
         </div>
         <div class="banner_block">
-          <div class="one_banner">
-            <a href="#"><img src="images/banner_recent.jpg" alt=""/></a>
+          <div>
+            <img src="images/list_title.jpg" alt=""/>
           </div>
           <div class="one_banner">
-            <a href="#"><img src="images/banner_ohui.jpg" alt=""/></a>
+            <a href="http://ohuimall.co.kr/PC/goods_detail<?=$end_view?>.php"><img src="<?=$recent_image?>" alt="<?=$goods_array[$end_view]['goods_name']?>" title="<?=$goods_array[$end_view]['goods_name']?>"/></a>
+          </div>
+          <div class="one_banner">
+            <a href="http://www.ohui.co.kr/product/detail.jsp?pid=ACM06720&cid1=2&cid2=E" target="_blank"><img src="images/banner_ohui.jpg" alt=""/></a>
           </div>
         </div>
       </div>
@@ -83,9 +92,9 @@
 			}
 ?>
             <div class="list">
-              <p><a href="goods_detail.php?goods_idx=<?=$val['goods_idx']?>"><img src="images/thumb_product_<?=$val['goods_idx']?>.jpg" alt=""/></a></p>
-              <p class="txt_name"><a href="goods_detail.php?goods_idx=<?=$val['goods_idx']?>"><img src="images/txt_product_name_<?=$val['goods_idx']?>.jpg" width="213" height="57" alt=""/></a></p>
-              <p class="btn_block"><a href="goods_detail.php?goods_idx=<?=$val['goods_idx']?>"><img src="images/btn_buy_at_list.jpg" width="290" height="59" alt=""/></a></p>
+              <p><a href="goods_detail<?=$val['goods_idx']?>.php"><img src="images/thumb_product_<?=$val['goods_idx']?>.jpg" alt=""/></a></p>
+              <p class="txt_name"><a href="goods_detail<?=$val['goods_idx']?>.php"><img src="images/txt_product_name_<?=$val['goods_idx']?>.jpg" width="213" height="57" alt=""/></a></p>
+              <p class="btn_block"><a href="goods_detail<?=$val['goods_idx']?>.php"><img src="images/btn_buy_at_list.jpg" width="290" height="59" alt=""/></a></p>
             </div>
 <?
 		}

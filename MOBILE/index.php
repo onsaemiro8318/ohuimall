@@ -44,10 +44,28 @@
             <div class="t_soldout"><img src="images/txt_soldout.png" width="60" alt=""/></div>
 <?php
 		}
+
+		if(in_array($goods_data['idx'], $_gl['hot_data'][date("Ymd")]))
+		{
+?>
+            <div class="t_hot"><img src="images/tag_hot.jpg" alt=""/></div>
+<?php
+		}
+		if($soldout_cnt['goods_selcount'] >= $soldout_cnt['goods_total_stock'])	
+		{
 ?>
             <div class="list">
-              <a href="goods_detail.php?goods_idx=<?=$goods_data['idx']?>"><img src="images/thumb_product_<?=$goods_idx?>.jpg" alt=""/></a>
+              <a href="soldout.php?goods_idx=<?=$goods_data['idx']?>"><img src="images/thumb_product_<?=$goods_data['idx']?>.jpg" alt=""/></a>
             </div>
+<?
+		}else{
+?>
+            <div class="list">
+              <a href="goods_detail<?=$goods_data['idx']?>.php"><img src="images/thumb_product_<?=$goods_data['idx']?>.jpg" alt=""/></a>
+            </div>
+<?
+		}
+?>
           </li>
 <?
 	}
@@ -69,7 +87,7 @@
 	var slider = $('.bxslider').bxSlider({
 		video: true,
 		useCSS: false,
-		reponsive: false,
+		responsive: false,
 		auto: true,
 		speed: 300
 	});
