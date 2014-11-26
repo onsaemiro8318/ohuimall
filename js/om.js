@@ -37,13 +37,13 @@ function buy_goods(idx)
 	}
 }
 
-function fb_share(name,detail,imgurl,gubun)
+function fb_share(name,detail,imgurl,gubun,idx)
 {
-	var sTop=window.screen.height/2-(280);
-	var sLeft=window.screen.width/2-(310);
+	//var sTop=window.screen.height/2-(280);
+	//var sLeft=window.screen.width/2-(310);
 	var media = "fb";
 
-	var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://ohuimall.co.kr/?media=fb&goods_idx=1'),'sharer','toolbar=0,status=0,width=600,height=325,top='+sTop+',left='+sLeft);
+	var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://ohuimall.co.kr/?media=fb&goods_idx='+ idx),'sharer','toolbar=0,status=0,width=600,height=325');
 
 	$.ajax({
 		type   : "POST",
