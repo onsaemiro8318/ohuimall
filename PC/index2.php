@@ -33,7 +33,7 @@
     <meta property="og:title" content="어려지는 쇼핑몰에서 '최근 본 어린마음'">
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://ohuimall.co.kr/?media=fb&goods_idx=2">
-    <meta property="og:image" content="http://www.tomorrowkids.or.kr/images/fb/jobimg_2.jpg">
+    <meta property="og:image" content="http://ohuimall.co.kr/images/can_img_2.jpg">
     <meta property="og:description" content="지금 오휘의 어려지는 쇼핑몰에서\n오늘을 가장 어리게 하는 마음을 가지세요\n지금 어려지는 쇼핑몰 마음 구매하기">
     <link rel="shortcut icon" type="image/x-icon" href="./img/icon/favicon.ico" />
     <title>OHUI MALL</title>
@@ -175,7 +175,7 @@
 ?>
             <div class="list">
               <p><a href="soldout.php?goods_idx=<?=$val['goods_idx']?>"><img src="images/thumb_product_<?=$val['goods_idx']?>.jpg" alt=""/></a></p>
-              <p class="txt_name"><a href="soldout.php?goods_idx=<?=$val['goods_idx']?>"><img src="images/txt_product_name_<?=$val['goods_idx']?>.jpg" width="213" height="57" alt=""/></a></p>
+              <p class="txt_name"><a href="soldout.php?goods_idx=<?=$val['goods_idx']?>"><img src="images/txt_product_name_<?=$val['goods_idx']?>.jpg" height="57" alt=""/></a></p>
               <p class="btn_block"><a href="soldout.php?goods_idx=<?=$val['goods_idx']?>"><img src="images/btn_buy_at_list_out.jpg" width="290" height="59" alt=""/></a></p>
             </div>
 <?
@@ -191,7 +191,7 @@
 ?>
             <div class="list">
               <p><a href="goods_detail.php?goods_idx=<?=$val['goods_idx']?>"><img src="images/thumb_product_<?=$val['goods_idx']?>.jpg" alt=""/></a></p>
-              <p class="txt_name"><a href="goods_detail.php?goods_idx=<?=$val['goods_idx']?>"><img src="images/txt_product_name_<?=$val['goods_idx']?>.jpg" width="213" height="57" alt=""/></a></p>
+              <p class="txt_name"><a href="goods_detail.php?goods_idx=<?=$val['goods_idx']?>"><img src="images/txt_product_name_<?=$val['goods_idx']?>.jpg" height="57" alt=""/></a></p>
               <p class="btn_block"><a href="goods_detail.php?goods_idx=<?=$val['goods_idx']?>"><img src="images/btn_buy_at_list.jpg" width="290" height="59" alt=""/></a></p>
             </div>
 <?
