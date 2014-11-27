@@ -16,6 +16,13 @@
    	   	 <div class="img"><img src="images/big_product_<?=$goods_idx?>.jpg" alt="" border="0"/></div>
             <div class="img add"><img src="images/big_product_<?=$goods_idx?>_gift.jpg" alt=""/></div>
             
+      </div>
+      <div class="product_img">
+        <div class="img add2"><img src="images/big_product_<?=$goods_idx?>_detail.jpg" alt=""/></div>
+      </div>
+      <div class="product_view_box">
+        <img src="images/view_list.png" alt=""/>
+        <img src="images/view_list_1.png" alt=""/ class="product_view_list">
       </div> 
     </div>
     
