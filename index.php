@@ -3,8 +3,8 @@
 
 
 	unset($media);
-	$media		= $_REQUEST[media];
-	$goods_idx	= $_REQUEST[goods_idx];
+	$media		= $_REQUEST['media'];
+	$goods_idx	= $_REQUEST['goods_idx'];
 
 	OM_InsertTrackingInfo($media, $gubun);
 
