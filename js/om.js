@@ -273,6 +273,14 @@ function input_name(gubun)
 		$("#mb_phone").focus();
 		return false;
 	}
+	var phone_len	= phone_val.length;
+
+	if (phone_len < 10 || phone_len > 11)
+	{
+		alert("전화번호를 정확히 입력해 주세요.");
+		$("#mb_phone").focus();
+		return false;
+	}
 
 	if ($("input:checkbox[id='agree1']").is(":checked") == false)
 	{

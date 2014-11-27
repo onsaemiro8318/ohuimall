@@ -12,8 +12,14 @@
 	while($data = @mysqli_fetch_array($result))
 	{
 		$goods_array[$i]['goods_idx']		= $data['idx'];
+		$goods_array[$i]['goods_name']		= $data['goods_name'];
 		$i++;
 	}
+
+	if (isset($end_view) == true)
+		$recent_image = "images/banner_recent_".$end_view.".jpg";
+	else
+		$recent_image = "images/banner_recent_no.jpg";
 ?>
     <div class="content">
       <div class="slide_block g_960">
@@ -38,7 +44,7 @@
             <img src="images/list_title.jpg" alt=""/>
           </div>
           <div class="one_banner">
-            <a href="http://ohuimall.co.kr/PC/goods_detail<?=$end_view?>.php"><img src="images/banner_recent_<?=$end_view?>.jpg" alt="<?=$goods_array[$end_view]['goods_name']?>" title="<?=$goods_array[$end_view]['goods_name']?>"/></a>
+            <a href="http://ohuimall.co.kr/PC/goods_detail<?=$end_view?>.php"><img src="<?=$recent_image?>" alt="<?=$goods_array[$end_view]['goods_name']?>" title="<?=$goods_array[$end_view]['goods_name']?>"/></a>
           </div>
           <div class="one_banner">
             <a href="http://www.ohui.co.kr/product/detail.jsp?pid=ACM06720&cid1=2&cid2=E" target="_blank"><img src="images/banner_ohui.jpg" alt=""/></a>
