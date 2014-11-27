@@ -126,18 +126,9 @@
       <div class="slide_block g_960">
         <div class="youtubebox">
           <ul class="bxslider">
-<?php
-  $query 		= "SELECT * FROM ".$_gl['banner_info_table']." ";
-  $result 	= mysqli_query($my_db, $query);
-  while($data = mysqli_fetch_array($result))
-  {
-?>
             <li>
-            <?=$data['banner_url']?>
+<iframe width="960" height="540" id="ytplayer" src="https://www.youtube.com/embed/e3y0ucig7Nk?controls=0&loop=1&modestbranding=1&showinfo=0&wmode=opaque&enablejsapi=1&rel=0" frameborder="0" allowfullscreen></iframe>
             </li>
-<?php
-  }
-?>
           </ul>
         </div>
         <div class="banner_block">
@@ -218,12 +209,12 @@
 
 	<script type='text/javascript'>
 	// 메인 배너 slider
-	var slider = $('.bxslider').bxSlider({
-		video: true,
-		useCSS: false,
-		responsive: false,
-		auto: true,
-		speed: 300
+  // var slider = $('.bxslider').bxSlider({
+  //   video: true,
+  //   useCSS: false,
+  //   responsive: false,
+  //   auto: true,
+  //   speed: 300
 	});
 	//slider = $('.bxslider').bxSlider();
 
