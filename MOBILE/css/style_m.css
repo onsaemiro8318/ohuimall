@@ -372,7 +372,8 @@ body.pop_bg{
 }
 .popup{
 	width:95%;
-	background: url(../images/bg.jpg);
+	/*background: url(../images/bg.jpg);*/
+  background-color: #fff;
 	margin:10px auto ;
 }
 .popup .btn_close{
