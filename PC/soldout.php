@@ -3,7 +3,7 @@
 
 	// 설정파일
 	include_once "../config.php";
-  include_once "header.php";
+	include_once "header.php";
 
 	$goods_info = OM_GetGoodsInfo($goods_idx);
 

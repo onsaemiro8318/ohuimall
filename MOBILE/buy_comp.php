@@ -31,7 +31,7 @@
       </div>
       <div class="info_detail d2">
         배송은 12월 20일 이후 일괄 발송되며 문의는<br>  
-        ju.lee@minivertising.kr 또는 070-4888-3580로 해주세요!
+        je.lee@minivertising.kr 또는 070-4888-3580로 해주세요!
       </div>
       <div class="btn_block">
         <a href="index.php"><img src="images/btn_go_main.jpg" width="115" alt=""/></a>
