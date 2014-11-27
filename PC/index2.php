@@ -2,9 +2,6 @@
 	include_once "../config.php";
 	//include_once "header.php";
 
-	$media = $_REQUEST['media'];
-	OM_InsertTrackingInfo($media, $gubun);
-
 	$view_arr	= explode(",",$_COOKIE['goods_view']); 
 	$end_view	= end($view_arr);
 	// 상품 목록 쿼리
