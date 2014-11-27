@@ -282,7 +282,7 @@
         </div> 
       </div>
       <div class="product_detail_img">
-        <img src="images/big_product_<?=$goods_idx?>_detail.jpg" width="960" height="608" alt=""/>
+        <img src="images/big_product_<?=$goods_idx?>_detail.jpg" alt=""/>
       </div>
     </div>
 
