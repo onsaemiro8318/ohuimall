@@ -35,7 +35,7 @@
     <meta property="og:url" content="http://ohuimall.co.kr/?media=fb&goods_idx=1">
     <meta property="og:image" content="http://ohuimall.co.kr/images/can_img_1.jpg">
     <meta property="og:description" content="지금 오휘의 어려지는 쇼핑몰에서\n오늘을 가장 어리게 하는 마음을 가지세요\n지금 어려지는 쇼핑몰 마음 구매하기">
-    <link rel="shortcut icon" type="image/x-icon" href="./img/icon/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
     <title>OHUI MALL</title>
     <!--[if lt IE 9]><script src="./js/html5shiv.js"></script><![endif]-->
     <link href="css/style.css" rel="stylesheet" type="text/css">
