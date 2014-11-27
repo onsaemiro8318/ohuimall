@@ -318,7 +318,7 @@ body{
 }
 .wrap_pop{
   margin: 0 auto;
-	background:url(../images/bg.jpg);
+	background-color:#fff;
 	width:650px;
 }
 .wrap_pop .header .btn_close{
@@ -404,6 +404,10 @@ body{
 .wrap_pop .content.info .buyer_info_block ul li .input{
 	float:left;
 	width:140px;
+}
+
+.wrap_pop .content.info .buyer_info_block ul li .label img{
+  margin-top:5px;
 }
 
 .wrap_pop .content.info .buyer_info_block ul li .input input{
