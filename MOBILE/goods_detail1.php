@@ -247,10 +247,9 @@
     <div class="content">
       <div class="product_img">
         <div class="img"><img src="images/big_product_<?=$goods_idx?>.jpg" alt="" border="0"/></div>
-        <div class="img add"><img src="images/big_product_<?=$goods_idx?>_gift.jpg" alt=""/></div>
+        <!-- <div class="img add"><img src="images/big_product_<?=$goods_idx?>_gift.jpg" alt=""/></div> -->
       </div>
       <div class="btn_getit">
-        <!-- <a href="#" onclick="javascript:buy_goods('<?=$goods_idx?>')"><img src="images/btn_getit.jpg"/></a> -->
         <a href="#input_1" class="popup-with-zoom-anim"><img src="images/btn_getit.jpg"/></a>
       </div> 
       <div class="btn_share_inview clearfix">
@@ -264,6 +263,9 @@
           <a href="#" onclick="javascript:kt_share('<?=$goods_info['goods_name']?>','<?=$goods_info['goods_detail']?>','<?=$goods_info['goods_imgurl']?>','<?=$gubun?>');"><img src="images/btn_kt.jpg" width="40" alt=""/></a>
         </div>
       </div>      
+      <div class="product_img">
+        <div class="img add2"><img src="images/big_product_<?=$goods_idx?>_detail.jpg" alt=""/></div>
+      </div>
     </div>
 
 <!--  이름, 전화번호 입력 받는 DIV 시작  -->
