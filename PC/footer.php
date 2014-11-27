@@ -17,7 +17,6 @@
       </ul>
     </div>
     <div class="txt copy">
-    	Copyright (c) LG HOUSEHOLD@HEALTH CARE LTD.,All rights reserved.
     </div>
   </div>
 </body>
