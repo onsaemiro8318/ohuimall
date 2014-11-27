@@ -33,7 +33,7 @@
     <meta property="og:title" content="어려지는 쇼핑몰에서 '최근 본 어린마음'">
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://ohuimall.co.kr/MOBILE/goods_detail5.php">
-    <meta property="og:image" content="http://www.tomorrowkids.or.kr/images/fb/jobimg_5.jpg">
+    <meta property="og:image" content="http://www.ohuimall.co.kr/images/can_img_5.jpg">
     <meta property="og:description" content="지금 오휘의 어려지는 쇼핑몰에서\n오늘을 가장 어리게 하는 마음을 가지세요\n지금 어려지는 쇼핑몰 마음 구매하기">
     <link rel="shortcut icon" type="image/x-icon" href="./img/icon/favicon.ico" />
     <title>OHUI MALL</title>
