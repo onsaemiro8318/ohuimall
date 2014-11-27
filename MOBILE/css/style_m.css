@@ -84,7 +84,7 @@ body {
 .header {
 	width: 100%;
 	height: 160px;
-	/*background: url(../images/bg_top.jpg) repeat-x bottom;*/
+  background: url(../images/bg_top.jpg) repeat-x bottom;
 	background-color: #fff;
 	position: fixed;
 	z-index: 10000;
