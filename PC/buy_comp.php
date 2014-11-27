@@ -26,7 +26,7 @@
             <li>가격 : 0 원  </li>
           </ul>
         </div>
-        <div class="txt_guide">* 배송은 12월 20일 이후 일괄 발송되며 문의는 ju.lee@minivertising.kr 또는 070-4888-3580로 해주세요!</div>
+        <div class="txt_guide">* 배송은 12월 20일 이후 일괄 발송되며 문의는 je.lee@minivertising.kr 또는 070-4888-3580로 해주세요!</div>
       </div>
     </div>
 <?
