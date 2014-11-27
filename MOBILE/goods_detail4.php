@@ -215,19 +215,6 @@
 ?>
           <li><img src="images/navi_bar.jpg" width="1" alt=""/></li>
 <?
-	if (strpos($_SERVER["PHP_SELF"],"movie.php") !== false)
-	{
-?>
-          <li><a href="movie.php"><img src="images/btn_navi_movie_02.jpg" width="40" alt=""/></a></li>
-<?
-	}else{
-?>
-          <li><a href="movie.php"><img src="images/btn_navi_movie.jpg" width="40" alt=""/></a></li>
-<?
-	}
-?>
-          <li><img src="images/navi_bar.jpg" width="1" alt=""/></li>
-<?
 	if (strpos($_SERVER["PHP_SELF"],"faq.php") !== false)
 	{
 ?>
