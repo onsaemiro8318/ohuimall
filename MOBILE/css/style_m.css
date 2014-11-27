@@ -121,7 +121,7 @@ body {
 .header .menu_block ul li {
 	float: left;
 	display: block;
-	padding: 0 8px;
+	padding: 3 8px;
 	text-align: center;
 }
 
@@ -194,6 +194,20 @@ body {
 .content .product_img .img.add2{
 	padding-top:40px;
 }
+
+.content .product_view_box{
+  width:100%;
+  position: relative;
+  margin-top:5%;
+}
+
+.content .product_view_box img{
+  width: 100%;
+}
+.content .product_view_box .product_view_list{
+  margin-top:-1%;
+}
+
 .content .btn_getit {
 	width: 100%;
 	text-align: center;
