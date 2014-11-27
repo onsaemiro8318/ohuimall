@@ -87,7 +87,7 @@ li {
 
 /* common */
 body{
-	background:url(../images/bg.jpg);
+/*  background:url(../images/bg.jpg);*/
 }
 .g_960{
 	width:960px;

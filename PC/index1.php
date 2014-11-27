@@ -72,7 +72,7 @@
         </div>
       </div>
       <div class="title g_960">
-        <a href="index.php"><img src="images/title.png" width="326" height="100" alt=""/></a>
+        <a href="index.php"><img src="images/title.jpg" width="326" height="100" alt=""/></a>
       </div>
       <div class="navi">
         <div class="inner g_960">
