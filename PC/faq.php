@@ -4,7 +4,7 @@
 ?>
 	<div class="content g_960">
     	 <div class="content">
-         	<p><img src="images/faq.jpg" width="960" height="859"></p>
+         	<p><img src="images/faq.jpg" width="960"></p>
          </div>  
     </div>
 <?
