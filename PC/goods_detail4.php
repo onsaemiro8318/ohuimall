@@ -330,10 +330,10 @@
             <img src="images/fail_product_<?=$goods_idx?>.jpg" alt=""/>
           </div>
           <div class="share_txt">
-            <img src="images/txt_share.jpg" width="324" height="92" alt=""/>
+            <img src="images/txt_share.jpg" alt=""/>
           </div>
           <div class="btn_share_block clearfix">
-            <div class="fb"><a href="#" onclick="javascript:fb_share('<?=$goods_info['goods_name']?>','<?=$goods_info['goods_detail']?>','<?=$goods_info['goods_imgurl']?>','<?=$gubun?>','<?=$goods_info['idx']?>');"><img src="images/btn_fb.jpg" alt=""/></a></div>
+            <div class="fb"><a href="#" onclick="javascript:fb_share('<?=$goods_info['goods_name']?>','<?=$goods_info['goods_detail']?>','<?=$goods_info['goods_imgurl']?>','<?=$gubun?>','<?=$goods_info['idx']?>');"><img src="images/facebook_bt_fail.jpg" alt=""/></a></div>
             <!-- <div class="kt"><a href="#" onclick="javascript:kt_share('<?=$goods_info['goods_name']?>','<?=$goods_info['goods_detail']?>','<?=$goods_info['goods_imgurl']?>','<?=$gubun?>');"><img src="images/btn_kt.jpg" alt=""/></a></div> -->
           </div>
         </div>
