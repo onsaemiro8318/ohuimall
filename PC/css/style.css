@@ -153,6 +153,10 @@ body{
 	padding-bottom:20px;
 }
 
+.recent_goods_image{
+  margin-top: -4px;
+}
+
 .list_block ul li{
 	float:left;
 	padding:0 12px;

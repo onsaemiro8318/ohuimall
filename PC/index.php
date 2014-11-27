@@ -31,17 +31,15 @@
           </ul>
         </div>
         <div class="banner_block">
-          <div>
-            <img src="images/list_title.jpg" alt=""/>
-          </div>
           <div class="one_banner">
-            <a href="http://ohuimall.co.kr/PC/goods_detail<?=$end_view?>.php"><img src="<?=$recent_image?>" alt="<?=$goods_array[$end_view]['goods_name']?>" title="<?=$goods_array[$end_view]['goods_name']?>"/></a>
+            <a href="http://www.ohui.co.kr/product/detail.jsp?pid=ACM06720&cid1=2&cid2=E" target="_blank"><img src="images/banner_ohui.jpg" alt=""/></a>
           </div>
           <div class="one_banner">
             <a href="http://www.youtube.com/watch?v=m5afhT4OakA" target="_blank"><img src="images/banner_go_tvcf.jpg" alt="TVCF 보러가기" title="TVCF 보러가기"/></a>
           </div>
           <div class="one_banner">
-            <a href="http://www.ohui.co.kr/product/detail.jsp?pid=ACM06720&cid1=2&cid2=E" target="_blank"><img src="images/banner_ohui.jpg" alt=""/></a>
+            <img src="images/list_title.jpg" alt=""/>
+            <a href="http://ohuimall.co.kr/PC/goods_detail<?=$end_view?>.php"><img src="<?=$recent_image?>" alt="<?=$goods_array[$end_view]['goods_name']?>" title="<?=$goods_array[$end_view]['goods_name']?>" class="recent_goods_image"/></a>
           </div>
         </div>
       </div>
