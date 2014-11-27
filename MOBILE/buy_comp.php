@@ -26,7 +26,7 @@
         <ul>
           <li>주문일자 :  <?=$order_array[0]?>년 <?=$order_array[1]?>월 <?=$order_array[2]?>일</li>
           <li>유효기간 :  2099년 12월 31일</li>
-          <li>가&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;격 :  0 원 </li>
+          <li>가&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;격 :  0 원 </li>
         </ul>
       </div>
       <div class="info_detail d2">

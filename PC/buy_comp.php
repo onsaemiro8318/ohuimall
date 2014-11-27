@@ -23,7 +23,7 @@
           <ul>
             <li>주문일자 : <?=$order_array[0]?>년 <?=$order_array[1]?>월 <?=$order_array[2]?>일 </li>
             <li>유효기간 : 2099년 12월 31일  </li>
-            <li>가&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;격 : 0 원  </li>
+            <li>가&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;격 : 0 원  </li>
           </ul>
         </div>
         <div class="txt_guide">* 배송은 12월 20일 이후 일괄 발송되며 궁금하신 점은 je.lee@minivertising.kr 또는 070-4888-3580로 문의 바랍니다.</div>
