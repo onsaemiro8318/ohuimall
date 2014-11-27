@@ -387,6 +387,18 @@ body{
 	font-weight:bold;
 }
 
+/* 마음 구매자 팝업 - 당첨자 팝업과 class 겹치는 부분 따로 구분했음 */
+.wrap_pop .content.info .buyer_info_block ul li .input input{
+	padding:5px;
+	width:360px;
+	font-size:14px;
+	font-weight:bold;
+}
+
+.wrap_pop .content.info .buyer_info_block ul li .input {
+	width:360px;
+}
+
 .wrap_pop .content.info .check_block{
 	padding-left:140px;
 	padding-bottom:30px;
