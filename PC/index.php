@@ -16,7 +16,7 @@
 		$i++;
 	}
 
-	if (isset($end_view) == true)
+	if ($end_view)
 		$recent_image = "images/banner_recent_".$end_view.".jpg";
 	else
 		$recent_image = "images/banner_recent_no.jpg";
