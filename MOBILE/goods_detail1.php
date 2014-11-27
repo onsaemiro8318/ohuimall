@@ -247,10 +247,9 @@
     <div class="content">
       <div class="product_img">
         <div class="img"><img src="images/big_product_<?=$goods_idx?>.jpg" alt="" border="0"/></div>
-        <div class="img add"><img src="images/big_product_<?=$goods_idx?>_gift.jpg" alt=""/></div>
+        <!-- <div class="img add"><img src="images/big_product_<?=$goods_idx?>_gift.jpg" alt=""/></div> -->
       </div>
       <div class="btn_getit">
-        <!-- <a href="#" onclick="javascript:buy_goods('<?=$goods_idx?>')"><img src="images/btn_getit.jpg"/></a> -->
         <a href="#input_1" class="popup-with-zoom-anim"><img src="images/btn_getit.jpg"/></a>
       </div> 
       <div class="btn_share_inview clearfix">
