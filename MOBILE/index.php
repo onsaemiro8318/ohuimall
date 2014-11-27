@@ -46,7 +46,7 @@
 		{
 ?>
             <div class="list">
-              <a href="soldout.php?goods_idx=<?=$goods_data['idx']?>"><img src="images/thumb_product_<?=$goods_data['idx']?>.jpg" alt=""/></a>
+              <a href="soldout.php?goods_idx=<?=$goods_data['idx']?>"><img src="images/thumb_product_<?=$goods_data['idx']?>_soldout.jpg" alt=""/></a>
             </div>
 <?
 		}else{
