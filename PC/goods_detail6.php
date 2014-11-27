@@ -295,7 +295,7 @@
           <div class="title">
             <img src="images/title_info.jpg" width="382" height="66" alt=""/>
           </div>
-          <div class="info_block">
+          <div class="buyer_info_block">
             <ul>
               <li class="clearfix">
                 <div class="label"><img src="images/txt_name.jpg" width="38" height="21" alt=""/></div>
