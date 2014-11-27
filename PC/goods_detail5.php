@@ -272,7 +272,7 @@
       </div>
       <div class="product_view_box">
         <img src="images/view_list.jpg" alt=""/>
-        <img src="images/view_list_1.jpg" alt=""/ class="product_view_list">
+        <a href="http://www.ohui.co.kr/product/line.jsp?cid1=2&cid2=E"><img src="images/view_list_1.jpg" alt="" class="product_view_list" /></a>
       </div>      
     </div>
 
