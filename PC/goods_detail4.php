@@ -270,6 +270,10 @@
       <div class="product_detail_img">
         <img src="images/big_product_<?=$goods_idx?>_detail.jpg" alt=""/>
       </div>
+      <div class="product_view_box">
+        <img src="images/view_list.jpg" alt=""/>
+        <img src="images/view_list_1.jpg" alt=""/ class="product_view_list">
+      </div>
     </div>
 
 <!--  이름, 전화번호 입력 받는 DIV 시작  -->

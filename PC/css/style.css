@@ -238,6 +238,11 @@ body{
 	padding-top:15px;
 	float:left;
 }
+
+.content .product_view_box .product_view_list{
+  margin-top:-4px;
+}
+
 .txt_ship{
 	padding:40px 0;
 }
@@ -353,7 +358,7 @@ body{
 	float:left;
 }
 .wrap_pop .content .btn_share_block div.fb{
-	padding-left:250px;
+	padding-left:155px;
 	padding-right:5px;
 }
 
