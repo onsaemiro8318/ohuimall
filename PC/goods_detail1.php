@@ -275,7 +275,7 @@
                 <a href="#"><img src="images/btn_kt.jpg" alt=""/></a>
               </div> -->
               <div class="btn_fb">
-                <a href="#" onclick="fb_share('<?=$goods_info['goods_name']?>','<?=$goods_info['goods_detail']?>','<?=$goods_info['goods_imgurl']?>','<?=$gubun?>','<?=$goods_info['idx']?>');"><img src="images/btn_fb.jpg" alt=""/></a>
+                <a href="#" onclick="fb_share('<?=$goods_info['goods_name']?>','<?=$goods_info['goods_detail']?>','<?=$goods_info['goods_imgurl']?>','<?=$gubun?>','<?=$goods_info['idx']?>');"><img src="images/bt_facebook.jpg" alt=""/></a>
               </div>
             </div> 
           </div>
