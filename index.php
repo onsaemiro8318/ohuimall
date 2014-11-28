@@ -10,10 +10,10 @@
 
 	if($check_mobile)
 	{
-		Header("Location:http://www.ohuimall.co.kr/MOBILE/index".$goods_idx.".php");
+		Header("Location:http://www.ohuimall.co.kr/MOBILE/index_".$goods_idx.".php");
 		exit;
 	}else{
-		Header("Location:http://www.ohuimall.co.kr/PC/index".$goods_idx.".php");
+		Header("Location:http://www.ohuimall.co.kr/PC/index_".$goods_idx.".php");
 		exit;
 	}
 
