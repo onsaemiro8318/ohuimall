@@ -284,16 +284,16 @@
       <div class="inner">
         <div class="content info">
           <div class="title">
-            <img src="images/title_info.jpg" width="382" height="66" alt=""/>
+            <img src="images/title_info.jpg" height="66" alt=""/>
           </div>
           <div class="buyer_info_block">
             <ul>
               <li class="clearfix">
-                <div class="label"><img src="images/txt_name.jpg" width="38" height="21" alt=""/></div>
+                <div class="label"><img src="images/txt_name.jpg" height="21" alt=""/></div>
                 <div class="input"><input type="text" name="mb_name" id="mb_name" onblur="only_kor(this)"></div>
               </li>
               <li class="clearfix">
-                <div class="label"><img src="images/txt_phonenum.jpg" width="99" height="21" alt=""/></div>
+                <div class="label"><img src="images/txt_phonenum.jpg" height="21" alt=""/></div>
                 <div class="input"><input type="text" name="mb_phone" id="mb_phone" onkeyup="only_num(this)"></div>
               </li>
               <li class="input_notice">
