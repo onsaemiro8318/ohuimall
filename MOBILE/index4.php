@@ -14,11 +14,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-    <meta property="og:title" content="어려지는 쇼핑몰에서 '최근 본 어린마음'">
+    <meta property="og:title" content="The Delightful Change OHUI">
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://ohuimall.co.kr/MOBILE/index4.php">
     <meta property="og:image" content="http://ohuimall.co.kr/images/can_img_4.jpg">
-    <meta property="og:description" content="지금 오휘의 어려지는 쇼핑몰에서\n오늘을 가장 어리게 하는 마음을 가지세요\n지금 어려지는 쇼핑몰 마음 구매하기">
+    <meta property="og:description" content="마음을 파는 가게">
     <link rel="shortcut icon" type="image/x-icon" href="./img/icon/favicon.ico" />
     <title>OHUI MALL</title>
     <!--[if lt IE 9]><script src="./js/html5shiv.js"></script><![endif]-->
