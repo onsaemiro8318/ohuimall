@@ -14,7 +14,7 @@
         <img src="images/buy_end_product_img_<?=$goods_idx?>.jpg" width="959" height="493" alt=""/>
       </div>
       <div class="txt_ship">
-        <p><img src="images/txt_shipping.jpg" width="303" height="33" alt=""/></p>
+        <p><img src="images/txt_shipping.jpg" alt=""/></p>
         <p>주문하신 마음은<br>[<?=$goods_info['goods_name']?>] 입니다.</p>
       </div>
       <div class="buy_detail">
