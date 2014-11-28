@@ -32,11 +32,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-    <meta property="og:title" content="The Delightful Change OHUI">
+    <meta property="og:title" content="마음을 파는 가게">
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://ohuimall.co.kr/PC/goods_detail_5.php" />
     <meta property="og:image" content="http://www.ohuimall.co.kr/images/can_img_5.jpg">
-    <meta property="og:description" content="마음을 파는 가게">
+    <meta property="og:description" content="어릴 적 당신이 지녔던 '그 마음'을 팝니다">
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
     <title>OHUI MALL</title>
     <!--[if lt IE 9]><script src="./js/html5shiv.js"></script><![endif]-->
