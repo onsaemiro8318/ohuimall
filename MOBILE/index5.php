@@ -14,11 +14,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-    <meta property="og:title" content="The Delightful Change OHUI">
+    <meta property="og:title" content="마음을 파는 가게">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://ohuimall.co.kr/MOBILE/index5.php">
+    <meta property="og:url" content="http://ohuimall.co.kr/MOBILE/index_5.php">
     <meta property="og:image" content="http://ohuimall.co.kr/images/can_img_5.jpg">
-    <meta property="og:description" content="마음을 파는 가게">
+    <meta property="og:description" content="어릴 적 당신이 지녔던 '그 마음'을 팝니다">
     <link rel="shortcut icon" type="image/x-icon" href="./img/icon/favicon.ico" />
     <title>OHUI MALL</title>
     <!--[if lt IE 9]><script src="./js/html5shiv.js"></script><![endif]-->
@@ -54,28 +54,61 @@
       <div class="title_block"><a href="index.php"><img src="images/title.jpg" width="200" boder="0" /></a></div>
       <div class="menu_block">
         <ul class="clearfix">
-<?
-	if (strpos($_SERVER["PHP_SELF"],"index") !== false)
+<?php
+	$query 		= "SELECT * FROM ".$_gl['goods_info_table']." ";
+	$result 	= mysqli_query($my_db, $query);
+	$j = 0;
+	while($goods_data = mysqli_fetch_array($result))
 	{
 ?>
-          <li><a href="index.php"><img src="images/btn_navi_mall_02.jpg" width="40" alt=""/></a></li>
-<?
-	}else{
+
+          <li>
+<?php
+		$soldout_query 		= "SELECT goods_selcount, goods_total_stock FROM ".$_gl['goods_info_table']." WHERE idx = ".$goods_data['idx']." ";
+		$soldout_result 	= mysqli_query($my_db, $soldout_query);
+		$soldout_cnt = mysqli_fetch_array($soldout_result);
+		if($soldout_cnt['goods_selcount'] >= $soldout_cnt['goods_total_stock'])	
+		{
 ?>
-          <li><a href="index.php"><img src="images/btn_navi_mall.jpg" width="40" alt=""/></a></li>
-<?
-	}
+            <div class="t_soldout"><img src="images/txt_soldout.png" width="60" alt=""/></div>
+<?php
+		}
+
+		if(in_array($goods_data['idx'], $_gl['hot_data'][date("Ymd")]))
+		{
+			$hot_style = "";
+			if ($goods_data['idx'] == "2" || $goods_data['idx'] == "3" || $goods_data['idx'] == "5")
+				$hot_style = "style='top:14%'";
+
+			if ($j == 2)
+			{
 ?>
-          <li><img src="images/navi_bar.jpg" width="1" alt=""/></li>
+            <div class="t_hot" <?=$hot_style?>><img src="images/tag_new.jpg" alt=""/></div>
+
 <?
-	if (strpos($_SERVER["PHP_SELF"],"faq.php") !== false)
-	{
+			}else{
 ?>
-          <li><a href="faq.php"><img src="images/btn_navi_faq_02.jpg" width="40" alt=""/></a></li>
+            <div class="t_hot" <?=$hot_style?>><img src="images/tag_hot.jpg" alt=""/></div>
+<?php
+			}
+			$j++;
+		}
+		if($soldout_cnt['goods_selcount'] >= $soldout_cnt['goods_total_stock'])	
+		{
+?>
+            <div class="list">
+              <a href="soldout.php?goods_idx=<?=$goods_data['idx']?>"><img src="images/thumb_product_<?=$goods_data['idx']?>_soldout.jpg" alt=""/></a>
+            </div>
 <?
-	}else{
+		}else{
 ?>
-          <li><a href="faq.php"><img src="images/btn_navi_faq.jpg" width="40" alt=""/></a></li>
+            <div class="list">
+              <a href="goods_detail_<?=$goods_data['idx']?>.php"><img src="images/thumb_product_<?=$goods_data['idx']?>.jpg" alt=""/></a>
+            </div>
+<?
+		}
+?>
+          </li>
 <?
 	}
 ?>

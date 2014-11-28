@@ -14,9 +14,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-    <meta property="og:title" content="The Delightful Change OHUI">
+    <meta property="og:title" content="마음을 파는 가게">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://ohuimall.co.kr/MOBILE/index1.php">
+    <meta property="og:url" content="http://ohuimall.co.kr/MOBILE/index_1.php">
     <meta property="og:image" content="http://ohuimall.co.kr/images/can_img_1.jpg">
     <meta property="og:description" content="마음을 파는 가게">
     <link rel="shortcut icon" type="image/x-icon" href="./img/icon/favicon.ico" />
@@ -94,6 +94,7 @@
 <?php
 	$query 		= "SELECT * FROM ".$_gl['goods_info_table']." ";
 	$result 	= mysqli_query($my_db, $query);
+	$j = 0;
 	while($goods_data = mysqli_fetch_array($result))
 	{
 ?>
@@ -112,9 +113,22 @@
 
 		if(in_array($goods_data['idx'], $_gl['hot_data'][date("Ymd")]))
 		{
+			$hot_style = "";
+			if ($goods_data['idx'] == "2" || $goods_data['idx'] == "3" || $goods_data['idx'] == "5")
+				$hot_style = "style='top:14%'";
+
+			if ($j == 2)
+			{
 ?>
-            <div class="t_hot"><img src="images/tag_hot.jpg" alt=""/></div>
+            <div class="t_hot" <?=$hot_style?>><img src="images/tag_new.jpg" alt=""/></div>
+
+<?
+			}else{
+?>
+            <div class="t_hot" <?=$hot_style?>><img src="images/tag_hot.jpg" alt=""/></div>
 <?php
+			}
+			$j++;
 		}
 		if($soldout_cnt['goods_selcount'] >= $soldout_cnt['goods_total_stock'])	
 		{
@@ -126,7 +140,7 @@
 		}else{
 ?>
             <div class="list">
-              <a href="goods_detail<?=$goods_data['idx']?>.php"><img src="images/thumb_product_<?=$goods_data['idx']?>.jpg" alt=""/></a>
+              <a href="goods_detail_<?=$goods_data['idx']?>.php"><img src="images/thumb_product_<?=$goods_data['idx']?>.jpg" alt=""/></a>
             </div>
 <?
 		}
