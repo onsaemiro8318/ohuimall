@@ -121,8 +121,8 @@ body{
 	padding-bottom:20px;
 }
 .header .navi{
-	padding-top:10px;
-	padding-bottom:15px;
+	padding-top:0px;
+	padding-bottom:0px;
 	background:url(../images/bg_navi.jpg) bottom repeat-x;
 }
 .header .navi ul{
