@@ -188,11 +188,11 @@
         <div class="info_block">
           <div class="input_one name clearfix">
             <div class="label">이름</div>
-            <div class="input"><input type="text" name="mb_name" id="mb_name" onblur="only_kor(this)"></div>
+            <div class="input"><input type="text" name="mb_name" id="mb_name" onblur="only_kor(this)" style="-webkit-appearance: none"></div>
           </div>
           <div class="input_one name clearfix">
             <div class="label">휴대폰번호</div>
-            <div class="input"><input type="tel" name="mb_phone" id="mb_phone" onkeyup="only_num(this)"></div>
+            <div class="input"><input type="tel" name="mb_phone" id="mb_phone" onkeyup="only_num(this)" style="-webkit-appearance: none"></div>
           </div>
           <div class="input_notice"><p>'-'없이 번호만 입력해주세요.</p></div>
         </div>
