@@ -18,7 +18,7 @@
 	if ($end_view)
 	{
 		$recent_image	= "images/banner_recent_".$end_view.".jpg";
-		$recent_link	= "http://ohuimall.co.kr/PC/goods_detail".$end_view.".php";
+		$recent_link	= "http://ohuimall.co.kr/PC/goods_detail_".$end_view.".php";
 	}else{
 		$recent_image = "images/banner_recent_no.jpg";
 		$recent_link	= "#";
@@ -188,9 +188,9 @@
 			}
 ?>
             <div class="list">
-              <p><a href="goods_detail<?=$val['goods_idx']?>.php"><img src="images/thumb_product_<?=$val['goods_idx']?>.jpg" alt=""/></a></p>
-              <p class="txt_name"><a href="goods_detail<?=$val['goods_idx']?>.php"><img src="images/txt_product_name_<?=$val['goods_idx']?>.jpg" height="57" alt=""/></a></p>
-              <p class="btn_block"><a href="goods_detail<?=$val['goods_idx']?>.php"><img src="images/btn_buy_at_list.jpg" width="290" height="59" alt=""/></a></p>
+              <p><a href="goods_detail_<?=$val['goods_idx']?>.php"><img src="images/thumb_product_<?=$val['goods_idx']?>.jpg" alt=""/></a></p>
+              <p class="txt_name"><a href="goods_detail_<?=$val['goods_idx']?>.php"><img src="images/txt_product_name_<?=$val['goods_idx']?>.jpg" height="57" alt=""/></a></p>
+              <p class="btn_block"><a href="goods_detail_<?=$val['goods_idx']?>.php"><img src="images/btn_buy_at_list.jpg" width="290" height="59" alt=""/></a></p>
             </div>
 <?
 		}
