@@ -16,8 +16,8 @@
     <meta name="keywords" content="" />
     <meta property="og:title" content="마음을 파는 가게">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://ohuimall.co.kr/MOBILE/index6.php">
-    <meta property="og:image" content="http://ohuimall.co.kr/images/can_img_6.jpg">
+    <meta property="og:url" content="http://ohuimall.co.kr/MOBILE/index_2.php">
+    <meta property="og:image" content="http://ohuimall.co.kr/images/can_img_2.jpg">
     <meta property="og:description" content="어릴 적 당신이 지녔던 '그 마음'을 팝니다">
     <link rel="shortcut icon" type="image/x-icon" href="./img/icon/favicon.ico" />
     <title>OHUI MALL</title>
@@ -54,6 +54,43 @@
       <div class="title_block"><a href="index.php"><img src="images/title.jpg" width="200" boder="0" /></a></div>
       <div class="menu_block">
         <ul class="clearfix">
+<?
+	if (strpos($_SERVER["PHP_SELF"],"index") !== false)
+	{
+?>
+          <li><a href="index.php"><img src="images/btn_navi_mall_02.jpg" width="40" alt=""/></a></li>
+<?
+	}else{
+?>
+          <li><a href="index.php"><img src="images/btn_navi_mall.jpg" width="40" alt=""/></a></li>
+<?
+	}
+?>
+          <li><img src="images/navi_bar.jpg" width="1" alt=""/></li>
+<?
+	if (strpos($_SERVER["PHP_SELF"],"faq.php") !== false)
+	{
+?>
+          <li><a href="faq.php"><img src="images/btn_navi_faq_02.jpg" width="40" alt=""/></a></li>
+<?
+	}else{
+?>
+          <li><a href="faq.php"><img src="images/btn_navi_faq.jpg" width="40" alt=""/></a></li>
+<?
+	}
+?>
+        </ul>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="slide_block">
+        <div class="youtubebox">
+              <iframe id="ytplayer" width="100%" src="https://www.youtube.com/embed/tbfEw8Qxa_w?controls=0&loop=1&modestbranding=1&showinfo=0&wmode=opaque&enablejsapi=1&rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="list_block">
+        <ul>
 <?php
 	$query 		= "SELECT * FROM ".$_gl['goods_info_table']." ";
 	$result 	= mysqli_query($my_db, $query);
@@ -104,62 +141,6 @@
 ?>
             <div class="list">
               <a href="goods_detail_<?=$goods_data['idx']?>.php"><img src="images/thumb_product_<?=$goods_data['idx']?>.jpg" alt=""/></a>
-            </div>
-<?
-		}
-?>
-          </li>
-<?
-	}
-?>
-        </ul>
-      </div>
-    </div>
-
-    <div class="content">
-      <div class="slide_block">
-        <div class="youtubebox">
-              <iframe id="ytplayer" width="100%" src="https://www.youtube.com/embed/tbfEw8Qxa_w?controls=0&loop=1&modestbranding=1&showinfo=0&wmode=opaque&enablejsapi=1&rel=0" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
-      <div class="list_block">
-        <ul>
-<?php
-	$query 		= "SELECT * FROM ".$_gl['goods_info_table']." ";
-	$result 	= mysqli_query($my_db, $query);
-	while($goods_data = mysqli_fetch_array($result))
-	{
-?>
-
-          <li>
-<?php
-		$soldout_query 		= "SELECT goods_selcount, goods_total_stock FROM ".$_gl['goods_info_table']." WHERE idx = ".$goods_data['idx']." ";
-		$soldout_result 	= mysqli_query($my_db, $soldout_query);
-		$soldout_cnt = mysqli_fetch_array($soldout_result);
-		if($soldout_cnt['goods_selcount'] >= $soldout_cnt['goods_total_stock'])	
-		{
-?>
-            <div class="t_soldout"><img src="images/txt_soldout.png" width="60" alt=""/></div>
-<?php
-		}
-
-		if(in_array($goods_data['idx'], $_gl['hot_data'][date("Ymd")]))
-		{
-?>
-            <div class="t_hot"><img src="images/tag_hot.jpg" alt=""/></div>
-<?php
-		}
-		if($soldout_cnt['goods_selcount'] >= $soldout_cnt['goods_total_stock'])	
-		{
-?>
-            <div class="list">
-              <a href="soldout.php?goods_idx=<?=$goods_data['idx']?>"><img src="images/thumb_product_<?=$goods_data['idx']?>_soldout.jpg" alt=""/></a>
-            </div>
-<?
-		}else{
-?>
-            <div class="list">
-              <a href="goods_detail<?=$goods_data['idx']?>.php"><img src="images/thumb_product_<?=$goods_data['idx']?>.jpg" alt=""/></a>
             </div>
 <?
 		}

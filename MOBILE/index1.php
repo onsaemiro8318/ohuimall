@@ -16,9 +16,9 @@
     <meta name="keywords" content="" />
     <meta property="og:title" content="마음을 파는 가게">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://ohuimall.co.kr/MOBILE/index_1.php">
+    <meta property="og:url" content="http://ohuimall.co.kr/MOBILE/index1.php">
     <meta property="og:image" content="http://ohuimall.co.kr/images/can_img_1.jpg">
-    <meta property="og:description" content="마음을 파는 가게">
+    <meta property="og:description" content="어릴 적 당신이 지녔던 '그 마음'을 팝니다">
     <link rel="shortcut icon" type="image/x-icon" href="./img/icon/favicon.ico" />
     <title>OHUI MALL</title>
     <!--[if lt IE 9]><script src="./js/html5shiv.js"></script><![endif]-->
