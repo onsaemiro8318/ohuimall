@@ -8,7 +8,7 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
-    <title>OHUI MALL</title>
+    <title>O HUI mall</title>
     <!--[if lt IE 9]><script src="./js/html5shiv.js"></script><![endif]-->
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/normalize.css" rel="stylesheet" type="text/css">
