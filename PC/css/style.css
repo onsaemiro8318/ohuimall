@@ -254,6 +254,32 @@ body{
 	padding:5px 0;
 	margin:0;
 }
+
+.txt_faq p{
+/*  color:#5e5e5e;*/
+  color: #000;
+	font-size:20px;
+	line-height:15px;
+	padding:5px 0;
+	margin:0;
+}
+
+.txt_faq .title1{
+	font-size:26px;
+	line-height:22px;
+	color:#000;
+}
+
+.txt_faq .title2{
+	font-size:40px;
+	line-height:35px;
+	color:#000;
+}
+
+.txt_faq{
+  padding: 20px 0 10px 0 ;
+}
+
 .buy_detail{
 	margin-bottom:30px;
 }
