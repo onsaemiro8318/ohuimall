@@ -32,7 +32,7 @@
     <meta name="keywords" content="" />
     <meta property="og:title" content="The Delightful Change OHUI">
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://www.ohuimall.co.kr/?media=fb&goods_idx=1">
+    <meta property="og:url" content="http://www.ohuimall.co.kr/index1.php">
     <meta property="og:image" content="http://www.ohuimall.co.kr/images/can_img_1.jpg?t=12345" />
     <meta property="og:description" content="마음을 파는 가게">
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
