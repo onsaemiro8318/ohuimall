@@ -21,15 +21,7 @@
 
 	$goods_info = OM_GetGoodsInfo($goods_idx);
 
-	$iPod = stripos($_SERVER['HTTP_USER_AGENT'], "iPod");
-	$iPhone = stripos($_SERVER['HTTP_USER_AGENT'], "iPhone");
-	$iPad = stripos($_SERVER['HTTP_USER_AGENT'], "iPad");
-	$Android = stripos($_SERVER['HTTP_USER_AGENT'], "Android");
-
-	if ($Android)
-		$os_style	= "style=''";
-	else
-		$os_style	= "style='-webkit-appearance: none;-webkit-border-radius: 0;border:1px solid #d2d2d2;'";
+	$os_style	= "style='-webkit-appearance: none;-webkit-border-radius: 0;border:1px solid #d2d2d2;'";
 ?>
 	<style>
 /* Styles for dialog window */
