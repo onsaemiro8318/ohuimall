@@ -24,7 +24,7 @@
     <div class="content">
       <div class="slide_block g_960">
         <div class="youtubebox">
-          <ul class="bxslider">
+          <ul style="margin-top:0px">
             <li>
 <iframe width="960" height="540" id="ytplayer" src="https://www.youtube.com/embed/e3y0ucig7Nk?controls=0&loop=1&modestbranding=1&showinfo=0&wmode=opaque&enablejsapi=1&rel=0" frameborder="0" allowfullscreen></iframe>
             </li>

@@ -15,7 +15,7 @@
 		$i++;
 	}
 
-	if (isset($end_view) == true)
+	if ($end_view != "")
 		$recent_image = "images/banner_recent_".$end_view.".jpg";
 	else
 		$recent_image = "images/banner_recent_no.jpg";
@@ -41,7 +41,7 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/normalize.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="../lib/iCheck/skins/all.css">
-    <link rel="stylesheet" href="../lib/bxslider/jquery.bxslider.css">
+    <!-- <link rel="stylesheet" href="../lib/bxslider/jquery.bxslider.css"> -->
     <link rel="stylesheet" href="../lib/Magnific-Popup/magnific-popup.css"> 
     <link href="http://cdn.poesis.kr/post/search.css" rel="stylesheet" media="all" />
     <!-- <link rel="stylesheet" href="../js/jquery.mobile/jquery.mobile-1.4.5.min.css" /> -->
@@ -57,7 +57,7 @@
     <script type='text/javascript' src='../js/kakao.link.js'></script>
     <script type='text/javascript' src="http://cdn.poesis.kr/post/search.min.js"></script>
     <script type="text/javascript" src="../lib/bxslider/plugins/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="../lib/bxslider/jquery.bxslider.js"></script>
+    <!-- <script type="text/javascript" src="../lib/bxslider/jquery.bxslider.js"></script> -->
     <script type="text/javascript" src="../lib/Magnific-Popup/jquery.magnific-popup.js"></script>
     <!-- <script src="js/vendor/modernizr-2.6.2.min.js"></script> -->
 
@@ -109,7 +109,7 @@
     <div class="content">
       <div class="slide_block g_960">
         <div class="youtubebox">
-          <ul class="bxslider">
+          <ul style="margin-top:0px">
             <li>
 <iframe width="960" height="540" id="ytplayer" src="https://www.youtube.com/embed/e3y0ucig7Nk?controls=0&loop=1&modestbranding=1&showinfo=0&wmode=opaque&enablejsapi=1&rel=0" frameborder="0" allowfullscreen></iframe>
             </li>
