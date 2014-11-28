@@ -50,6 +50,7 @@
             <div class="t_hot" <?=$hot_style?>><img src="images/tag_hot.jpg" alt=""/></div>
 <?php
 			}
+			$j++;
 		}
 		if($soldout_cnt['goods_selcount'] >= $soldout_cnt['goods_total_stock'])	
 		{
@@ -61,7 +62,7 @@
 		}else{
 ?>
             <div class="list">
-              <a href="goods_detail<?=$goods_data['idx']?>.php"><img src="images/thumb_product_<?=$goods_data['idx']?>.jpg" alt=""/></a>
+              <a href="goods_detail_<?=$goods_data['idx']?>.php"><img src="images/thumb_product_<?=$goods_data['idx']?>.jpg" alt=""/></a>
             </div>
 <?
 		}
