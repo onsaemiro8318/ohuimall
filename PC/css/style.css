@@ -217,17 +217,16 @@ body{
 	padding:0 0 30px;
 }
 .content .product_detail .btn_block .inner{
-	width:370px;
+	width:385px;
 	float:right;
 }
 .content .product_detail .btn_block .btn_getit{
 	padding:10px 0 0;
-	text-align:right;
 }
 
 .content .product_detail .btn_block .btn_share_inview{
 	width:370px;
-	padding-top:8px;
+	padding-top:13px;
 }
 .content .product_detail .btn_block .btn_share_inview .btn_fb,
 .content .product_detail .btn_block .btn_share_inview .btn_kt{
