@@ -20,6 +20,9 @@
 	}
 
 	$goods_info = OM_GetGoodsInfo($goods_idx);
+
+	$os_style	= "style='-webkit-appearance: none;-webkit-border-radius: 0;border:1px solid #d2d2d2;'";
+
 ?>
 <!doctype html>
 <html>
@@ -276,11 +279,11 @@
         <div class="info_block">
           <div class="input_one name clearfix">
             <div class="label">이름</div>
-            <div class="input"><input type="text" name="mb_name" id="mb_name" onblur="only_kor(this)"></div>
+            <div class="input"><input type="text" name="mb_name" id="mb_name" onblur="only_kor(this)" <?=$os_style?>></div>
           </div>
           <div class="input_one name clearfix">
             <div class="label">휴대폰번호</div>
-            <div class="input"><input type="tel" name="mb_phone" id="mb_phone" onkeyup="only_num(this)"></div>
+            <div class="input"><input type="tel" name="mb_phone" id="mb_phone" onkeyup="only_num(this)" <?=$os_style?>></div>
           </div>
           <div class="input_notice"><p>'-'없이 번호만 입력해주세요.</p></div>
         </div>
@@ -395,9 +398,9 @@
             <div class="label">우편번호</div>
             <div class="input">
               <div class="inner clearfix">
-                <div class="in"><input type="text" id="postcode1" readonly="readonly" size="5"></div>
+                <div class="in"><input type="text" id="postcode1" readonly="readonly" size="5" <?=$os_style?>></div>
                 <div class="dash">-</div>
-                <div class="in"><input type="text" id="postcode2" readonly="readonly" size="5"></div>
+                <div class="in"><input type="text" id="postcode2" readonly="readonly" size="5" <?=$os_style?>></div>
                 <div class="btn"><a href="#" onclick="show_post();return false;"><img src="images/btn_search.jpg" width="50"/></a></div>
               </div>
             </div>
@@ -405,8 +408,8 @@
           <div class="input_one detail_num clearfix">
             <div class="label">상세주소</div>
             <div class="input">
-              <p class="first"><input type="text" id="addr1" readonly="readonly"></p>
-              <p><input type="text" id="addr2"></p>
+              <p class="first"><input type="text" id="addr1" readonly="readonly" <?=$os_style?>></p>
+              <p><input type="text" id="addr2" <?=$os_style?>></p>
             </div>
           </div>
         </div>
