@@ -50,7 +50,7 @@
       <div class="list_block g_984">
         <ul class="clearfix">
 <?php
-
+	$j = 0;
 	foreach ($goods_array as $key => $val)
 	{
 ?>
@@ -66,9 +66,17 @@
 <?php
 			if(in_array($val['goods_idx'], $_gl['hot_data'][date(Ymd)]))
 			{
+				if ($j == 2)
+				{
+?>
+            <div class="t_hot"><img src="images/tag_new.jpg" width="37" height="19" alt=""/></div>
+<?
+				}else{
 ?>
             <div class="t_hot"><img src="images/tag_hot.jpg" width="37" height="19" alt=""/></div>
 <?php
+				}
+				$j++;
 			}
 ?>
             <div class="list">
@@ -82,9 +90,17 @@
 <?php
 			if(in_array($val['goods_idx'], $_gl['hot_data'][date(Ymd)]))
 			{
+				if ($j == 2)
+				{
+?>
+            <div class="t_hot"><img src="images/tag_new.jpg" width="37" height="19" alt=""/></div>
+<?
+				}else{
 ?>
             <div class="t_hot"><img src="images/tag_hot.jpg" width="37" height="19" alt=""/></div>
 <?php
+				}
+				$j++;
 			}
 ?>
             <div class="list">

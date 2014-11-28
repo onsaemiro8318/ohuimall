@@ -135,7 +135,7 @@
       <div class="list_block g_984">
         <ul class="clearfix">
 <?php
-
+	$j = 0;
 	foreach ($goods_array as $key => $val)
 	{
 ?>
@@ -151,9 +151,17 @@
 <?php
 			if(in_array($val['goods_idx'], $_gl['hot_data'][date(Ymd)]))
 			{
+				if ($j == 2)
+				{
+?>
+            <div class="t_hot"><img src="images/tag_new.jpg" width="37" height="19" alt=""/></div>
+<?
+				}else{
 ?>
             <div class="t_hot"><img src="images/tag_hot.jpg" width="37" height="19" alt=""/></div>
 <?php
+				}
+				$j++;
 			}
 ?>
             <div class="list">
@@ -167,15 +175,23 @@
 <?php
 			if(in_array($val['goods_idx'], $_gl['hot_data'][date(Ymd)]))
 			{
+				if ($j == 2)
+				{
+?>
+            <div class="t_hot"><img src="images/tag_new.jpg" width="37" height="19" alt=""/></div>
+<?
+				}else{
 ?>
             <div class="t_hot"><img src="images/tag_hot.jpg" width="37" height="19" alt=""/></div>
 <?php
+				}
+				$j++;
 			}
 ?>
             <div class="list">
-              <p><a href="goods_detail<?=$val['goods_idx']?>.php?goods_idx=<?=$val['goods_idx']?>"><img src="images/thumb_product_<?=$val['goods_idx']?>.jpg" alt=""/></a></p>
-              <p class="txt_name"><a href="goods_detail<?=$val['goods_idx']?>.php?goods_idx=<?=$val['goods_idx']?>"><img src="images/txt_product_name_<?=$val['goods_idx']?>.jpg" height="57" alt=""/></a></p>
-              <p class="btn_block"><a href="goods_detail<?=$val['goods_idx']?>.php?goods_idx=<?=$val['goods_idx']?>"><img src="images/btn_buy_at_list.jpg" width="290" height="59" alt=""/></a></p>
+              <p><a href="goods_detail<?=$val['goods_idx']?>.php"><img src="images/thumb_product_<?=$val['goods_idx']?>.jpg" alt=""/></a></p>
+              <p class="txt_name"><a href="goods_detail<?=$val['goods_idx']?>.php"><img src="images/txt_product_name_<?=$val['goods_idx']?>.jpg" height="57" alt=""/></a></p>
+              <p class="btn_block"><a href="goods_detail<?=$val['goods_idx']?>.php"><img src="images/btn_buy_at_list.jpg" width="290" height="59" alt=""/></a></p>
             </div>
 <?
 		}
