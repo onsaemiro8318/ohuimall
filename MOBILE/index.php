@@ -38,9 +38,18 @@
 			$hot_style = "";
 			if ($goods_data['idx'] == "2" || $goods_data['idx'] == "3" || $goods_data['idx'] == "5")
 				$hot_style = "style='top:14%'";
+
+			if ($j == 2)
+			{
+?>
+            <div class="t_hot" <?=$hot_style?>><img src="images/tag_new.jpg" alt=""/></div>
+
+<?
+			}else{
 ?>
             <div class="t_hot" <?=$hot_style?>><img src="images/tag_hot.jpg" alt=""/></div>
 <?php
+			}
 		}
 		if($soldout_cnt['goods_selcount'] >= $soldout_cnt['goods_total_stock'])	
 		{
