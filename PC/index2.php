@@ -15,11 +15,14 @@
 		$i++;
 	}
 
-	if ($end_view != "")
-		$recent_image = "images/banner_recent_".$end_view.".jpg";
-	else
+	if ($end_view)
+	{
+		$recent_image	= "images/banner_recent_".$end_view.".jpg";
+		$recent_link	= "http://ohuimall.co.kr/PC/goods_detail".$end_view.".php";
+	}else{
 		$recent_image = "images/banner_recent_no.jpg";
-
+		$recent_link	= "#";
+	}
 ?>
 <!doctype html>
 <html>
@@ -124,7 +127,7 @@
           </div>
           <div class="one_banner">
             <img src="images/list_title.jpg" alt=""/>
-            <a href="http://ohuimall.co.kr/PC/goods_detail<?=$end_view?>.php"><img src="<?=$recent_image?>" alt="<?=$goods_array[$end_view]['goods_name']?>" title="<?=$goods_array[$end_view]['goods_name']?>" class="recent_goods_image"/></a>
+            <a href="<?=$recent_link?>"><img src="<?=$recent_image?>" alt="<?=$goods_array[$end_view]['goods_name']?>" title="<?=$goods_array[$end_view]['goods_name']?>" class="recent_goods_image"/></a>
           </div>
         </div>
       </div>
