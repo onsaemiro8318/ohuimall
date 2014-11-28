@@ -202,11 +202,11 @@
       <div class="logo g_960">
         <div class="inner clearfix">
           <div class="left"><a href="http://www.ohui.co.kr/" target="_blank"><img src="images/logo.png" width="76" height="21" alt=""/></a></div>
-          <div class="right"><img src="images/txt_campaign_title.png" width="271" height="18" alt=""/></div>
+          <div class="right"><img src="images/txt_campaign_title.png" alt=""/></div>
         </div>
       </div>
       <div class="title g_960">
-        <a href="index.php"><img src="images/title.jpg" width="326" height="100" alt=""/></a>
+        <a href="index.php"><img src="images/title.jpg" alt=""/></a>
       </div>
       <div class="navi">
         <div class="inner g_960">
