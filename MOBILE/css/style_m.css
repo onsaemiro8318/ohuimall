@@ -106,7 +106,7 @@ body {
 .header .title_block {
 	text-align: center;
 	border-bottom: 1px solid #d78b8b;
-	padding-bottom: 20px;
+/*  padding-bottom: 20px;*/
 }
 .header .menu_block {
 	width: 100%;
