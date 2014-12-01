@@ -6,8 +6,9 @@
 	$media		= $_REQUEST['media'];
 	$goods_idx	= $_REQUEST['goods_idx'];
 
+	if (!$goods_idx)
+		$goods_idx = "1";
 	OM_InsertTrackingInfo($media, $gubun);
-
 	if($check_mobile)
 	{
 		Header("Location:http://www.ohuimall.co.kr/MOBILE/index_".$goods_idx.".php");
