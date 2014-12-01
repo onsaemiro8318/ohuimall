@@ -93,15 +93,15 @@ function kt_share(name,detail,imgurl,gubun)
   var media = "kt";
 	Kakao.Link.sendTalkLink({
 		//container: '#kakao-link-btn',
-		label: "어릴 적 당신을 찾을 수 있도록\n어려지는 마음을 파는 가게를\n잠시 열어두었습니다.\n\n지금 방문해 보세요\n\nwww.ohuimall.co.kr\n",
+		label: "어릴 적 당신을 찾을 수 있도록\n어려지는 마음을 파는 가게를\n잠시 열어두었습니다.\n\n지금 방문해 보세요\n\nhttp://bit.ly/1A65Ikz\n",
 		image: {
 			src: imgurl,
 			width: '300',
 			height: '200'
 		},
 		webButton: {
-			text: '마음을 파는 가게 방문',
-			url: 'http://ohuimall.co.kr'
+			text: '마음을 파는 가게',
+			url: 'http://ohuimall.co.kr/?media=kt'
 		}
 	});
 	$.ajax({
