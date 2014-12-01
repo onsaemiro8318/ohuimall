@@ -113,42 +113,44 @@
 		$chkwin = "N";
 		// 하루에 10명 당첨
 
-
-		// 당일 구매자 수 조회
-		$today_cnt = OM_TodayBuyCnt();
-		if (date("Y-m-d") <= "2014-12-07")
+		if (date("Y-m-d") >= "2014-12-02")
 		{
-			$winner_array = array(2,35,112,230);
-			$max_winner_cnt = 4;
-		}else if(date("Y-m-d") <= "2014-12-09" && date("Y-m-d") > "2014-12-07"){
-			$winner_array = array(2,10,35,80,112,145,175,200,230,280,300);
-			$max_winner_cnt = 11;
-		}else{
-			$winner_array = array(2,10,35,80,112,145,175,200,230,280);
-			$max_winner_cnt = 10;
-		}
-
-		foreach ($winner_array as $key => $val)
-		{
-			if ($today_cnt == $val)
+			// 당일 구매자 수 조회
+			$today_cnt = OM_TodayBuyCnt();
+			if (date("Y-m-d") <= "2014-12-07")
 			{
-				$chkwin = "Y";
-				OM_GoodsWinUpdate($idx);
+				$winner_array = array(2,35,112,230);
+				$max_winner_cnt = 4;
+			}else if(date("Y-m-d") <= "2014-12-09" && date("Y-m-d") > "2014-12-07"){
+				$winner_array = array(2,10,35,80,112,145,175,200,230,280,300);
+				$max_winner_cnt = 11;
+			}else{
+				$winner_array = array(2,10,35,80,112,145,175,200,230,280);
+				$max_winner_cnt = 10;
 			}
-		}
 
-		$winner_add_array = array(320,350,380,410,440,470,500,530,560,590,620,650,680);
-		if ($today_cnt > 280)
-		{
-			$today_winner = OM_TodayWinnerYN();
-			if ($today_winner < $max_winner_cnt)
+			foreach ($winner_array as $key => $val)
 			{
-				foreach ($winner_add_array as $key2 => $val2)
+				if ($today_cnt == $val)
 				{
-					if ($today_cnt == $val2)
+					$chkwin = "Y";
+					OM_GoodsWinUpdate($idx);
+				}
+			}
+
+			$winner_add_array = array(320,350,380,410,440,470,500,530,560,590,620,650,680);
+			if ($today_cnt > 280)
+			{
+				$today_winner = OM_TodayWinnerYN();
+				if ($today_winner < $max_winner_cnt)
+				{
+					foreach ($winner_add_array as $key2 => $val2)
 					{
-						$chkwin = "Y";
-						OM_GoodsWinUpdate($idx);
+						if ($today_cnt == $val2)
+						{
+							$chkwin = "Y";
+							OM_GoodsWinUpdate($idx);
+						}
 					}
 				}
 			}
