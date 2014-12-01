@@ -254,7 +254,10 @@
         </div>
       </div>      
       <div class="product_img">
-        <div class="img add2"><img src="images/big_product_<?=$goods_idx?>_detail.jpg" alt=""/></div>
+        <div class="img add2">
+          <img src="images/txt_noti.jpg" alt="" class="secret_noti"/>
+          <img src="images/big_product_<?=$goods_idx?>_detail.jpg" alt=""/>
+        </div>
       </div>
       <div class="product_view_box">
         <img src="images/view_list.png" alt=""/>

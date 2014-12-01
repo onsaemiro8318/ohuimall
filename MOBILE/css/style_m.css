@@ -234,6 +234,10 @@ body {
 	padding-left: 10px;
 }
 
+.content .secret_noti{
+  margin-bottom: 10px;
+}
+
 .input_notice p {
   margin: 0;
   font-size: 11px;
