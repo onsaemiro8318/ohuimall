@@ -268,7 +268,7 @@
         </div> 
       </div>
       <div class="product_detail_img">
-        <img src="images/txt_1201.jpg" alt="">                
+        <img src="images/txt_noti.jpg" alt="">                
         <img src="images/big_product_<?=$goods_idx?>_detail.jpg" alt=""/>
       </div>
       <div class="product_view_box">
