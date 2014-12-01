@@ -325,13 +325,13 @@
       <div class="header">
         <div class="btn_close"><a href="javascript:magnificPopup.close();"><img src="images/btn_close.jpg" width="70" height="70" alt=""/></a></div>
       </div>
-      <div class="inner">
+      <div class="inner sorry_div_inner">
         <div class="content info">
           <div class="title">
-            <img src="images/title_fail.jpg" alt=""/>
+            <img src="images/title_fail.jpg" alt="" class="sorry_pop"/>
           </div>
           <div class="img_one">
-            <img src="images/fail_product_<?=$goods_idx?>.jpg" alt=""/>
+            <img src="images/fail_product_<?=$goods_idx?>.jpg" alt="" class="sorry_pop"/>
           </div>
           <div class="share_txt">
             <img src="images/txt_share.jpg" alt=""/>
