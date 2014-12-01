@@ -93,14 +93,14 @@ function kt_share(name,detail,imgurl,gubun)
   var media = "kt";
 	Kakao.Link.sendTalkLink({
 		//container: '#kakao-link-btn',
-		label: "오늘을 어리게 하는 마음을\n파는 곳 들어봤어?\n\n얼굴뿐만 아니라\n이제 마음도 안티에이징 하자고!\n\n지금 어려지는 쇼핑몰에서\n마음 쇼핑하기",
+		label: "어릴 적 당신을 찾을 수 있도록\n어려지는 마음을 파는 가게를\n잠시 열어두었습니다.\n\n지금 방문해 보세요\n\nwww.ohuimall.co.kr",
 		image: {
 			src: imgurl,
 			width: '300',
 			height: '200'
 		},
 		webButton: {
-			text: '오늘을 가장 어리게',
+			text: '마음을 파는 가게 방문하기',
 			url: 'http://ohuimall.co.kr'
 		}
 	});
