@@ -269,6 +269,7 @@
       </div>
       <div class="product_detail_img">
         <img src="images/big_product_<?=$goods_idx?>_detail.jpg" alt=""/>
+        <img src="images/txt_1201.jpg" alt="">
       </div>
       <div class="product_view_box">
         <img src="images/view_list.jpg" alt=""/>
