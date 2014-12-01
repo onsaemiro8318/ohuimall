@@ -360,7 +360,7 @@ body{
 	text-align:right;
 }
 .wrap_pop .inner{
-	padding:0 70px 70px;
+	padding:0 70px 45px;
 }
 .wrap_pop .content .title{
 	text-align:center;
@@ -422,6 +422,9 @@ body{
 }
 
 /* 마음 구매자 팝업 - 당첨자 팝업과 class 겹치는 부분 따로 구분했음 */
+.wrap_pop .content.info .sorry_pop{
+  width: 70%;
+}
 
 .wrap_pop .content.info .buyer_info_block{
 	padding:20px 0;
