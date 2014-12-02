@@ -33,7 +33,7 @@
 		$buyer_goods_query	= "SELECT buyer_goods, COUNT( buyer_goods ) buyer_cnt FROM ".$_gl['buyer_info_table']." WHERE buyer_date LIKE  '%".$daily_date."%' GROUP BY buyer_goods";
 		$buyer_res		= mysqli_query($my_db, $buyer_goods_query);
 		
-		unset($goods_idx);
+		unset($buyer_goods);
 		unset($buyer_cnt);
 		unset($pc_cnt);
 		unset($mobile_cnt);
@@ -100,3 +100,6 @@
     <!-- /#page-wrapper -->
   </div>
   <!-- /#wrapper -->
+</body>
+
+</html>
