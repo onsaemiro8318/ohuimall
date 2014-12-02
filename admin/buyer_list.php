@@ -24,17 +24,16 @@
 	else
 		$eDate = $_REQUEST['eDate'];
 
-	/*
+	
 	if(isset($_REQUEST['pg']) == false)
 		$pg = "1";
 	else
 		$pg = $_REQUEST['pg'];
-	*/
-
+	
 	if (!$pg)
 		$pg = "1";
 	//if(isset($pg) == false) $pg = 1;	// $pg가 없으면 1로 생성
-	$page_size = 20;	// 한 페이지에 나타날 개수
+	$page_size = 3;	// 한 페이지에 나타날 개수
 	$block_size = 10;	// 한 화면에 나타낼 페이지 번호 개수
 
 	//if (isset($search_type) == false)
@@ -70,7 +69,7 @@
         <div class="table-responsive">
           <ol class="breadcrumb">
             <form name="frm_execute" method="POST" onsubmit="return checkfrm()">
-              <input type="hidden" name="pg">
+              <input type="hidden" name="pg" value="<?=$pg?>">
               <select name="search_type">
                 <option value="buyer_name" <?php if($search_type == "buyer_name"){?>selected<?php }?>>이름</option>
                 <option value="buyer_phone" <?php if($search_type == "buyer_phone"){?>selected<?php }?>>전화번호</option>
@@ -110,7 +109,7 @@
 	$BLOCK_LIST = $PAGE_CLASS->blockList();
 	$PAGE_UNCOUNT = $PAGE_CLASS->page_uncount;
 
-	$buyer_list_query = "SELECT * FROM ".$_gl['buyer_info_table']." WHERE 1".$where." Order by idx DESC LIMIT $PAGE_CLASS->page_start, $page_size";
+	$buyer_list_query = "SELECT * FROM ".$_gl['buyer_info_table']." WHERE 1 ".$where." Order by idx DESC LIMIT $PAGE_CLASS->page_start, $page_size";
 
 	$res = mysqli_query($my_db, $buyer_list_query);
 

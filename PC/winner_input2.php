@@ -1,6 +1,7 @@
 <?
 	// 설정파일
 	include_once "../config.php";
+	include_once "../config.php";
 	include_once "header.php";
 
 	$goods_idx	= $_REQUEST['goods_idx'];
@@ -29,6 +30,8 @@
 	개인정보취급위탁 동의 <input type="checkbox" name="privacychk2" id="privacychk2">
 	<input type="button" value="자세히보기"><br />
 	<input type="button" value="입력완료" onclick="chkwinnerfrm()">
+
+	<input type="button" value="테스트 버튼" onclick="rand_test();">
 	</form>
   </body>
 </html>
