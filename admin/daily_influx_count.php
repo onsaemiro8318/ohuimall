@@ -72,11 +72,15 @@
                   </tr>
 <?php
 			$total_media_cnt += $media_cnt[$i];
+			$total_mobile_cnt += $mobile_cnt[$i];
+			$total_pc_cnt += $pc_cnt[$i];                  
 			$i++;
 		}
 ?>
                   <tr>
-                    <td colspan="4">합계</td>
+                    <td colspan="2">합계</td>
+                    <td><?php echo number_format($total_pc_cnt)?></td>
+                    <td><?php echo number_format($total_mobile_cnt)?></td>
                     <td><?php echo number_format($total_media_cnt)?></td>
                   </tr>
 

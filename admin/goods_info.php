@@ -64,7 +64,7 @@
     </div>
     <!-- /.row -->
     <div class="row">
-      <div class="col-lg-2">
+      <div class="col-lg-4">
         <div class="table-responsive">
           <table id="winner_list" class="table table-hover">
             <thead>
