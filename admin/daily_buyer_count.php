@@ -38,6 +38,8 @@
 		unset($pc_cnt);
 		unset($mobile_cnt);
 		$total_buyer_cnt = 0;
+		$total_mobile_cnt = 0;
+		$total_pc_cnt = 0;
 		while ($buyer_daily_data = mysqli_fetch_array($buyer_res))
 		{
 			$buyer_goods[]	= $buyer_daily_data['buyer_goods'];

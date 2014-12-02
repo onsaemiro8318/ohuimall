@@ -39,6 +39,8 @@
 		unset($pc_cnt);
 		unset($mobile_cnt);
 		$total_media_cnt = 0;
+		$total_mobile_cnt = 0;
+		$total_pc_cnt = 0;    
 		while ($media_daily_data = mysqli_fetch_array($media_res))
 		{
 			$media_name[]	= $media_daily_data['tracking_media'];
