@@ -83,8 +83,8 @@
 			$all_pc_cnt[]		= $all_pc_count;
 			$all_mobile_cnt[]	= $all_mobile_count;
       
-      $etc_pc_cnt[] = $all_pc_count - $fb_pc_count - $fb_pc_count;
-      $etc_mobile_cnt[] = $all_mobile_count - $fb_mobile_count - $fb_mobile_count;
+      $etc_pc_cnt[] = $all_pc_count - $fb_pc_count - $yt_pc_count;
+      $etc_mobile_cnt[] = $all_mobile_count - $fb_mobile_count - $yt_mobile_count;
 
 		}
 
