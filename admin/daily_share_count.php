@@ -44,9 +44,9 @@
 		{
 			$media_name[]	= $media_daily_data['sns_media'];
 			$media_cnt[]	= $media_daily_data['media_cnt'];
-			$pc_query		= "SELECT * FROM ".$_gl['share_info_table']." WHERE sns_date LIKE  '%".$daily_date."%' AND sns_media='".$media_daily_data['sns_media']."' AND gubun='PC'";
+			$pc_query		= "SELECT * FROM ".$_gl['share_info_table']." WHERE sns_date LIKE  '%".$daily_date."%' AND sns_media='".$media_daily_data['sns_media']."' AND sns_gubun='PC'";
 			$pc_count		= mysqli_num_rows(mysqli_query($my_db, $pc_query));
-			$mobile_query	= "SELECT * FROM ".$_gl['share_info_table']." WHERE sns_date LIKE  '%".$daily_date."%' AND sns_media='".$media_daily_data['sns_media']."' AND gubun='MOBILE'";
+			$mobile_query	= "SELECT * FROM ".$_gl['share_info_table']." WHERE sns_date LIKE  '%".$daily_date."%' AND sns_media='".$media_daily_data['sns_media']."' AND sns_gubun='MOBILE'";
 			$mobile_count	= mysqli_num_rows(mysqli_query($my_db, $mobile_query));
 			$pc_cnt[]		= $pc_count;
 			$mobile_cnt[]	= $mobile_count;
