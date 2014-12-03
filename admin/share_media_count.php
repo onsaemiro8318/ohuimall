@@ -42,9 +42,9 @@
 
 		while ($media_data = mysqli_fetch_array($media_res))
 		{
-			$pc_query		= "SELECT * FROM ".$_gl['share_info_table']." WHERE sns_media='".$media_data['sns_media']."' AND gubun='PC'";
+			$pc_query		= "SELECT * FROM ".$_gl['share_info_table']." WHERE sns_media='".$media_data['sns_media']."' AND sns_gubun='PC'";
 			$pc_count		= mysqli_num_rows(mysqli_query($my_db, $pc_query));
-			$mobile_query	= "SELECT * FROM ".$_gl['share_info_table']." WHERE sns_media='".$media_data['sns_media']."' AND gubun='MOBILE'";
+			$mobile_query	= "SELECT * FROM ".$_gl['share_info_table']." WHERE sns_media='".$media_data['sns_media']."' AND sns_gubun='MOBILE'";
 			$mobile_count	= mysqli_num_rows(mysqli_query($my_db, $mobile_query));
 			$total_count		= $pc_count + $mobile_count;
 
