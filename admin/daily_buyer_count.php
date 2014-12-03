@@ -2,12 +2,14 @@
 	// 설정파일
 	include_once "../config.php";
 
+/*
 	if (isset($_SESSION['ss_mb_id']) == false)
 	{
 		//header('Location: index.php'); 
 		echo "<script>location.href='index.php'</script>"; 
 		exit; 
 	}
+*/
 
 	include "./head.php";
 ?>
