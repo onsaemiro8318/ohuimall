@@ -39,12 +39,12 @@
 	}
 
 	// 구매자 정보 입력
-	function InsertBuyerInfo($mb_name, $mb_phone, $goods_idx, $buyer_gubun)
+	function InsertBuyerInfo($mb_name, $mb_phone, $goods_idx, $buyer_gubun, $buyer_media)
 	{
 		global $_gl;
 		global $my_db;
 
-		$query 		= "INSERT INTO ".$_gl['buyer_info_table']."(buyer_ipaddr,buyer_name,buyer_phone,buyer_goods,buyer_date,buyer_gubun) values ('".$_SERVER['REMOTE_ADDR']."','".$mb_name."','".$mb_phone."','".$goods_idx."',now(),'".$buyer_gubun."')";
+		$query 		= "INSERT INTO ".$_gl['buyer_info_table']."(buyer_ipaddr,buyer_name,buyer_phone,buyer_goods,buyer_date,buyer_gubun,buyer_media) values ('".$_SERVER['REMOTE_ADDR']."','".$mb_name."','".$mb_phone."','".$goods_idx."',now(),'".$buyer_gubun."','".$buyer_media."')";
 		$result 	= mysqli_query($my_db, $query);
 
 		return $result;

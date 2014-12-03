@@ -297,7 +297,7 @@
           </div>
         </div>
         <div class="btn_block">
-          <a href="#" onclick="input_name('<?=$gubun?>');return false;">
+          <a href="#" onclick="input_name('<?=$gubun?>','<?=$_SESSION['ss_media']?>');return false;">
             <img src="images/btn_input_comp_1.jpg" width="170" alt=""/> 
           </a>
         </div>

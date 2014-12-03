@@ -254,7 +254,7 @@ function only_kor(obj)
 	}
 }
 
-function input_name(gubun)
+function input_name(gubun, media)
 {
 	var name_val		= $("#mb_name").val();
 	var phone_val		= $("#mb_phone").val();
@@ -308,7 +308,8 @@ function input_name(gubun)
 			"goods_idx"   : goods_idx_val,
 			"mb_name"     : name_val,
 			"mb_phone"    : phone_val,
-			"buyer_gubun" : buyer_gubun
+			"buyer_gubun" : buyer_gubun,
+			"buyer_media" : media
 		},
 		url: "../main_exec.php",
 		success: function(response){

@@ -315,7 +315,7 @@
             </ul>
           </div>
           <div class="btn_block">
-            <a href="#" onclick="input_name('<?=$gubun?>');return false;"><img src="images/btn_input_01.jpg" width="250" height="59" alt=""/></a>
+            <a href="#" onclick="input_name('<?=$gubun?>','<?=$_SESSION['ss_media']?>');return false;"><img src="images/btn_input_01.jpg" width="250" height="59" alt=""/></a>
           </div>
         </div>
       </div>
