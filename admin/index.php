@@ -34,7 +34,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-6">
-            <h1 class="page-header">O HUI mall Admin</h1>
+            <h1 class="page-header">O HUI mall Adm11in</h1>
             <ol class="breadcrumb">
               <form name="login_frm" method="post" action="admin_exec.php">
                 <input type="hidden" name="exec" value="login">
