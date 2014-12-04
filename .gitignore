@@ -1,2 +1,2 @@
 *.log
-admin/index.php
+include/dba.php
