@@ -111,7 +111,6 @@
 		global $my_db;
 
 		$chkwin = "N";
-		// 하루에 10명 당첨
 
 		// 당일 구매자 수 조회
 		$today_cnt = OM_TodayBuyCnt();
@@ -122,12 +121,6 @@
 		}else if(date("Y-m-d") <= "2014-12-09" && date("Y-m-d") > "2014-12-07"){
 			$winner_array = array(2,10,35,80,112,145,175,200,230,280,300);
 			$max_winner_cnt = 11;
-		//}else if(date("Y-m-d") <= "2014-12-08" && date("Y-m-d") > "2014-12-07"){
-		//	if ($idx == 2 || $idx == 6)
-		//	{
-		//		$winner_array = array(2,10,15,20,24,30,34,38,42,45,200,230,280,300);
-		//	}
-
 		}else{
 			$winner_array = array(2,10,35,80,112,145,175,200,230,280);
 			$max_winner_cnt = 10;
