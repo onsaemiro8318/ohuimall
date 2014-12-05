@@ -59,10 +59,17 @@ switch ($_REQUEST['exec'])
 			}
 
 		}else{
-			$insert_rs = InsertBuyerInfo($mb_name, $mb_phone, $goods_idx, $buyer_gubun, $buyer_media);
-			if ($insert_rs)
+			$userWinnerYN = OM_WinnerByPhone($mb_phone);
+
+			if ($userWinnerYN > 0)
 			{
-				$winner_chk = OM_WinCheck($goods_idx);
+				$winner_chk = "W";
+			}else{
+				$insert_rs = InsertBuyerInfo($mb_name, $mb_phone, $goods_idx, $buyer_gubun, $buyer_media);
+				if ($insert_rs)
+				{
+					$winner_chk = OM_WinCheck($goods_idx);
+				}
 			}
 		}
 		echo $winner_chk;
