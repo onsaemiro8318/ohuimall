@@ -313,6 +313,7 @@ function input_name(gubun, media)
 		},
 		url: "../main_exec.php",
 		success: function(response){
+			alert(response);
 			if (response == "Y" || name_val == "테스트")
 			//if (response == "Y")
 			{

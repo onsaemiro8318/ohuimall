@@ -104,6 +104,19 @@
 		$query 		= "UPDATE ".$_gl['goods_info_table']." SET goods_selcount = goods_selcount + 1 WHERE idx = '".$idx."'";
 		$result 	= mysqli_query($my_db, $query);
 	}
+
+	function winnerByIP()
+	{
+		global $_gl;
+		global $my_db;
+
+		$query 		= "SELECT * FROM ".$_gl['winner_info_table']." WHERE winner_ipaddr = '".$_SERVER['REMOTE_ADDR']."'";
+		$result 	= mysqli_query($my_db, $query);
+		$info		= mysqli_num_rows($result);
+
+		return $info;
+	}
+
 	// 당첨자 체크 로직 - 기존 당첨자도 체크
 	function OM_WinCheck($idx)
 	{
@@ -112,41 +125,49 @@
 
 		$chkwin = "N";
 
-		// 당일 구매자 수 조회
-		$today_cnt = OM_TodayBuyCnt();
-		if (date("Y-m-d") <= "2014-12-07")
+		// 당첨 중복 체크 ( IP )
+		$win_ip_yn = winnerByIP();
+
+		if ($win_ip_yn > 0)
 		{
-			$winner_array = array(2,35,112,230);
-			$max_winner_cnt = 4;
-		}else if(date("Y-m-d") <= "2014-12-09" && date("Y-m-d") > "2014-12-07"){
-			$winner_array = array(2,10,35,80,112,145,175,200,230,280,300);
-			$max_winner_cnt = 11;
+			$chkwin = "N";
 		}else{
-			$winner_array = array(2,10,35,80,112,145,175,200,230,280);
-			$max_winner_cnt = 10;
-		}
-
-		foreach ($winner_array as $key => $val)
-		{
-			if ($today_cnt == $val)
+			// 당일 구매자 수 조회
+			$today_cnt = OM_TodayBuyCnt();
+			if (date("Y-m-d") <= "2014-12-07")
 			{
-				$chkwin = "Y";
-				OM_GoodsWinUpdate($idx);
+				$winner_array = array(2,35,112,230);
+				$max_winner_cnt = 4;
+			}else if(date("Y-m-d") <= "2014-12-09" && date("Y-m-d") > "2014-12-07"){
+				$winner_array = array(2,10,35,80,112,145,175,200,230,280,300);
+				$max_winner_cnt = 11;
+			}else{
+				$winner_array = array(7,16,31,82,131,139,205,211,230,320);
+				$max_winner_cnt = 10;
 			}
-		}
 
-		$winner_add_array = array(320,350,380,410,440,470,500,530,560,590,620,650,680);
-		if ($today_cnt > 280)
-		{
-			$today_winner = OM_TodayWinnerYN();
-			if ($today_winner < $max_winner_cnt)
+			foreach ($winner_array as $key => $val)
 			{
-				foreach ($winner_add_array as $key2 => $val2)
+				if ($today_cnt == $val)
 				{
-					if ($today_cnt == $val2)
+					$chkwin = "Y";
+					OM_GoodsWinUpdate($idx);
+				}
+			}
+
+			$winner_add_array = array(320,350,380,410,440,470,500,530,560,590,620,650,680);
+			if ($today_cnt > 280)
+			{
+				$today_winner = OM_TodayWinnerYN();
+				if ($today_winner < $max_winner_cnt)
+				{
+					foreach ($winner_add_array as $key2 => $val2)
 					{
-						$chkwin = "Y";
-						OM_GoodsWinUpdate($idx);
+						if ($today_cnt == $val2)
+						{
+							$chkwin = "Y";
+							OM_GoodsWinUpdate($idx);
+						}
 					}
 				}
 			}
