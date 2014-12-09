@@ -246,7 +246,18 @@
       </div>
       <div class="product_detail">
         <div class="product_txt">
+<?
+	if ($soldout == "Y")
+	{
+?>
+          <img src="images/big_product_<?=$goods_idx?>_txt_out.png" alt=""/> 
+<?
+	}else{
+?>
           <img src="images/big_product_<?=$goods_idx?>_txt.jpg" alt=""/> 
+<?
+	}
+?>
         </div>
         <div class="btn_block clearfix">
           <div class="inner">
