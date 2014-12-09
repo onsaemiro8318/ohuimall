@@ -313,7 +313,7 @@ function input_name(gubun, media)
 		},
 		url: "../main_exec.php",
 		success: function(response){
-			if (response == "Y" || name_val == "테스트")
+			if (response == "Y")
 			//if (response == "Y")
 			{
 				$("#winner_phone").val(phone_val);

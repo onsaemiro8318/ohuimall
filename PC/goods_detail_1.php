@@ -21,6 +21,13 @@
 
 	$goods_info = OM_GetGoodsInfo($goods_idx);
 
+	$soldout_query 		= "SELECT goods_selcount, goods_total_stock FROM ".$_gl['goods_info_table']." WHERE idx = '1' ";
+	$soldout_result 	= mysqli_query($my_db, $soldout_query);
+	$soldout_cnt = mysqli_fetch_array($soldout_result);
+	if($soldout_cnt['goods_selcount'] >= $soldout_cnt['goods_total_stock'])	
+		$soldout = "Y";
+	else
+		$soldout = "N";
 
 ?>
 <!doctype html>
@@ -242,6 +249,15 @@
     <input type="hidden" name="goods_idx" id="goods_idx" value="<?=$goods_idx?>">
     <div class="content g_960">
       <div class="product_img">
+        <!--품절시-->
+<?
+	if ($soldout == "Y")
+	{
+?>
+        <div class="t_soldout"><img src="images/txt_soldout.png" alt=""/></div>
+<?
+	}
+?>
         <div class="img"><img src="images/big_product_<?=$goods_idx?>.jpg" alt="" border="0"/></div>
       </div>
       <div class="product_detail">
@@ -251,7 +267,18 @@
         <div class="btn_block clearfix">
           <div class="inner">
             <div class="btn_getit">
+<?
+	if ($soldout == "Y")
+	{
+?>
+              <img src="images/btn_buy_out.jpg"/>
+<?
+	}else{
+?>
               <a href="#input_1" class="popup-with-zoom-anim"><img src="images/btn_buy.jpg"/></a>
+<?
+	}
+?>
             </div>
             <div class="btn_share_inview clearfix">
               <div class="txt">
@@ -266,6 +293,14 @@
             </div> 
           </div>
         </div> 
+<?
+	if ($soldout == "Y")
+	{
+?>
+      <div class="img add"><img src="images/big_product_<?=$goods_idx?>_gift.jpg" alt=""/></div>
+<?
+	}
+?>
       </div>
       <div class="product_detail_img">
         <img src="images/txt_noti.jpg" alt="">                
