@@ -145,55 +145,41 @@
 		{
 			$chkwin = "N";
 		}else{
-			if ($idx == "6")
+			// 당일 구매자 수 조회
+			$today_cnt = OM_TodayBuyCnt();
+			if (date("Y-m-d") <= "2014-12-07")
 			{
-				$win_cnt = OM_TotalWinnerCntByGoods($idx);
-				if ($win_cnt <= 17)
-				{
-					$check_array = array("Y");
-					shuffle($check_array);
-					if($check_array[0] == "Y")
-						$chkwin = "Y";
-				}else{
-					$chkwin = "N";
-				}
+				$winner_array = array(2,35,112,230);
+				$max_winner_cnt = 4;
+			}else if(date("Y-m-d") <= "2014-12-09" && date("Y-m-d") > "2014-12-07"){
+				$winner_array = array(2,10,35,80,112,145,175,200,230,280,300);
+				$max_winner_cnt = 11;
 			}else{
-				// 당일 구매자 수 조회
-				$today_cnt = OM_TodayBuyCnt();
-				if (date("Y-m-d") <= "2014-12-07")
-				{
-					$winner_array = array(2,35,112,230);
-					$max_winner_cnt = 4;
-				}else if(date("Y-m-d") <= "2014-12-09" && date("Y-m-d") > "2014-12-07"){
-					$winner_array = array(2,10,35,80,112,145,175,200,230,280,300);
-					$max_winner_cnt = 11;
-				}else{
-					$winner_array = array(48,382);
-					$max_winner_cnt = 2;
-				}
+				$winner_array = array(48,382);
+				$max_winner_cnt = 2;
+			}
 
-				foreach ($winner_array as $key => $val)
+			foreach ($winner_array as $key => $val)
+			{
+				if ($today_cnt == $val)
 				{
-					if ($today_cnt == $val)
-					{
-						$chkwin = "Y";
-						OM_GoodsWinUpdate($idx);
-					}
+					$chkwin = "Y";
+					OM_GoodsWinUpdate($idx);
 				}
+			}
 
-				$winner_add_array = array(1084,1147,1182,1205,1252,1282,1312,1352,1399,1420,1460,1511,1573);
-				if ($today_cnt > 1044)
+			$winner_add_array = array(1084,1147,1182,1205,1252,1282,1312,1352,1399,1420,1460,1511,1573);
+			if ($today_cnt > 1044)
+			{
+				$today_winner = OM_TodayWinnerYN();
+				if ($today_winner < $max_winner_cnt)
 				{
-					$today_winner = OM_TodayWinnerYN();
-					if ($today_winner < $max_winner_cnt)
+					foreach ($winner_add_array as $key2 => $val2)
 					{
-						foreach ($winner_add_array as $key2 => $val2)
+						if ($today_cnt == $val2)
 						{
-							if ($today_cnt == $val2)
-							{
-								$chkwin = "Y";
-								OM_GoodsWinUpdate($idx);
-							}
+							$chkwin = "Y";
+							OM_GoodsWinUpdate($idx);
 						}
 					}
 				}
