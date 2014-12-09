@@ -168,8 +168,8 @@
 					$winner_array = array(2,10,35,80,112,145,175,200,230,280,300);
 					$max_winner_cnt = 11;
 				}else{
-					$winner_array = array(48,75,93,344,382,428,518,593,758,1044);
-					$max_winner_cnt = 10;
+					$winner_array = array(48,382);
+					$max_winner_cnt = 2;
 				}
 
 				foreach ($winner_array as $key => $val)
