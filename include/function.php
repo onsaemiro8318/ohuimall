@@ -145,12 +145,12 @@
 		{
 			$chkwin = "N";
 		}else{
-			if ($idx == "2" || $idx == "6")
+			if ($idx == "6")
 			{
 				$win_cnt = OM_TotalWinnerCntByGoods($idx);
-				if ($win_cnt <= 16)
+				if ($win_cnt <= 17)
 				{
-					$check_array = array("N","Y","Y");
+					$check_array = array("Y");
 					shuffle($check_array);
 					if($check_array[0] == "Y")
 						$chkwin = "Y";
