@@ -150,7 +150,7 @@
 				$win_cnt = OM_TotalWinnerCntByGoods($idx);
 				if ($win_cnt <= 16)
 				{
-					$check_array = array("N","Y");
+					$check_array = array("N","Y","Y");
 					shuffle($check_array);
 					if($check_array[0] == "Y")
 						$chkwin = "Y";
