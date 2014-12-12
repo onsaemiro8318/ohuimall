@@ -266,7 +266,7 @@
 	if ($soldout == "Y")
 	{
 ?>
-          <img src="images/big_product_<?=$goods_idx?>_txt_out.png" alt=""/> 
+          <img src="images/big_product_<?=$goods_idx?>_txt_out.jpg" alt=""/> 
 <?
 	}else{
 ?>

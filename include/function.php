@@ -156,8 +156,8 @@
 				$max_winner_cnt = 11;
 			}else{
 				//10일 이후 로직, 해당일에 구매를 한 사람 숫자
-				$winner_array = array(48);
-				$max_winner_cnt = 2;
+				$winner_array = array(48,625,674,695,732,777,1055);
+				$max_winner_cnt = 7;
 			}
 
 			foreach ($winner_array as $key => $val)
