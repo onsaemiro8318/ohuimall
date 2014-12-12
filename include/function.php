@@ -150,14 +150,14 @@
 
 			if (date("Y-m-d") == "2014-12-13")
 			{
-				$winner_array = array(42,135,182,454,555,692);
-				$max_winner_cnt = 6;
+				$winner_array = array(42,135,182,454,692);
+				$max_winner_cnt = 5;
 			}else if (date("Y-m-d") == "2014-12-14"){
 				$winner_array = array(42,79,135,164,182,222,265,339,454,692);
 				$max_winner_cnt = 10;
 			}else{
 				$winner_array = array(695,732,777,795,811,849,860);
-				$max_winner_cnt = 9;
+				$max_winner_cnt = 10;
 			}
 
 			/*
@@ -183,7 +183,7 @@
 				}
 			}
 
-			$winner_add_array = array(1084,1147,1182,1205,1252,1282,1312,1352,1399,1420,1460,1511,1573);
+			$winner_add_array = array(900,950,1084,1147,1182,1205,1252,1282,1312,1352,1399,1420,1460,1511,1573);
 			if ($today_cnt > 860)
 			{
 				$today_winner = OM_TodayWinnerYN();
