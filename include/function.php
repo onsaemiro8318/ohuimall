@@ -145,56 +145,75 @@
 		{
 			$chkwin = "N";
 		}else{
-			// 당일 구매자 수 조회
-			$today_cnt = OM_TodayBuyCnt();
-
-			if (date("Y-m-d") == "2014-12-13")
+			if ($idx == "1")
 			{
-				$winner_array = array(42,135,182,454,692);
-				$max_winner_cnt = 5;
-			}else if (date("Y-m-d") == "2014-12-14"){
-				$winner_array = array(42,79,135,164,182,222,265,339,454,692);
-				$max_winner_cnt = 10;
+				$chkwin = "N";
 			}else{
-				$winner_array = array(695,732,777,795,811,849,860);
-				$max_winner_cnt = 10;
-			}
-
-			/*
-			if (date("Y-m-d") <= "2014-12-07")
-			{
-				$winner_array = array(2,35,112,230);
-				$max_winner_cnt = 4;
-			}else if(date("Y-m-d") <= "2014-12-09" && date("Y-m-d") > "2014-12-07"){
-				$winner_array = array(2,10,35,80,112,145,175,200,230,280,300);
-				$max_winner_cnt = 11;
-			}else{
-				//10일 이후 로직, 해당일에 구매를 한 사람 숫자
-				$winner_array = array(695,732,777,795,811,849,1055);
-				$max_winner_cnt = 7;
-			}
-			*/
-			foreach ($winner_array as $key => $val)
-			{
-				if ($today_cnt == $val)
+				if ($idx == "5")
 				{
-					$chkwin = "Y";
-					OM_GoodsWinUpdate($idx);
-				}
-			}
-
-			$winner_add_array = array(900,950,1084,1147,1182,1205,1252,1282,1312,1352,1399,1420,1460,1511,1573);
-			if ($today_cnt > 860)
-			{
-				$today_winner = OM_TodayWinnerYN();
-				if ($today_winner < $max_winner_cnt)
-				{
-					foreach ($winner_add_array as $key2 => $val2)
+					$win_cnt = OM_TotalWinnerCntByGoods($idx);
+					if ($win_cnt <= 17)
 					{
-						if ($today_cnt == $val2)
+						$check_array = array("Y");
+						shuffle($check_array);
+						if($check_array[0] == "Y")
+							$chkwin = "Y";
+					}else{
+						$chkwin = "N";
+					}
+				}else{
+					// 당일 구매자 수 조회
+					$today_cnt = OM_TodayBuyCnt();
+
+					if (date("Y-m-d") == "2014-12-13")
+					{
+						$winner_array = array(42,135,182,454,692);
+						$max_winner_cnt = 5;
+					}else if (date("Y-m-d") == "2014-12-14"){
+						$winner_array = array(42,79,135,164,182,222,265,339,454,692);
+						$max_winner_cnt = 10;
+					}else{
+						$winner_array = array(695,732,777,795,811,849,860);
+						$max_winner_cnt = 10;
+					}
+
+					/*
+					if (date("Y-m-d") <= "2014-12-07")
+					{
+						$winner_array = array(2,35,112,230);
+						$max_winner_cnt = 4;
+					}else if(date("Y-m-d") <= "2014-12-09" && date("Y-m-d") > "2014-12-07"){
+						$winner_array = array(2,10,35,80,112,145,175,200,230,280,300);
+						$max_winner_cnt = 11;
+					}else{
+						//10일 이후 로직, 해당일에 구매를 한 사람 숫자
+						$winner_array = array(695,732,777,795,811,849,1055);
+						$max_winner_cnt = 7;
+					}
+					*/
+					foreach ($winner_array as $key => $val)
+					{
+						if ($today_cnt == $val)
 						{
 							$chkwin = "Y";
 							OM_GoodsWinUpdate($idx);
+						}
+					}
+
+					$winner_add_array = array(900,950,1084,1147,1182,1205,1252,1282,1312,1352,1399,1420,1460,1511,1573);
+					if ($today_cnt > 860)
+					{
+						$today_winner = OM_TodayWinnerYN();
+						if ($today_winner < $max_winner_cnt)
+						{
+							foreach ($winner_add_array as $key2 => $val2)
+							{
+								if ($today_cnt == $val2)
+								{
+									$chkwin = "Y";
+									OM_GoodsWinUpdate($idx);
+								}
+							}
 						}
 					}
 				}
