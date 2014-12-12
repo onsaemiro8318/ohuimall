@@ -150,14 +150,14 @@
 
 			if (date("Y-m-d") == "2014-12-13")
 			{
-				$winner_array = array(42,135,182,454,692);
-				$max_winner_cnt = 5;
+				$winner_array = array(42,135,182,454,555,692);
+				$max_winner_cnt = 6;
 			}else if (date("Y-m-d") == "2014-12-14"){
 				$winner_array = array(42,79,135,164,182,222,265,339,454,692);
 				$max_winner_cnt = 10;
 			}else{
 				$winner_array = array(695,732,777,795,811,849,860);
-				$max_winner_cnt = 7;
+				$max_winner_cnt = 9;
 			}
 
 			/*
