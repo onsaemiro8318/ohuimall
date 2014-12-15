@@ -32,6 +32,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <meta name="google-site-verification" content="31A5-XKhqHSxrthCl8Y_k3RzZiM4yvHdEZJmcxOfYyI" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta property="og:title" content="마음을 파는 가게">
@@ -165,9 +166,9 @@
 			}
 ?>
             <div class="list">
-              <p><a href="soldout.php?goods_idx=<?=$val['goods_idx']?>"><img src="images/thumb_product_<?=$val['goods_idx']?>.jpg" alt=""/></a></p>
-              <p class="txt_name"><a href="soldout.php?goods_idx=<?=$val['goods_idx']?>"><img src="images/txt_product_name_<?=$val['goods_idx']?>.jpg" height="57" alt=""/></a></p>
-              <p class="btn_block"><a href="soldout.php?goods_idx=<?=$val['goods_idx']?>"><img src="images/btn_buy_at_list_out.jpg" width="290" height="59" alt=""/></a></p>
+              <p><a href="goods_detail_<?=$val['goods_idx']?>.php"><img src="images/thumb_product_<?=$val['goods_idx']?>.jpg" alt=""/></a></p>
+              <p class="txt_name"><a href="goods_detail_<?=$val['goods_idx']?>.php"><img src="images/txt_product_name_<?=$val['goods_idx']?>.jpg" height="57" alt=""/></a></p>
+              <p class="btn_block"><a href="goods_detail_<?=$val['goods_idx']?>.php"><img src="images/btn_buy_at_list_out.jpg" width="290" height="59" alt=""/></a></p>
             </div>
 <?
 		}else{

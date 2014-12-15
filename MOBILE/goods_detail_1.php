@@ -23,6 +23,14 @@
 
 	$os_style	= "style='-webkit-appearance: none;-webkit-border-radius: 0;border:1px solid #d2d2d2;'";
 
+	$soldout_query 		= "SELECT goods_selcount, goods_total_stock FROM ".$_gl['goods_info_table']." WHERE idx = '".$goods_idx."' ";
+	$soldout_result 	= mysqli_query($my_db, $soldout_query);
+	$soldout_cnt = mysqli_fetch_array($soldout_result);
+	if($soldout_cnt['goods_selcount'] >= $soldout_cnt['goods_total_stock'])	
+		$soldout = "Y";
+	else
+		$soldout = "N";
+
 ?>
 <!doctype html>
 <html>
@@ -236,11 +244,35 @@
     <input type="hidden" name="goods_idx" id="goods_idx" value="<?=$goods_idx?>">
     <div class="content">
       <div class="product_img">
+        <!--품절시-->
+<?
+	if ($soldout == "Y")
+	{
+?>
+        <div class="t_soldout"><img src="images/txt_soldout.png" width="60" alt=""/></div>
+        <div class="img"><img src="images/big_product_<?=$goods_idx?>_out.jpg" alt="" border="0"/></div>
+<?
+	}else{
+?>
         <div class="img"><img src="images/big_product_<?=$goods_idx?>.jpg" alt="" border="0"/></div>
+<?
+	}
+?>
         <!-- <div class="img add"><img src="images/big_product_<?=$goods_idx?>_gift.jpg" alt=""/></div> -->
       </div>
       <div class="btn_getit">
+<?
+	if ($soldout == "Y")
+	{
+?>
+        <img src="images/btn_getit_out.jpg"/>
+<?
+	}else{
+?>
         <a href="#input_1" class="popup-with-zoom-anim"><img src="images/btn_getit.jpg"/></a>
+<?
+	}
+?>
       </div> 
       <div class="btn_share_inview clearfix">
         <div class="txt">
@@ -255,7 +287,18 @@
       </div>      
       <div class="product_img">
         <div class="img add2">
+<?
+	if ($soldout == "Y")
+	{
+?>
+          <img src="images/big_product_<?=$goods_idx?>_gift.jpg" alt=""/>
+<?
+	}else{
+?>
           <img src="images/txt_noti.jpg" alt="" class="secret_noti"/>
+<?
+	}
+?>
           <img src="images/big_product_<?=$goods_idx?>_detail.jpg" alt=""/>
         </div>
       </div>
@@ -296,7 +339,7 @@
           </div>
         </div>
         <div class="btn_block">
-          <a href="#" onclick="input_name('<?=$gubun?>');return false;">
+          <a href="#" onclick="input_name('<?=$gubun?>','<?=$_SESSION['ss_media']?>');return false;">
             <img src="images/btn_input_comp_1.jpg" width="170" alt=""/> 
           </a>
         </div>

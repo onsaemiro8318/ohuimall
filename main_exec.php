@@ -41,6 +41,7 @@ switch ($_REQUEST['exec'])
 		$mb_phone		= $_REQUEST['mb_phone'];
 		$goods_idx		= $_REQUEST['goods_idx'];
 		$buyer_gubun	= $_REQUEST['buyer_gubun'];
+		$buyer_media	= $_REQUEST['buyer_media'];
 
 		$buyer_info = OM_GetBuyerInfoByPhone($mb_phone);
 
@@ -58,10 +59,17 @@ switch ($_REQUEST['exec'])
 			}
 
 		}else{
-			$insert_rs = InsertBuyerInfo($mb_name, $mb_phone, $goods_idx, $buyer_gubun);
-			if ($insert_rs)
+			$userWinnerYN = OM_WinnerByPhone($mb_phone);
+
+			if ($userWinnerYN > 0)
 			{
-				$winner_chk = OM_WinCheck($goods_idx);
+				$winner_chk = "W";
+			}else{
+				$insert_rs = InsertBuyerInfo($mb_name, $mb_phone, $goods_idx, $buyer_gubun, $buyer_media);
+				if ($insert_rs)
+				{
+					$winner_chk = OM_WinCheck($goods_idx);
+				}
 			}
 		}
 		echo $winner_chk;

@@ -20,7 +20,6 @@
        	   <div class="product_txt">
        	   	<img src="images/big_product_<?=$goods_idx?>_txt.jpg" alt=""/> 
            </div>
-           <div class="img add"><img src="images/big_product_<?=$goods_idx?>_gift.jpg" alt=""/></div>
            
       </div> 
 
